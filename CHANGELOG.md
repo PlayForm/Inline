@@ -1,3 +1,7 @@
+## 0.0.3
+
+-   Adds hedgehog
+
 ## 0.0.2
 
 -   Provides a CHANGELOG.md

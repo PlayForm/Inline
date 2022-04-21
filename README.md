@@ -1,4 +1,4 @@
-# astro-critters
+# astro-critters 🦔
 
 This **[Astro integration][astro-integration]** brings [critters][critters] to
 your Astro project.
