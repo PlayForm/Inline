@@ -1,0 +1,33 @@
+{
+	"name": "astro-critters",
+	"version": "0.0.1",
+	"type": "module",
+	"description": "AstroJS GoogleChromeLabs critters integration",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nhristov/astro-critters.git"
+	},
+	"homepage": "https://github.com/nhristov/astro-critters#readme",
+	"bugs": {
+		"url": "https://github.com/nhristov/astro-critters/issues"
+	},
+	"author": "Nikola Hristov <nikola@playform.cloud>",
+	"license": "SEE LICENSE IN LICENSE",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"keywords": [
+		"astro-component",
+		"performance"
+	],
+	"scripts": {
+		"build": "esbuild --format=esm --platform=node --target=node14 --sources-content=false --outdir=dist src/index.ts && tsc"
+	},
+	"dependencies": {
+		"critters": "0.0.16"
+	},
+	"devDependencies": {
+		"@types/node": "17.0.25",
+		"astro": "0.26.1",
+		"esbuild": "0.14.37"
+	}
+}

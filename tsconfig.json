@@ -1,0 +1,20 @@
+{
+	"include": ["src"],
+	"compilerOptions": {
+		"allowJs": true,
+		"baseUrl": ".",
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"lib": ["es2015"],
+		"module": "ES2022",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"outDir": "dist",
+		"types": ["node"]
+	}
+}
