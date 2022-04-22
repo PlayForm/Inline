@@ -59,11 +59,11 @@ export default {
 
 ## Getting started
 
-Critters should now automatically update your CSS.
+Critters should now automatically inline the critical CSS of your HTML files.
 
 You can override any of the default options from the configuration at
 https://github.com/GoogleChromeLabs/critters#properties. Path is "./dist/" by
-default as in the [Astro configuration][astro-configuration-outdir]:
+default as in the [Astro configuration][astro-configuration-outdir].
 
 ```ts
 export interface Options {

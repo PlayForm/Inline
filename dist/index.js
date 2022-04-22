@@ -9,7 +9,7 @@ function createPlugin(critterOptions = {}) {
       "astro:build:done": async (options) => {
         const files = options.pages.map((page) => {
           const pathname = page.pathname.endsWith("/") ? page.pathname : page.pathname + "/";
-          const file = pathname !== "404/" ? `${pathname}index.html` : "404.html";
+          const file = pathname === "404/" ? "404.html" : `${pathname}index.html`;
           return defaultOptions.path + file;
         });
         for (const file of files) {

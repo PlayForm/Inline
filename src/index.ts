@@ -24,9 +24,9 @@ export default function createPlugin(
 						: page.pathname + "/";
 
 					const file =
-						pathname !== "404/"
-							? `${pathname}index.html`
-							: "404.html";
+						pathname === "404/"
+							? "404.html"
+							: `${pathname}index.html`;
 
 					return defaultOptions.path + file;
 				});

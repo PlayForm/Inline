@@ -1,6 +1,6 @@
 {
 	"name": "astro-critters",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"type": "module",
 	"description": "AstroJS GoogleChromeLabs critters integration",
 	"repository": {
@@ -17,8 +17,10 @@
 	"types": "./dist/index.d.ts",
 	"keywords": [
 		"astro-component",
-		"performance",
-		"css"
+		"astro",
+		"critters",
+		"css",
+		"performance"
 	],
 	"scripts": {
 		"build": "esbuild --format=esm --platform=node --target=node14 --sources-content=false --outdir=dist src/index.ts && tsc"
