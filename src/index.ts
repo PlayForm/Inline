@@ -1,33 +1,40 @@
 import * as Critters from "critters";
-import { writeFileSync } from "fs";
+import fs from "fs";
 import type { AstroIntegration } from "astro";
 
+export interface Options extends Critters.Options {}
+
 export default function createPlugin(
-	critterOptions: Critters.Options = {}
+	critterOptions: Options = {}
 ): AstroIntegration {
+	const defaultOptions = Object.assign(
+		{ path: "./dist/" },
+		critterOptions || {}
+	);
+
+	const critters = new Critters.default(defaultOptions);
+
 	return {
 		name: "astro-critters",
 		hooks: {
 			"astro:build:done": async (options) => {
-				const defaultOptions = {
-					path: "./dist/",
-					...critterOptions,
-				};
+				const files = options.pages.map((page) => {
+					const pathname = page.pathname.endsWith("/")
+						? page.pathname
+						: page.pathname + "/";
 
-				const critters = new Critters.default(defaultOptions);
+					const file =
+						pathname !== "404/"
+							? `${pathname}index.html`
+							: "404.html";
 
-				const files = options.pages.map(
-					(page) =>
-						defaultOptions.path +
-						(page.pathname !== "404/"
-							? `${page.pathname}index.html`
-							: "404.html")
-				);
+					return defaultOptions.path + file;
+				});
 
 				for (const file of files) {
 					const html = await critters.readFile(file);
 					const inlined = await critters.process(html);
-					writeFileSync(file, inlined, "utf-8");
+					await fs.promises.writeFile(file, inlined, "utf-8");
 				}
 			},
 		},

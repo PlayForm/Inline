@@ -1,35 +1,21 @@
-var __defProp = Object.defineProperty;
-var __getOwnPropSymbols = Object.getOwnPropertySymbols;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __propIsEnum = Object.prototype.propertyIsEnumerable;
-var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues = (a, b) => {
-  for (var prop in b || (b = {}))
-    if (__hasOwnProp.call(b, prop))
-      __defNormalProp(a, prop, b[prop]);
-  if (__getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(b)) {
-      if (__propIsEnum.call(b, prop))
-        __defNormalProp(a, prop, b[prop]);
-    }
-  return a;
-};
 import * as Critters from "critters";
-import { writeFileSync } from "fs";
+import fs from "fs";
 function createPlugin(critterOptions = {}) {
+  const defaultOptions = Object.assign({ path: "./dist/" }, critterOptions || {});
+  const critters = new Critters.default(defaultOptions);
   return {
     name: "astro-critters",
     hooks: {
       "astro:build:done": async (options) => {
-        const defaultOptions = __spreadValues({
-          path: "./dist/"
-        }, critterOptions);
-        const critters = new Critters.default(defaultOptions);
-        const files = options.pages.map((page) => defaultOptions.path + (page.pathname !== "404/" ? `${page.pathname}index.html` : "404.html"));
+        const files = options.pages.map((page) => {
+          const pathname = page.pathname.endsWith("/") ? page.pathname : page.pathname + "/";
+          const file = pathname !== "404/" ? `${pathname}index.html` : "404.html";
+          return defaultOptions.path + file;
+        });
         for (const file of files) {
           const html = await critters.readFile(file);
           const inlined = await critters.process(html);
-          writeFileSync(file, inlined, "utf-8");
+          await fs.promises.writeFile(file, inlined, "utf-8");
         }
       }
     }

@@ -61,14 +61,36 @@ export default {
 
 Critters should now automatically update your CSS.
 
-Path is "./dist/" by default as in the [Astro
-configuration][astro-configuration-outdir]:
+You can override any of the default options from the configuration at
+https://github.com/GoogleChromeLabs/critters#properties. Path is "./dist/" by
+default as in the [Astro configuration][astro-configuration-outdir]:
+
+```ts
+export interface Options {
+	path?: string;
+	publicPath?: string;
+	external?: boolean;
+	inlineThreshold?: number;
+	minimumExternalSize?: number;
+	pruneSource?: boolean;
+	mergeStylesheets?: boolean;
+	additionalStylesheets?: string[];
+	preload?: "body" | "media" | "swap" | "js" | "js-lazy";
+	noscriptFallback?: boolean;
+	inlineFonts?: boolean;
+	preloadFonts?: boolean;
+	fonts?: boolean;
+	keyframes?: string;
+	compress?: boolean;
+	logLevel?: "info" | "warn" | "error" | "trace" | "debug" | "silent";
+	reduceInlineStyles?: boolean;
+	logger?: Logger;
+}
+```
 
 Head to [critters](https://github.com/GoogleChromeLabs/critters) for all options
-and features available. You can override any of the default options from the
-configuration at https://github.com/GoogleChromeLabs/critters#properties. You
-can also check the [Astro Integration Documentation][astro-integration] for more
-on integrations.
+and features available. You can also check the [Astro Integration
+Documentation][astro-integration] for more on integrations.
 
 [astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
 [astro-configuration-outdir]:
