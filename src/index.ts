@@ -1,24 +1,28 @@
-import * as Critters from "critters";
 import fs from "fs";
 import type { AstroIntegration } from "astro";
-
-export interface Options extends Critters.Options {}
+import Critters from "critters";
+import Options from "./options";
 
 export default function createPlugin(
-	critterOptions: Options = {}
+	integrationOptions: Options = {}
 ): AstroIntegration {
-	const defaultOptions = Object.assign(
-		{ path: "./dist/" },
-		critterOptions || {}
-	);
+	const defaultOptions: Options = {
+		path: "./dist/",
+	};
 
-	const critters = new Critters.default(defaultOptions);
+	const options = Object.assign(defaultOptions, integrationOptions || {});
+
+	options.path = options.path?.endsWith("/")
+		? options.path
+		: `${options.path}/`;
+
+	const critters = new Critters(options);
 
 	return {
 		name: "astro-critters",
 		hooks: {
-			"astro:build:done": async (options) => {
-				const files = options.pages.map((page) => {
+			"astro:build:done": async ({ pages }) => {
+				const files = pages.map((page) => {
 					const pathname = page.pathname.endsWith("/")
 						? page.pathname
 						: page.pathname + "/";
@@ -28,7 +32,7 @@ export default function createPlugin(
 							? "404.html"
 							: `${pathname}index.html`;
 
-					return defaultOptions.path + file;
+					return options.path + file;
 				});
 
 				for (const file of files) {

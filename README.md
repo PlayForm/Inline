@@ -31,10 +31,6 @@ yarn astro add astro-critters
 pnpx astro add astro-critters
 ```
 
-If you run into any hiccups,
-[feel free to log an issue on our GitHub](https://github.com/withastro/astro/issues)
-and try the manual installation steps below.
-
 ### Install dependencies manually
 
 First, install the `astro-critters` integration like so:

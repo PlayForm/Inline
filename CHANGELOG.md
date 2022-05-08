@@ -1,3 +1,9 @@
+## 0.0.6
+
+-   Updates package.json
+-   Updates README.md
+-   Refactor
+
 ## 0.0.5
 
 -   Updates README.md
