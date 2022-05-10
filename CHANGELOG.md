@@ -1,3 +1,9 @@
+## 0.0.7
+
+-   Updates package.json
+-   Updates README.md
+-   Minify
+
 ## 0.0.6
 
 -   Updates package.json

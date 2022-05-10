@@ -1,4 +1,4 @@
-# astro-critters 🦔
+# [astro-critters] 🦔
 
 This **[Astro integration][astro-integration]** brings [critters][critters] to
 your Astro project.
@@ -45,12 +45,13 @@ Then, apply this integration to your `astro.config.*` file using the
 **astro.config.mjs**
 
 ```js
+import { defineConfig } from "astro/config";
 import critters from "astro-critters";
 
-export default {
+export default defineConfig({
 	// ...
 	integrations: [critters()],
-};
+});
 ```
 
 ## Getting started
@@ -88,11 +89,12 @@ Head to [critters](https://github.com/GoogleChromeLabs/critters) for all options
 and features available. You can also check the [Astro Integration
 Documentation][astro-integration] for more on integrations.
 
+[astro-critters]: https://npmjs.org/astro-critters
+[critters]: https://github.com/GoogleChromeLabs/critters
 [astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
 [astro-configuration-outdir]:
 	https://docs.astro.build/en/reference/configuration-reference/#outdir
 [astro-ui-frameworks]:
 	https://docs.astro.build/en/core-concepts/framework-components/#using-framework-components
-[critters]: https://github.com/GoogleChromeLabs/critters
 [critical css]:
 	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
