@@ -6,8 +6,6 @@ import Options from "./options";
 export default function createPlugin(
 	integrationOptions: Options = {}
 ): AstroIntegration {
-
-
 	const defaultOptions: Options = {
 		path: "./dist/",
 		preload: "body",
