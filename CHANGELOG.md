@@ -1,3 +1,7 @@
+## 0.0.8
+
+-   Refactor
+
 ## 0.0.7
 
 -   Updates package.json

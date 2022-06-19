@@ -1,6 +1,6 @@
 {
 	"name": "astro-critters",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"type": "module",
 	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
 	"repository": {
@@ -26,7 +26,8 @@
 		"build": "esbuild --format=esm --platform=node --target=node14 --sources-content=false --minify --outdir=dist src/index.ts && tsc"
 	},
 	"dependencies": {
-		"critters": "0.0.16"
+		"critters": "0.0.16",
+		"fast-glob": "3.2.11"
 	},
 	"devDependencies": {
 		"@types/node": "18.0.0",
