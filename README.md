@@ -1,6 +1,4 @@
 # [astro-critters] 🦔
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnhristov%2Fastro-critters.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnhristov%2Fastro-critters?ref=badge_shield)
-
 
 This **[Astro integration][astro-integration]** brings [critters][critters] to
 your Astro project.
@@ -100,7 +98,3 @@ Documentation][astro-integration] for more on integrations.
 	https://docs.astro.build/en/core-concepts/framework-components/#using-framework-components
 [critical css]:
 	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
-
-
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnhristov%2Fastro-critters.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnhristov%2Fastro-critters?ref=badge_large)
