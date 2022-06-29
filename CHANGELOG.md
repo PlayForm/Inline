@@ -1,3 +1,7 @@
+## 0.0.9
+
+-   Updates dependencies
+
 ## 0.0.8
 
 -   Refactor
