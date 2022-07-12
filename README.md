@@ -98,3 +98,7 @@ Documentation][astro-integration] for more on integrations.
 	https://docs.astro.build/en/core-concepts/framework-components/#using-framework-components
 [critical css]:
 	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
+
+## License
+
+[Hippocratic License](LICENSE)
