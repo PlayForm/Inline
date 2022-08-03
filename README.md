@@ -49,7 +49,6 @@ import { defineConfig } from "astro/config";
 import critters from "astro-critters";
 
 export default defineConfig({
-	// ...
 	integrations: [critters()],
 });
 ```
