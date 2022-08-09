@@ -1,6 +1,8 @@
 import type { AstroIntegration } from "astro";
 import FastGlob from "fast-glob";
 import fs from "fs";
+import { deepmerge } from "deepmerge-ts";
+
 import Options from "./options";
 
 import Critters from "critters";
@@ -65,7 +67,7 @@ export default function createPlugin(
 		compress: true,
 	};
 
-	const _options = Object.assign(defaultOptions, integrationOptions);
+	const _options = deepmerge(defaultOptions, integrationOptions);
 
 	_options.path = _options.path?.endsWith("/")
 		? _options.path
