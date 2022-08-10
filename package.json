@@ -33,8 +33,8 @@
 	},
 	"devDependencies": {
 		"@types/node": "18.6.5",
-		"astro": "1.0.0",
-		"esbuild": "0.14.54",
+		"astro": "1.0.1",
+		"esbuild": "0.15.0",
 		"typescript": "4.7.4"
 	}
 }
