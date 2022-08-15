@@ -333,9 +333,9 @@ amended except in a writing signed by Licensor and Licensee.
 inure to the benefit of the Licensor’s and Licensee’s respective heirs,
 successors, and assigns.
 
-""" This license applies to the `LICENSE`, `README.md`, `tsconfig.json` and
-parts of the `src` directory of `astro-critters` originating from the
-https://github.com/withastro/astro repository:
+""" This license applies to the `README.md` and parts of the `src` directory of
+`astro-critters` originating from the https://github.com/withastro/astro
+repository:
 
 MIT License
 
