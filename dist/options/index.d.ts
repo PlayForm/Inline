@@ -1,5 +1,5 @@
 import { Options as CritterOptions } from "critters";
-export default interface Options extends CritterOptions {
+export interface Options extends CritterOptions {
     [key: string]: any;
     /**
      * Astro build path.
@@ -7,3 +7,5 @@ export default interface Options extends CritterOptions {
      */
     path?: string;
 }
+declare const _default: Options;
+export default _default;

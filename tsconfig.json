@@ -3,6 +3,9 @@
 	"include": [
 		"src"
 	],
+	"ts-node": {
+		"esm": true
+	},
 	"compilerOptions": {
 		"allowJs": true,
 		"baseUrl": ".",
