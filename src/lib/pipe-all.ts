@@ -1,7 +1,7 @@
 import Critters from "critters";
 
-import { Options } from "../options";
-import parse from "./parse";
+import { Options } from "../options/index.js";
+import parse from "./parse.js";
 
 /**
  * It takes a settings object, creates a new Critters instance, and then parses all HTML files in the
