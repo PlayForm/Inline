@@ -32,7 +32,7 @@
 		"fast-glob": "3.2.11"
 	},
 	"devDependencies": {
-		"@types/node": "18.7.6",
+		"@types/node": "18.7.7",
 		"astro": "1.0.6",
 		"esbuild": "0.15.5",
 		"ts-node": "10.9.1",
