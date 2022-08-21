@@ -1,1 +1,1 @@
-import a from"critters";import p from"./parse.js";var c=async t=>{const r=new a(t);await p(`${t.path}**/*.html`,async o=>await r.process(o))};export{c as default};
+import p from"critters";import i from"./parse.js";var e=async t=>{const o=new p(t);await i(`${t.path}**/*.html`,async r=>await o.process(r))};export{e as default};

@@ -1,6 +1,6 @@
 import Critters from "critters";
 
-import { Options } from "../options/index.js";
+import type { Options } from "../options/index";
 import parse from "./parse.js";
 
 /**
