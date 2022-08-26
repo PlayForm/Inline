@@ -32,8 +32,8 @@
 		"fast-glob": "3.2.11"
 	},
 	"devDependencies": {
-		"@playform/config": "0.0.1",
-		"@playform/scripts": "0.0.2",
-		"astro": "1.0.8"
+		"@playform/config": "0.0.2",
+		"@playform/scripts": "0.0.3",
+		"astro": "1.1.0"
 	}
 }
