@@ -5,7 +5,7 @@
 	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Playform/astro-critters.git"
+		"url": "https://github.com/Playform/astro-critters.git"
 	},
 	"homepage": "https://github.com/Playform/astro-critters#readme",
 	"bugs": {
@@ -32,8 +32,8 @@
 		"fast-glob": "3.2.11"
 	},
 	"devDependencies": {
-		"@playform/config": "0.0.2",
-		"@playform/scripts": "0.0.4",
+		"@playform/config": "0.0.3",
+		"@playform/scripts": "0.0.5",
 		"astro": "1.1.1"
 	}
 }
