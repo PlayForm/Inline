@@ -34,6 +34,6 @@
 	"devDependencies": {
 		"@playform/config": "0.0.2",
 		"@playform/scripts": "0.0.3",
-		"astro": "1.1.0"
+		"astro": "1.1.1"
 	}
 }
