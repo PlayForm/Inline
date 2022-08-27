@@ -36,21 +36,23 @@ pnpx astro add astro-critters
 First, install the `astro-critters` integration like so:
 
 ```
-npm install astro-critters
+npm install -D -E astro-critters
 ```
 
 Then, apply this integration to your `astro.config.*` file using the
 `integrations` property:
 
-**astro.config.mjs**
+**astro.config.ts**
 
-```js
-import { defineConfig } from "astro/config";
+```ts
+import type { AstroUserConfig } from "astro";
 import critters from "astro-critters";
 
-export default defineConfig({
-	integrations: [critters()],
-});
+export default (): AstroUserConfig => {
+	return {
+		integrations: [critters()],
+	};
+};
 ```
 
 ## Getting started
