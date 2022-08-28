@@ -7,5 +7,5 @@ export interface Options extends CritterOptions {
      */
     path?: string;
 }
-declare const _default: Options;
+declare const _default: () => Options;
 export default _default;
