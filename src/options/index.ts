@@ -10,9 +10,11 @@ export interface Options extends CritterOptions {
 	path?: string;
 }
 
-export default {
-	path: "./dist/",
-	preload: "swap",
-	inlineFonts: true,
-	compress: true,
-} as Options;
+export default (): Options => {
+	return {
+		path: "./dist/",
+		preload: "swap",
+		inlineFonts: true,
+		compress: true,
+	};
+};
