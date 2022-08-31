@@ -100,4 +100,4 @@ Documentation][astro-integration] for more on integrations.
 [critical css]:
 	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
 
-[![Built with lightrix/npm](https://raw.githubusercontent.com/lightrix/npm/29746a0f4dd9afe481b0dc5ed0f01b989032d577/.github/img/favicon-16x16.png)](https://github.com/lightrix/npm)
+[![Built with lightrix/npm](https://raw.githubusercontent.com/lightrix/npm/main/.github/img/favicon-16x16.png)](https://github.com/lightrix/npm)
