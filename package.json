@@ -5,11 +5,11 @@
 	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/lightrix/astro-critters.git"
+		"url": "https://github.com/NikolaRHristov/astro-critters.git"
 	},
-	"homepage": "https://github.com/lightrix/astro-critters#readme",
+	"homepage": "https://github.com/NikolaRHristov/astro-critters#readme",
 	"bugs": {
-		"url": "https://github.com/lightrix/astro-critters/issues"
+		"url": "https://github.com/NikolaRHristov/astro-critters/issues"
 	},
 	"author": "Nikola Hristov <nikola@lightrix.dev>",
 	"license": "MIT",
@@ -24,7 +24,7 @@
 		"performance"
 	],
 	"scripts": {
-		"build": "lightrix build src/index.ts src/lib/*.ts src/options/index.ts"
+		"build": "nikola build src/index.ts src/lib/*.ts src/options/index.ts"
 	},
 	"dependencies": {
 		"critters": "0.0.16",
@@ -32,8 +32,8 @@
 		"fast-glob": "3.2.11"
 	},
 	"devDependencies": {
-		"@lightrix/config": "0.0.1",
-		"@lightrix/scripts": "0.0.1",
+		"@nikolarhristov/config": "0.0.1",
+		"@nikolarhristov/scripts": "0.0.1",
 		"astro": "1.1.3"
 	}
 }
