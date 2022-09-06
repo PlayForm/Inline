@@ -34,6 +34,6 @@
 	"devDependencies": {
 		"@nikolarhristov/config": "0.0.1",
 		"@nikolarhristov/scripts": "0.0.1",
-		"astro": "1.1.5"
+		"astro": "1.1.6"
 	}
 }
