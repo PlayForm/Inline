@@ -1,20 +1,20 @@
 import FastGlob from "fast-glob";
 import fs from "fs";
 
-/**
- * It takes a glob, a write function, and a read function, and then it parses all the files in the glob
- * with the write function, and then it writes the result to the file
- * @param {string} glob - The glob pattern to match files.
- * @param write - (data: string) => Promise<string> = async (data) => data,
- * @param read - (file: string) => Promise<string> = async (file) =>
- */
 export default async (
 	glob: string,
-	write: (data: string) => Promise<string> = async (data) => data,
-	read: (file: string) => Promise<string> = async (file) =>
+	debug: number = 2,
+	type: string = "",
+	write: (data: string) => any = async (data) => data,
+	read: (file: string) => any = async (file) =>
 		await fs.promises.readFile(file, "utf-8")
 ) => {
 	const files = await FastGlob(glob);
+
+	const inlines = {
+		files: 0,
+		total: 0,
+	};
 
 	for (const file of files) {
 		try {
@@ -25,8 +25,22 @@ export default async (
 			}
 
 			await fs.promises.writeFile(file, writeBuffer, "utf-8");
+
+			inlines.files++;
 		} catch (error) {
-			console.log("Error: Cannot inline file " + file + " CSS!");
+			console.log("Error: Cannot inline file " + file + "!");
 		}
+	}
+
+	if (debug > 0 && inlines.files > 0) {
+		console.info(
+			"\u001b[32mSuccessfully inlined a total of " +
+				inlines.files +
+				" " +
+				type.toUpperCase() +
+				" " +
+				(inlines.files === 1 ? "file" : "files") +
+				".\u001b[39m"
+		);
 	}
 };

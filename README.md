@@ -48,11 +48,9 @@ Then, apply this integration to your `astro.config.*` file using the
 import type { AstroUserConfig } from "astro";
 import critters from "astro-critters";
 
-export default (): AstroUserConfig => {
-	return {
-		integrations: [critters()],
-	};
-};
+export default (): AstroUserConfig => ({
+	integrations: [critters()],
+});
 ```
 
 ## Getting started
@@ -60,35 +58,22 @@ export default (): AstroUserConfig => {
 Critters should now automatically inline the critical CSS of your HTML files.
 
 You can override any of the default options from the configuration at
-https://github.com/GoogleChromeLabs/critters#properties. Path is "./dist/" by
-default as in the [Astro configuration][astro-configuration-outdir].
+https://github.com/GoogleChromeLabs/critters#properties.
+
+Set logger to 0 if you do not want to see debug messages. Default is 2.
 
 ```ts
-export interface Options {
-	path?: string;
-	publicPath?: string;
-	external?: boolean;
-	inlineThreshold?: number;
-	minimumExternalSize?: number;
-	pruneSource?: boolean;
-	mergeStylesheets?: boolean;
-	additionalStylesheets?: string[];
-	preload?: "body" | "media" | "swap" | "js" | "js-lazy";
-	noscriptFallback?: boolean;
-	inlineFonts?: boolean;
-	preloadFonts?: boolean;
-	fonts?: boolean;
-	keyframes?: string;
-	compress?: boolean;
-	logLevel?: "info" | "warn" | "error" | "trace" | "debug" | "silent";
-	reduceInlineStyles?: boolean;
-	logger?: Logger;
-}
-```
+import type { AstroUserConfig } from "astro";
+import critters from "astro-critters";
 
-Head to [critters](https://github.com/GoogleChromeLabs/critters) for all options
-and features available. You can also check the [Astro Integration
-Documentation][astro-integration] for more on integrations.
+export default (): AstroUserConfig => ({
+	integrations: [
+		critters({
+			logger: 0,
+		}),
+	],
+});
+```
 
 [astro-critters]: https://npmjs.org/astro-critters
 [critters]: https://github.com/GoogleChromeLabs/critters

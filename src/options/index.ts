@@ -1,20 +1,22 @@
-import type { Options as CritterOptions } from "critters";
+import type CrittersOptions from "critters";
 
-export interface Options extends CritterOptions {
+export interface Options {
 	[key: string]: any;
 
-	/**
-	 * Astro build path.
-	 * @default "./dist/"
-	 */
 	path?: string;
+
+	critters?: boolean | CrittersOptions;
+
+	logger?: number;
 }
 
-export default (): Options => {
-	return {
+export default (): Options => ({
+	path: "./dist/",
+	critters: {
 		path: "./dist/",
 		preload: "swap",
 		inlineFonts: true,
 		compress: true,
-	};
-};
+	},
+	logger: 1,
+});

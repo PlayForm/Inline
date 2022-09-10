@@ -4,15 +4,17 @@ import { deepmerge } from "deepmerge-ts";
 import pipeAll from "./lib/pipe-all.js";
 import defaultOptions, { Options } from "./options/index.js";
 
-/**
- * It takes in an object of options, and returns an object that Astro can use to create a plugin
- * @param {Options} integrationOptions - Options = {}
- * @returns A function that returns an object.
- */
-export default function createPlugin(
-	integrationOptions: Options = {}
-): AstroIntegration {
-	const _options = deepmerge(defaultOptions(), integrationOptions);
+export default (options: Options = {}): AstroIntegration => {
+	for (const option in options) {
+		if (
+			Object.prototype.hasOwnProperty.call(options, option) &&
+			options[option] === true
+		) {
+			options[option] = defaultOptions()[option];
+		}
+	}
+
+	const _options = deepmerge(defaultOptions(), options);
 
 	_options.path = _options.path?.endsWith("/")
 		? _options.path
@@ -27,8 +29,8 @@ export default function createPlugin(
 					: _options.path;
 			},
 			"astro:build:done": async () => {
-				await pipeAll(_options);
+				await pipeAll(_options, _options.logger);
 			},
 		},
 	};
-}
+};

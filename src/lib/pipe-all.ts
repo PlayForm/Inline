@@ -3,16 +3,37 @@ import Critters from "critters";
 import type { Options } from "../options/index";
 import parse from "./parse.js";
 
-/**
- * It takes a settings object, creates a new Critters instance, and then parses all HTML files in the
- * given directory, passing each file's contents to the Critters instance
- * @param {Options} settings - Options
- */
-export default async (settings: Options) => {
-	const critters = new Critters(settings);
+export default async (settings: Options, debug: number = 2) => {
+	for (const files in settings) {
+		if (Object.prototype.hasOwnProperty.call(settings, files)) {
+			const setting = settings[files];
 
-	await parse(
-		`${settings.path}**/*.html`,
-		async (data) => await critters.process(data)
-	);
+			if (!setting) {
+				continue;
+			}
+
+			switch (files) {
+				case "html":
+					await parse(
+						`${settings.path}**/*.html`,
+						debug,
+						files,
+						async (data) => {
+							if (
+								typeof setting.path === "undefined" &&
+								typeof settings.path !== "undefined"
+							) {
+								setting.path = settings.path;
+							}
+
+							await new Critters(setting).process(data);
+						}
+					);
+					break;
+
+				default:
+					break;
+			}
+		}
+	}
 };
