@@ -13,7 +13,6 @@ export interface Options {
 export default (): Options => ({
 	path: "./dist/",
 	critters: {
-		path: "./dist/",
 		preload: "swap",
 		inlineFonts: true,
 		compress: true,
