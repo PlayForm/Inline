@@ -1,4 +1,4 @@
-import type CrittersOptions from "critters";
+import type { Options as CrittersOptions } from "critters";
 export interface Options {
     [key: string]: any;
     path?: string;

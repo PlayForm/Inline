@@ -57,8 +57,42 @@ export default (): AstroUserConfig => ({
 
 Critters should now automatically inline the critical CSS of your HTML files.
 
-You can override any of the default options from the configuration at
-https://github.com/GoogleChromeLabs/critters#properties.
+You can override any of the default options from the configuration of:
+
+-   [critters](src/options/critters.ts)
+
+or disable them entirely:
+
+```ts
+import type { AstroUserConfig } from "astro";
+import critters from "astro-critters";
+
+export default (): AstroUserConfig => ({
+	integrations: [
+		critters({
+			critters: false,
+		}),
+	],
+});
+```
+
+If your path is different than `dist` be sure to update it accordingly:
+
+```ts
+import type { AstroUserConfig } from "astro";
+import critters from "astro-critters";
+
+export default (): AstroUserConfig => ({
+	outDir: "./build",
+	integrations: [
+		critters({
+			critters: {
+				path: "./build",
+			},
+		}),
+	],
+});
+```
 
 Set logger to 0 if you do not want to see debug messages. Default is 2.
 
@@ -78,10 +112,6 @@ export default (): AstroUserConfig => ({
 [astro-critters]: https://npmjs.org/astro-critters
 [critters]: https://github.com/GoogleChromeLabs/critters
 [astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
-[astro-configuration-outdir]:
-	https://docs.astro.build/en/reference/configuration-reference/#outdir
-[astro-ui-frameworks]:
-	https://docs.astro.build/en/core-concepts/framework-components/#using-framework-components
 [critical css]:
 	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
 

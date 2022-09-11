@@ -1,4 +1,4 @@
-import type CrittersOptions from "critters";
+import type { Options as CrittersOptions } from "critters";
 
 export interface Options {
 	[key: string]: any;
@@ -16,6 +16,7 @@ export default (): Options => ({
 		preload: "swap",
 		inlineFonts: true,
 		compress: true,
+		pruneSource: true,
 	},
-	logger: 1,
+	logger: 2,
 });
