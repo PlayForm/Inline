@@ -24,7 +24,7 @@
 		"performance"
 	],
 	"scripts": {
-		"build": "nikola build src/index.ts src/lib/*.ts src/options/index.ts"
+		"build": "lightrix build src/index.ts src/lib/*.ts src/options/index.ts"
 	},
 	"dependencies": {
 		"critters": "0.0.16",
@@ -32,8 +32,8 @@
 		"fast-glob": "3.2.12"
 	},
 	"devDependencies": {
-		"@nikolarhristov/config": "0.0.1",
-		"@nikolarhristov/scripts": "0.0.1",
+		"@lightrix/config": "0.0.1",
+		"@lightrix/scripts": "0.0.1",
 		"astro": "1.2.3"
 	}
 }
