@@ -32,8 +32,8 @@
 		"fast-glob": "3.2.12"
 	},
 	"devDependencies": {
-		"@lightrix/config": "0.0.1",
-		"@lightrix/scripts": "0.0.1",
+		"@lightrix/config": "0.0.2",
+		"@lightrix/scripts": "0.0.2",
 		"astro": "1.2.6"
 	}
 }
