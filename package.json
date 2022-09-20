@@ -28,7 +28,7 @@
 	},
 	"dependencies": {
 		"critters": "0.0.16",
-		"deepmerge-ts": "4.2.1",
+		"deepmerge-ts": "4.2.2",
 		"fast-glob": "3.2.12"
 	},
 	"devDependencies": {
