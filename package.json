@@ -28,12 +28,12 @@
 	},
 	"dependencies": {
 		"critters": "0.0.16",
-		"deepmerge-ts": "4.2.1",
+		"deepmerge-ts": "4.2.2",
 		"fast-glob": "3.2.12"
 	},
 	"devDependencies": {
 		"@lightrix/config": "0.0.2",
 		"@lightrix/scripts": "0.0.2",
-		"astro": "1.2.6"
+		"astro": "1.2.8"
 	}
 }
