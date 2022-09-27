@@ -11,7 +11,7 @@
 	"bugs": {
 		"url": "https://github.com/NikolaRHristov/astro-critters/issues"
 	},
-	"author": "Nikola Hristov <nikola@lightrix.dev>",
+	"author": "NIKOLAHRISTOV",
 	"license": "MIT",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -34,6 +34,6 @@
 	"devDependencies": {
 		"@lightrix/config": "0.0.2",
 		"@lightrix/scripts": "0.0.2",
-		"astro": "1.3.0"
+		"astro": "1.3.1"
 	}
 }
