@@ -1,3 +1,7 @@
+## 1.0.5
+
+-   Switches ownership
+
 ## 1.0.4
 
 -   Enhancement

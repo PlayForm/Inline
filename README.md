@@ -57,9 +57,9 @@ export default (): AstroUserConfig => ({
 
 Critters should now automatically inline the critical CSS of your HTML files.
 
-You can override any of the default options from the configuration of:
+You can override any of the default options from the configuration of
 
--   [critters](src/options/critters.ts)
+-   [critters](https://github.com/GoogleChromeLabs/critters#usage)
 
 or disable them entirely:
 

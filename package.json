@@ -1,15 +1,15 @@
 {
 	"name": "astro-critters",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"type": "module",
 	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nikolarhristov/astro-critters.git"
+		"url": "https://github.com/astro-community/astro-critters.git"
 	},
-	"homepage": "https://github.com/nikolarhristov/astro-critters#readme",
+	"homepage": "https://github.com/astro-community/astro-critters#readme",
 	"bugs": {
-		"url": "https://github.com/nikolarhristov/astro-critters/issues"
+		"url": "https://github.com/astro-community/astro-critters/issues"
 	},
 	"author": "Nikola R. Hristov <nikola@lightrix.dev>",
 	"license": "MIT",
