@@ -7,7 +7,7 @@ export interface Options {
 	logger?: number;
 }
 
-export default {
+export default (): Options => ({
 	path: "./dist/",
 	critters: {
 		preload: "swap",
@@ -16,4 +16,4 @@ export default {
 		pruneSource: true,
 	},
 	logger: 2,
-} satisfies Options;
+});
