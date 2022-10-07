@@ -34,6 +34,6 @@
 	"devDependencies": {
 		"@lightrix/config": "0.0.2",
 		"@lightrix/scripts": "0.0.2",
-		"astro": "1.4.5"
+		"astro": "1.4.6"
 	}
 }
