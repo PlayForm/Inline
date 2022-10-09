@@ -42,9 +42,8 @@ npm install -D -E astro-critters
 Then, apply this integration to your `astro.config.*` file using the
 `integrations` property:
 
-**astro.config.ts**
-
 ```ts
+// astro.config.ts
 import type { AstroUserConfig } from "astro";
 import critters from "astro-critters";
 
@@ -114,5 +113,9 @@ export default (): AstroUserConfig => ({
 [astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
 [critical css]:
 	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this integration.
 
 [![Built with Lightrix/npm](https://raw.githubusercontent.com/Lightrix/npm/main/.github/img/favicon-16x16.png)](https://github.com/Lightrix/npm)
