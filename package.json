@@ -25,12 +25,12 @@
 		"build": "lightrix build src/index.ts src/lib/*.ts src/options/index.ts"
 	},
 	"dependencies": {
-		"@lightrix/config": "workspace:0.0.3",
 		"critters": "0.0.16",
 		"deepmerge-ts": "4.2.2",
 		"fast-glob": "3.2.12"
 	},
 	"devDependencies": {
+		"@lightrix/config": "0.0.3",
 		"@lightrix/scripts": "0.0.5",
 		"astro": "1.5.0"
 	}
