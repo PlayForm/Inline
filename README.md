@@ -43,13 +43,11 @@ Then, apply this integration to your `astro.config.*` file using the
 `integrations` property:
 
 ```ts
-// astro.config.ts
-import type { AstroUserConfig } from "astro";
 import critters from "astro-critters";
 
-export default (): AstroUserConfig => ({
+export default {
 	integrations: [critters()],
-});
+}
 ```
 
 ## Getting started
@@ -63,25 +61,23 @@ You can override any of the default options from the configuration of:
 or disable them entirely:
 
 ```ts
-import type { AstroUserConfig } from "astro";
 import critters from "astro-critters";
 
-export default (): AstroUserConfig => ({
+export default {
 	integrations: [
 		critters({
 			critters: false,
 		}),
 	],
-});
+}
 ```
 
 If your path is different than `dist` be sure to update it accordingly:
 
 ```ts
-import type { AstroUserConfig } from "astro";
 import critters from "astro-critters";
 
-export default (): AstroUserConfig => ({
+export default {
 	outDir: "./build",
 	integrations: [
 		critters({
@@ -90,22 +86,21 @@ export default (): AstroUserConfig => ({
 			},
 		}),
 	],
-});
+}
 ```
 
 Set logger to 0 if you do not want to see debug messages. Default is 2.
 
 ```ts
-import type { AstroUserConfig } from "astro";
 import critters from "astro-critters";
 
-export default (): AstroUserConfig => ({
+export default {
 	integrations: [
 		critters({
 			logger: 0,
 		}),
 	],
-});
+}
 ```
 
 [astro-critters]: https://npmjs.org/astro-critters
