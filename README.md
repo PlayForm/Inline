@@ -47,7 +47,7 @@ import critters from "astro-critters";
 
 export default {
 	integrations: [critters()],
-}
+};
 ```
 
 ## Getting started
@@ -69,7 +69,7 @@ export default {
 			critters: false,
 		}),
 	],
-}
+};
 ```
 
 If your path is different than `dist` be sure to update it accordingly:
@@ -86,7 +86,7 @@ export default {
 			},
 		}),
 	],
-}
+};
 ```
 
 Set logger to 0 if you do not want to see debug messages. Default is 2.
@@ -100,7 +100,7 @@ export default {
 			logger: 0,
 		}),
 	],
-}
+};
 ```
 
 [astro-critters]: https://npmjs.org/astro-critters
