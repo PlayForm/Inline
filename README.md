@@ -103,6 +103,27 @@ export default {
 };
 ```
 
+You can provide a filter to exclude files in your build. A filter can be an
+array of regexes or a single match. You can use functions, as well to match on
+file names.
+
+**`astro.config.ts`**
+
+```ts
+import critters from "astro-critters";
+
+export default {
+	integrations: [
+		critters({
+			exclude: [
+				"my-awesome.html",
+				(file: string) => file === "./dist/index.html",
+			],
+		}),
+	],
+};
+```
+
 [astro-critters]: https://npmjs.org/astro-critters
 [critters]: https://github.com/GoogleChromeLabs/critters
 [astro-integration]: https://docs.astro.build/en/guides/integrations-guide/

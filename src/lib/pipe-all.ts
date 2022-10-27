@@ -13,20 +13,22 @@ export default async (settings: Options, debug: number = 2) => {
 			}
 
 			switch (files) {
-				case "critters":
+				case "critters": {
 					await parse(
 						`${settings.path}**/*.html`,
 						debug,
 						"html",
-						async (data) => {
-							setting.path = !setting.path
-								? settings.path
-								: setting.path;
+						settings?.exclude,
+						async (data: any) => {
+							setting.path = setting.path
+								? setting.path
+								: settings.path;
 
 							return await new Critters(setting).process(data);
 						}
 					);
 					break;
+				}
 
 				default:
 					break;

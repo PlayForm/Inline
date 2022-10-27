@@ -1,10 +1,12 @@
 import FastGlob from "fast-glob";
 import fs from "fs";
+import type { Options } from "../options/index.js";
 
 export default async (
 	glob: string,
 	debug: number = 2,
 	type: string = "",
+	exclude: Options["exclude"],
 	write: (data: string) => any = async (data) => data,
 	read: (file: string) => any = async (file) =>
 		await fs.promises.readFile(file, "utf-8")
@@ -15,6 +17,36 @@ export default async (
 		files: 0,
 		total: 0,
 	};
+
+	let filters = new Set();
+
+	if (typeof exclude !== "undefined") {
+		if (exclude instanceof Array) {
+			for (const excludes of exclude) {
+				filters.add(excludes);
+			}
+		} else {
+			filters.add(exclude);
+		}
+	}
+
+	for (const filter of filters) {
+		if (typeof filter === "string") {
+			for (const file of files) {
+				if (file.match(filter)) {
+					files.splice(files.indexOf(file), 1);
+				}
+			}
+		}
+
+		if (typeof filter === "function") {
+			for (const file of files) {
+				if (filter(file)) {
+					files.splice(files.indexOf(file), 1);
+				}
+			}
+		}
+	}
 
 	for (const file of files) {
 		try {
@@ -28,19 +60,17 @@ export default async (
 
 			inlines.files++;
 		} catch (error) {
-			console.log("Error: Cannot inline file " + file + "!");
+			console.log(`Error: Cannot inline file ${file}!`);
 		}
 	}
 
 	if (debug > 0 && inlines.files > 0) {
 		console.info(
-			"\u001b[32mSuccessfully inlined a total of " +
-				inlines.files +
-				" " +
-				type.toUpperCase() +
-				" " +
-				(inlines.files === 1 ? "file" : "files") +
-				".\u001b[39m"
+			`\u001b[32mSuccessfully inlined a total of ${
+				inlines.files
+			} ${type.toUpperCase()} ${
+				inlines.files === 1 ? "file" : "files"
+			}.\u001b[39m`
 		);
 	}
 };

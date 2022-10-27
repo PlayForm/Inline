@@ -1,3 +1,7 @@
+## 1.1.0
+
+-   Introduces filters
+
 ## 1.0.5
 
 -   Switches ownership
