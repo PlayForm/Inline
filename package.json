@@ -11,7 +11,11 @@
 	"bugs": {
 		"url": "https://github.com/astro-community/astro-critters/issues"
 	},
+	"engines": {
+		"node": ">=14.21.0"
+	},
 	"main": "./dist/index.js",
+	"exports": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"keywords": [
 		"astro-integration",
@@ -31,7 +35,7 @@
 	},
 	"devDependencies": {
 		"@lightrix/config": "0.0.6",
-		"@lightrix/scripts": "0.0.13",
+		"@lightrix/scripts": "0.0.14",
 		"astro": "1.6.3"
 	}
 }
