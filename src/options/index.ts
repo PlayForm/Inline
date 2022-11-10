@@ -15,7 +15,7 @@ export interface Options {
 export default (): Options => ({
 	path: "./dist/",
 	critters: {
-		preload: "swap",
+		preload: "media",
 		inlineFonts: true,
 		compress: true,
 		pruneSource: true,

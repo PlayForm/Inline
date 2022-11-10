@@ -1,3 +1,7 @@
+## 1.1.2
+
+-   Switches to media preloading
+
 ## 1.1.1
 
 -   Cleanup
