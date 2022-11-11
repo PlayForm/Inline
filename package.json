@@ -11,6 +11,7 @@
 	"bugs": {
 		"url": "https://github.com/astro-community/astro-critters/issues"
 	},
+	"private": false,
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"keywords": [
@@ -33,5 +34,8 @@
 		"@lightrix/config": "0.0.6",
 		"@lightrix/scripts": "0.0.14",
 		"astro": "1.6.5"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
