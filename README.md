@@ -81,9 +81,24 @@ export default {
 	outDir: "./build",
 	integrations: [
 		critters({
-			critters: {
-				path: "./build",
-			},
+			path: "./build",
+		}),
+	],
+};
+```
+
+You can add multiple paths to inline by specifying an array as the path
+variable.
+
+**`astro.config.ts`**
+
+```ts
+import critters from "astro-critters";
+
+export default {
+	integrations: [
+		critters({
+			path: ["./build", "./dist"],
 		}),
 	],
 };

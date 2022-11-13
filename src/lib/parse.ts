@@ -7,7 +7,9 @@ export default async (
 	debug: number = 2,
 	type: string = "",
 	exclude: Options["exclude"],
+	// rome-ignore lint:
 	write: (data: string) => any = async (data) => data,
+	// rome-ignore lint:
 	read: (file: string) => any = async (file) =>
 		await fs.promises.readFile(file, "utf-8")
 ) => {
@@ -59,7 +61,7 @@ export default async (
 			await fs.promises.writeFile(file, writeBuffer, "utf-8");
 
 			inlines.files++;
-		} catch (error) {
+		} catch (_error) {
 			console.log(`Error: Cannot inline file ${file}!`);
 		}
 	}
