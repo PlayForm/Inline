@@ -2,8 +2,10 @@ import type { Options as CrittersOptions } from "critters";
 export type excludeFn = (file: string) => boolean;
 
 export interface Options {
+	// rome-ignore lint:
 	[key: string]: any;
-	path?: string;
+
+	path?: string | [string];
 
 	exclude?: string | RegExp | excludeFn | [string] | [RegExp] | [excludeFn];
 

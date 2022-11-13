@@ -89,6 +89,23 @@ export default {
 };
 ```
 
+You can add multiple paths to inline by specifying an array as the path
+variable.
+
+**`astro.config.ts`**
+
+```ts
+import critters from "astro-critters";
+
+export default {
+	integrations: [
+		critters({
+			path: ["./build", "./dist"],
+		}),
+	],
+};
+```
+
 Set logger to 0 if you do not want to see debug messages. Default is 2.
 
 ```ts
