@@ -1,13 +1,22 @@
 import type { Options as CrittersOptions } from "critters";
-export type excludeFn = (file: string) => boolean;
+export type filterFn = (file: string) => boolean;
 
 export interface Options {
 	// rome-ignore lint:
 	[key: string]: any;
 
-	path?: string | [string];
+	path?: string | string[] | Set<string>;
 
-	exclude?: string | RegExp | excludeFn | [string] | [RegExp] | [excludeFn];
+	exclude?:
+		| string
+		| RegExp
+		| filterFn
+		| string[]
+		| RegExp[]
+		| filterFn[]
+		| Set<string>
+		| Set<RegExp>
+		| Set<filterFn>;
 
 	critters?: boolean | CrittersOptions;
 
