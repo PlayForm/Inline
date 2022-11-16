@@ -1,4 +1,4 @@
-import Critters from "@nikolarhristov/critters";
+import Critters from "critters";
 
 import type { Options } from "../options/index";
 import parse from "./parse.js";

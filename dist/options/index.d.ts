@@ -1,4 +1,4 @@
-import type { Options as CrittersOptions } from "@nikolarhristov/critters";
+import type { Options as CrittersOptions } from "critters";
 export type filterFn = (file: string) => boolean;
 export interface Options {
     [key: string]: any;
