@@ -1,4 +1,4 @@
-import type { Options as CrittersOptions } from "critters";
+import type { Options as CrittersOptions } from "@nikolarhristov/critters";
 export type filterFn = (file: string) => boolean;
 
 export interface Options {
@@ -23,7 +23,7 @@ export interface Options {
 	logger?: number;
 }
 
-export default (): Options => ({
+const options: Options = {
 	path: "./dist/",
 	critters: {
 		preload: "media",
@@ -32,4 +32,6 @@ export default (): Options => ({
 		pruneSource: true,
 	},
 	logger: 2,
-});
+};
+
+export default options;

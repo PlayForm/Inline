@@ -1,5 +1,5 @@
-import type { Options as CrittersOptions } from "critters";
-export declare type filterFn = (file: string) => boolean;
+import type { Options as CrittersOptions } from "@nikolarhristov/critters";
+export type filterFn = (file: string) => boolean;
 export interface Options {
     [key: string]: any;
     path?: string | string[] | Set<string>;
@@ -7,5 +7,5 @@ export interface Options {
     critters?: boolean | CrittersOptions;
     logger?: number;
 }
-declare const _default: () => Options;
-export default _default;
+declare const options: Options;
+export default options;
