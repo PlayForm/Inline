@@ -1,7 +1,3 @@
-## 1.1.7
-
--   Switches to @nikolarhristov/critters
-
 ## 1.1.6
 
 -   Cleanup
