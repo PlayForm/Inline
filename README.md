@@ -1,7 +1,7 @@
 # [astro-critters] 🦔
 
-This **[Astro integration][astro-integration]** brings
-[critters][@nikolarhristov/critters] to your Astro project.
+This **[Astro integration][astro-integration]** brings [critters][critters] to
+your Astro project.
 
 Critters is a plugin that inlines your app's [critical CSS] and lazy-loads the
 rest.
@@ -56,7 +56,7 @@ Critters should now automatically inline the critical CSS of your HTML files.
 
 You can override any of the default options from the configuration of:
 
--   [critters](https://github.com/nikolaxhristov/critters#usage)
+-   [critters](https://github.com/GoogleChromeLabs/critters#usage)
 
 or disable them entirely:
 
@@ -140,7 +140,7 @@ export default {
 ```
 
 [astro-critters]: https://npmjs.org/astro-critters
-[critters]: https://github.com/nikolaxhristov/critters
+[critters]: https://github.com/GoogleChromeLabs/critters
 [astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
 [critical css]:
 	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
