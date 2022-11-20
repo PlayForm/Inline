@@ -1,6 +1,6 @@
 import FastGlob from "fast-glob";
 import * as fs from "fs";
-import type { Options } from "../options/index.js";
+import type { Options } from "./../options/index.js";
 
 export default async (
 	glob: string,
