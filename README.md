@@ -104,6 +104,44 @@ export default {
 };
 ```
 
+You can also provide a map of paths for different input output directories.
+
+**`astro.config.ts`**
+
+```ts
+import critters from "astro-critters";
+
+export default {
+	integrations: [
+		critters({
+			path: new Map([["./input", "./output"]]),
+		}),
+	],
+};
+```
+
+Or an array of the two.
+
+**`astro.config.ts`**
+
+```ts
+import critters from "astro-critters";
+
+export default {
+	integrations: [
+		critters({
+			path: [
+				// inline dist
+				"./dist",
+
+				// inline dist one more time into another directory
+				new Map([["./dist", "./dist-inlined"]]),
+			],
+		}),
+	],
+};
+```
+
 Set `logger` to `0` if you do not want to see debug messages. Default is `2`.
 
 ```ts
