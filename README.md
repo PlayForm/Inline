@@ -52,7 +52,7 @@ export default {
 
 ## Getting started
 
-Critters should now automatically inline the critical CSS of your HTML files.
+Critters will now automatically inline the critical CSS of your HTML files.
 
 You can override any of the default options from the configuration of:
 
