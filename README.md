@@ -134,23 +134,9 @@ export default {
 				// inline dist
 				"./dist",
 
-				// inline dist one more time into another directory
+				// inline dist one more time into a different directory
 				new Map([["./dist", "./dist-inlined"]]),
 			],
-		}),
-	],
-};
-```
-
-Set `logger` to `0` if you do not want to see debug messages. Default is `2`.
-
-```ts
-import critters from "astro-critters";
-
-export default {
-	integrations: [
-		critters({
-			logger: 0,
 		}),
 	],
 };
@@ -172,6 +158,20 @@ export default {
 				"my-awesome.html",
 				(file: string) => file === "./dist/index.html",
 			],
+		}),
+	],
+};
+```
+
+Set `logger` to `0` if you do not want to see debug messages. Default is `2`.
+
+```ts
+import critters from "astro-critters";
+
+export default {
+	integrations: [
+		critters({
+			logger: 0,
 		}),
 	],
 };
