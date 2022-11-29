@@ -1,1 +1,1 @@
-import r from"@nikolarhristov/pipeline";var e=(t={})=>({name:"astro-critters",hooks:{"astro:config:done":async i=>{t.path=t.path?t.path:i.config.outDir},"astro:build:done":async()=>{await new r(t).critters()}}});export{e as default};
+import o from"@nikolarhristov/pipeline";var e=(t={})=>({name:"astro-critters",hooks:{"astro:config:done":async i=>{t.path=t.path?t.path:i.config.outDir},"astro:build:done":async()=>{await new o(t).critters()}}});export{e as default};

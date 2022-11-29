@@ -6,18 +6,16 @@ import type { Options as CrittersOptions } from "@nikolarhristov/pipeline/dist/o
 
 export default (
 	_options: PipelineOptions & CrittersOptions = {}
-): AstroIntegration => {
-	return {
-		name: "astro-critters",
-		hooks: {
-			"astro:config:done": async (options) => {
-				_options.path = _options.path
-					? _options.path
-					: options.config.outDir;
-			},
-			"astro:build:done": async () => {
-				await new pipeline(_options).critters();
-			},
+): AstroIntegration => ({
+	name: "astro-critters",
+	hooks: {
+		"astro:config:done": async (options) => {
+			_options.path = _options.path
+				? _options.path
+				: options.config.outDir;
 		},
-	};
-};
+		"astro:build:done": async () => {
+			await new pipeline(_options).critters();
+		},
+	},
+});
