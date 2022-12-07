@@ -134,7 +134,7 @@ export default {
 				// inline dist
 				"./dist",
 
-				// inline dist one more time into a different directory
+				// inline dist one more time into another directory
 				new Map([["./dist", "./dist-inlined"]]),
 			],
 		}),
