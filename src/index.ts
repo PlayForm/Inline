@@ -1,16 +1,13 @@
 import type { AstroIntegration } from "astro";
 
 import { pipeline } from "@nikolarhristov/pipeline";
-import type { Options as PipelineOptions } from "@nikolarhristov/pipeline/dist/options/index.js";
-import type { Options as CrittersOptions } from "@nikolarhristov/pipeline/dist/options/lib/critters/index.js";
+import type { Options } from "@nikolarhristov/pipeline/dist/options/lib/critters/index.js";
 
-export default (
-	_options: PipelineOptions & CrittersOptions = {}
-): AstroIntegration => ({
+export default (options: Options = {}): AstroIntegration => ({
 	name: "astro-critters",
 	hooks: {
 		"astro:build:done": async () => {
-			await new pipeline(_options).critters();
+			await new pipeline(options).critters();
 		},
 	},
 });
