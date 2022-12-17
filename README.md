@@ -6,10 +6,10 @@ your Astro project.
 Critters is a plugin that inlines your app's [critical CSS] and lazy-loads the
 rest.
 
-> **Warning**
+> **Note**
 >
 > `astro-critters` will not inline your requests, only your statically generated
-> build.
+> build and prerendered routes.
 
 ## Installation
 
