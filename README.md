@@ -9,7 +9,7 @@ rest.
 > **Note**
 >
 > `astro-critters` will not inline your requests, only your statically generated
-> build and prerendered routes.
+> build and pre-rendered routes.
 
 ## Installation
 
