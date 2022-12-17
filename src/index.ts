@@ -1,7 +1,7 @@
 import type { AstroIntegration } from "astro";
 
-import { pipeline } from "@nikolarhristov/pipeline";
-import type { Options } from "@nikolarhristov/pipeline/dist/options/lib/critters/index.js";
+import { pipeline } from "files-pipeline";
+import type { Options } from "files-pipeline/dist/options/lib/critters/index.js";
 
 export default (options: Options = {}): AstroIntegration => ({
 	name: "astro-critters",
