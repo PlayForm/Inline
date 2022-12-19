@@ -27,7 +27,7 @@
 		"build": "lightrix build src/index.ts"
 	},
 	"dependencies": {
-		"files-pipeline": "0.0.1"
+		"files-pipeline": "0.0.2"
 	},
 	"devDependencies": {
 		"@lightrix/config": "0.0.7",
