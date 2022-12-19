@@ -1,3 +1,7 @@
+## 1.1.24
+
+-   Cleanup
+
 ## 1.1.23
 
 -   Switches ownership
