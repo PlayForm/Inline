@@ -51,6 +51,10 @@ export default (options: Options = {}): AstroIntegration => {
 		name: "astro-critters",
 		hooks: {
 			"astro:build:done": async () => {
+				if (!options["critters"]) {
+					return;
+				}
+
 				for (const path of paths) {
 					const _path = await applyTo(path, (url: URL | string) =>
 						url instanceof URL ? fileURLToPath(url) : url
