@@ -1,5 +1,5 @@
-import defaults from "files-pipeline/dist/options/index.js";
 import deepmerge from "files-pipeline/dist/lib/deepmerge.js";
+import defaults from "files-pipeline/dist/options/index.js";
 
 import type CRITTERS from "./critters.js";
 
