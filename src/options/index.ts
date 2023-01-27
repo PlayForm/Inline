@@ -1,7 +1,9 @@
 import deepmerge from "files-pipeline/dist/lib/deepmerge.js";
 import defaults from "files-pipeline/dist/options/index.js";
 
-import type CRITTERS from "./critters.js";
+import defaultsCRITTERS from "./critters.js";
+
+import type { CRITTERS } from "./critters.js";
 
 import type { Options as OptionsBase } from "files-pipeline/dist/options/index.js";
 
@@ -13,12 +15,7 @@ export interface Options extends OptionsBase {
 }
 
 export default deepmerge(defaults, {
-	critters: {
-		preload: "media",
-		inlineFonts: true,
-		compress: true,
-		pruneSource: true,
-	},
+	critters: defaultsCRITTERS,
 	pipeline: {
 		failed: async (current) =>
 			`Error: Cannot inline file ${current.inputPath}!`,
