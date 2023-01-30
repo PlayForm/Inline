@@ -1,4 +1,4 @@
-import type CRITTERS from "./critters.js";
+import type { CRITTERS } from "./critters.js";
 import type { Options as OptionsBase } from "files-pipeline/dist/options/index.js";
 export interface Options extends OptionsBase {
     [key: string]: any;
