@@ -1,24 +1,23 @@
-import type { AstroIntegration } from "astro";
-
 import type {
 	executions,
 	optionPath,
 } from "files-pipeline/dist/options/index.js";
 
-import type { Options } from "./options/index.js";
+// @ts-ignore
+import Critters from "critters";
 
 import defaults from "./options/index.js";
+
+import deepmerge from "files-pipeline/dist/lib/deepmerge.js";
+import { files } from "files-pipeline";
 
 import { fileURLToPath } from "url";
 
 import applyTo from "files-pipeline/dist/lib/apply-to.js";
-import deepmerge from "files-pipeline/dist/lib/deepmerge.js";
 
-import { files } from "files-pipeline";
+import type { AstroIntegration } from "astro";
 
-// critters
-// @ts-ignore
-import Critters from "critters";
+import type { Options } from "./options/index.js";
 
 export default (options: Options = {}): AstroIntegration => {
 	for (const option in options) {
@@ -80,7 +79,7 @@ export default (options: Options = {}): AstroIntegration => {
 										return "info";
 								}
 							})(),
-						})
+						} satisfies Options["critters"])
 					);
 
 					await (
@@ -92,7 +91,7 @@ export default (options: Options = {}): AstroIntegration => {
 					).pipeline(
 						deepmerge(defaults["pipeline"], {
 							wrote: async (current) =>
-								critters.process(current.buffer),
+								critters.process(current.buffer.toString()),
 						} satisfies executions)
 					);
 				}

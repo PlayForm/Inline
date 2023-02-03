@@ -11,4 +11,4 @@ export default {
 	inlineFonts: true,
 	compress: true,
 	pruneSource: true,
-};
+} satisfies CRITTERS;
