@@ -41,15 +41,17 @@ export default (options: Options = {}): AstroIntegration => {
 			for (const path of options["path"]) {
 				paths.add(path);
 			}
-		} else {
-			paths.add(options["path"]);
 		}
 	}
 
 	return {
 		name: "astro-critters",
 		hooks: {
-			"astro:build:done": async () => {
+			"astro:build:done": async ({ dir }) => {
+				if (!paths.size) {
+					paths.add(dir);
+				}
+
 				if (!options["critters"]) {
 					return;
 				}
