@@ -8,8 +8,8 @@ import Critters from "critters";
 
 import defaults from "./options/index.js";
 
-import deepmerge from "files-pipeline/dist/lib/deepmerge.js";
 import { files } from "files-pipeline";
+import deepmerge from "files-pipeline/dist/lib/deepmerge.js";
 
 import { fileURLToPath } from "url";
 
@@ -51,6 +51,9 @@ export default (options: Options = {}): AstroIntegration => {
 				if (!paths.size) {
 					paths.add(dir);
 				}
+
+				console.log(dir);
+				console.log(paths);
 
 				if (!options["critters"]) {
 					return;
