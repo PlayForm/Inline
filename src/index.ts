@@ -52,9 +52,6 @@ export default (options: Options = {}): AstroIntegration => {
 					paths.add(dir);
 				}
 
-				console.log(dir);
-				console.log(paths);
-
 				if (!options["critters"]) {
 					return;
 				}
