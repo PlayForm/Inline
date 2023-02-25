@@ -92,8 +92,8 @@ export default (options: Options = {}): AstroIntegration => {
 						).not(options["exclude"])
 					).pipeline(
 						deepmerge(defaults["pipeline"], {
-							wrote: async (current) =>
-								critters.process(current.buffer.toString()),
+							wrote: async (ongoing) =>
+								critters.process(ongoing.buffer.toString()),
 						} satisfies executions)
 					);
 				}

@@ -17,12 +17,12 @@ export interface Options extends OptionsBase {
 export default deepmerge(defaults, {
 	critters: defaultsCRITTERS,
 	pipeline: {
-		failed: async (current) =>
-			`Error: Cannot inline file ${current.inputPath}!`,
-		fulfilled: async (pipe) =>
-			pipe.files > 0
-				? `Successfully inlined a total of ${pipe.files} HTML ${
-						pipe.files === 1 ? "file" : "files"
+		failed: async (ongoing) =>
+			`Error: Cannot inline file ${ongoing.inputPath}!`,
+		fulfilled: async (plan) =>
+			plan.files > 0
+				? `Successfully inlined a total of ${plan.files} HTML ${
+						plan.files === 1 ? "file" : "files"
 				  }.`
 				: false,
 		accomplished: false,

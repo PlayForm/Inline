@@ -24,7 +24,7 @@
 		"performance"
 	],
 	"scripts": {
-		"build": "lightrix build src/index.ts src/options/*.ts"
+		"build": "lightrix build src/**/*.ts"
 	},
 	"dependencies": {
 		"critters": "0.0.16",
