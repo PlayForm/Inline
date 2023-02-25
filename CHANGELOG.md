@@ -1,3 +1,7 @@
+## 1.1.30
+
+-   Updates files-pipeline component
+
 ## 1.1.29
 
 -   Enhancement
