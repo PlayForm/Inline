@@ -1,3 +1,7 @@
+## 1.1.31
+
+-   Switches to the files-pipe component
+
 ## 1.1.30
 
 -   Updates files-pipeline component
