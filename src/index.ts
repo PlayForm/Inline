@@ -1,19 +1,19 @@
 import type {
 	executions,
 	optionPath,
-} from "files-pipeline/dist/options/index.js";
+} from "files-pipe/dist/options/index.js";
 
 // @ts-ignore
 import Critters from "critters";
 
 import defaults from "./options/index.js";
 
-import { files } from "files-pipeline";
-import deepmerge from "files-pipeline/dist/lib/deepmerge.js";
+import { files } from "files-pipe";
+import deepmerge from "files-pipe/dist/lib/deepmerge.js";
 
 import { fileURLToPath } from "url";
 
-import applyTo from "files-pipeline/dist/lib/apply-to.js";
+import applyTo from "files-pipe/dist/lib/apply-to.js";
 
 import type { AstroIntegration } from "astro";
 
@@ -90,8 +90,8 @@ export default (options: Options = {}): AstroIntegration => {
 								await new files(options["logger"]).in(path)
 							).by("**/*.html")
 						).not(options["exclude"])
-					).pipeline(
-						deepmerge(defaults["pipeline"], {
+					).pipe(
+						deepmerge(defaults["pipe"], {
 							wrote: async (ongoing) =>
 								critters.process(ongoing.buffer.toString()),
 						} satisfies executions)
