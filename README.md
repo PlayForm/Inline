@@ -32,8 +32,14 @@ follow the prompts:
 ```sh
 # Using NPM
 npx astro add astro-critters
+```
+
+```sh
 # Using Yarn
 yarn astro add astro-critters
+```
+
+```sh
 # Using PNPM
 pnpx astro add astro-critters
 ```
