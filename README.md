@@ -29,18 +29,18 @@ command will:
 To install `astro-critters`, run the following from your project directory and
 follow the prompts:
 
+#### Using NPM
 ```sh
-# Using NPM
 npx astro add astro-critters
 ```
 
+#### Using Yarn
 ```sh
-# Using Yarn
 yarn astro add astro-critters
 ```
 
+#### Using PNPM
 ```sh
-# Using PNPM
 pnpx astro add astro-critters
 ```
 
