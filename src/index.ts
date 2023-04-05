@@ -16,6 +16,36 @@ import type { AstroIntegration } from "astro";
 
 import type { Options } from "./options/index.js";
 
+import * as path from "path";
+import * as fs from "fs";
+
+class CrittersAstroPlugin extends Critters {
+	constructor(options: Options){
+		super(options);
+	}
+
+	process(html: string) {
+		const out = super.process(html);
+		return out
+	}
+
+	pruneSource(style: { $$name: string; }, before: string, sheetInverse: string) {
+		const isStyleInlined = super.pruneSource(style, before, sheetInverse);
+		const name = style.$$name;
+
+		// @ts-ignore
+		const abs = path.join(this.options.path, name);
+
+		if (isStyleInlined) {
+			fs.rm(abs, () => {});
+		} else {
+			fs.writeFile(abs, sheetInverse, () => {});
+		}
+
+		return isStyleInlined;
+	}
+}
+
 export default (options: Options = {}): AstroIntegration => {
 	for (const option in options) {
 		if (
@@ -58,7 +88,7 @@ export default (options: Options = {}): AstroIntegration => {
 						url instanceof URL ? fileURLToPath(url) : url
 					);
 
-					const critters = new Critters(
+					const critters = new CrittersAstroPlugin(
 						deepmerge(options["critters"], {
 							path:
 								_path instanceof Map
