@@ -1,19 +1,13 @@
-import type { executions, optionPath } from "files-pipe/options/index.js";
+import type { executions, optionPath } from "files-pipe/dist/options/index.js";
 
 // @ts-ignore
 import Critters from "critters";
-
 import defaults from "./options/index.js";
-
 import { files } from "files-pipe";
-import deepmerge from "files-pipe/lib/deepmerge.js";
-
+import deepmerge from "files-pipe/dist/lib/deepmerge.js";
 import { fileURLToPath } from "url";
-
-import applyTo from "files-pipe/lib/apply-to.js";
-
+import applyTo from "files-pipe/dist/lib/apply-to.js";
 import type { AstroIntegration } from "astro";
-
 import type { Options } from "./options/index.js";
 
 export default (options: Options = {}): AstroIntegration => {

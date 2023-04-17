@@ -1,3 +1,7 @@
+## 1.1.32
+
+-   Cleanup
+
 ## 1.1.31
 
 -   Switches to the files-pipe component
