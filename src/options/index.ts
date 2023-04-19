@@ -1,11 +1,11 @@
 import deepmerge from "files-pipe/dist/lib/deepmerge.js";
-import defaults from "files-pipe/dist/options/index.js";
-import defaultsCRITTERS from "./critters.js";
-import type { CRITTERS } from "./critters.js";
 import type { Options as OptionsBase } from "files-pipe/dist/options/index.js";
+import defaults from "files-pipe/dist/options/index.js";
+import type { CRITTERS } from "./critters.js";
+import defaultsCRITTERS from "./critters.js";
 
 export interface Options extends OptionsBase {
-	[key: string]: unknown;
+	[key: string]: any;
 
 	critters?: boolean | CRITTERS;
 }
