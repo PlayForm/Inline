@@ -5,6 +5,7 @@ import type { CRITTERS } from "./critters.js";
 import defaultsCRITTERS from "./critters.js";
 
 export interface Options extends OptionsBase {
+	// rome-ignore lint/suspicious/noExplicitAny:
 	[key: string]: any;
 
 	critters?: boolean | CRITTERS;

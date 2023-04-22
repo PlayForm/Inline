@@ -1,6 +1,6 @@
 import type { Options as CrittersOptions } from "critters";
 export interface CRITTERS extends CrittersOptions {
-    [key: string]: unknown;
+    [key: string]: any;
 }
 declare const _default: {
     preload: string;

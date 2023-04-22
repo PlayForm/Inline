@@ -1,6 +1,6 @@
 {
 	"name": "astro-critters",
-	"version": "1.1.32",
+	"version": "1.1.33",
 	"type": "module",
 	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
 	"repository": {
@@ -24,15 +24,15 @@
 		"performance"
 	],
 	"scripts": {
-		"build": "lightrix build 'src/**/*.ts'"
+		"prepare": "lightrix build 'src/**/*.ts'"
 	},
 	"dependencies": {
 		"critters": "0.0.16",
-		"files-pipe": "0.0.2"
+		"files-pipe": "0.0.3"
 	},
 	"devDependencies": {
-		"@lightrix/config": "0.0.9",
-		"@lightrix/scripts": "1.0.0",
+		"@lightrix/config": "0.0.11",
+		"@lightrix/scripts": "1.0.2",
 		"astro": "2.3.0"
 	},
 	"publishConfig": {
