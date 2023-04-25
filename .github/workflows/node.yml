@@ -78,3 +78,11 @@ jobs:
                   cache-dependency-path: ./pnpm-lock.yaml
             - run: pnpm install
               working-directory: .
+
+            - run: pnpm run prepublishOnly
+              working-directory: .
+
+            - uses: actions/upload-artifact@v3.1.2
+              with:
+                  name: .-node-${{ matrix.node-version }}-dist
+                  path: ./dist

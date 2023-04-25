@@ -1,3 +1,7 @@
+## 1.1.34
+
+-   Bug fix
+
 ## 1.1.33
 
 -   Version with provenance
