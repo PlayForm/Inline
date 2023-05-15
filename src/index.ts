@@ -19,7 +19,7 @@ export default (options: Options = {}): AstroIntegration => {
 		}
 	}
 
-	options = deepmerge(defaults, options);
+	const _options = deepmerge(defaults, options);
 
 	const paths = new Set<optionPath>();
 
