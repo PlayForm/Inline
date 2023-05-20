@@ -1,7 +1,17 @@
 {
 	"compilerOptions": {
-		"outDir": "dist"
+		"module": "ES2022",
+		"target": "ES2021",
+		"strict": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"removeComments": true,
+		"allowJs": true,
+		"declaration": true,
+		"verbatimModuleSyntax": true,
+		"outDir": "./dist"
 	},
-	"extends": "@lightrix/config/base/ts",
-	"include": ["src"]
+	"include": ["src"],
 }

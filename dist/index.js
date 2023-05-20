@@ -1,1 +1,61 @@
-import p from"critters";import{files as c}from"files-pipe";import m from"files-pipe/dist/lib/apply-to.js";import a from"files-pipe/dist/lib/deepmerge.js";import{fileURLToPath as l}from"url";import n from"./options/index.js";var O=(t={})=>{for(const e in t)Object.prototype.hasOwnProperty.call(t,e)&&t[e]===!0&&(t[e]=n[e]);const d=a(n,t),i=new Set;if(typeof t.path<"u"&&(t.path instanceof Array||t.path instanceof Set))for(const e of t.path)i.add(e);return{name:"astro-critters",hooks:{"astro:build:done":async({dir:e})=>{if(i.size||i.add(e),!!t.critters)for(const s of i){const o=await m(s,r=>r instanceof URL?l(r):r),f=new p(a(t.critters,{path:o instanceof Map?o.keys().next().value:o,logLevel:(()=>{switch(t.logger){case 0:return"silent";case 1:return"silent";case 2:return"info";default:return"info"}})()}));await(await(await(await new c(t.logger).in(s)).by("**/*.html")).not(t.exclude)).pipe(a(n.pipe,{wrote:async r=>f.process(r.buffer.toString())}))}}}}};export{O as default};
+import Critters from "critters";
+import { glob } from "glob";
+import fs from "fs/promises";
+import { fileURLToPath } from "url";
+import defaults from "./options.js";
+import { Logger } from "./utils/logger.js";
+const processFiles = async (dir, options, paths, logger) => {
+    logger.info(`Inlining CSS via Critters`);
+    if (options.critters === false) {
+        logger.info(`Skipping critters due to config`);
+        return;
+    }
+    if (!paths.size) {
+        paths.add(fileURLToPath(dir));
+    }
+    for (const path of paths) {
+        const files = await glob(`${path}**/*.html`, {
+            ignore: options.exclude
+        });
+        const critters = new Critters({
+            ...options.critters,
+            path,
+            logger: {
+                trace: (msg) => logger.info(msg),
+                debug: (msg) => logger.info(msg),
+                info: (msg) => logger.info(msg),
+                warn: (msg) => logger.warn(msg),
+                error: (msg) => logger.error(msg),
+            },
+            logLevel: options.logger == 2
+                ? 'debug'
+                : options.logger == 1
+                    ? 'info'
+                    : 'warn'
+        });
+        for (const file of files) {
+            const html = await fs.readFile(file, 'utf-8');
+            const inlined = await critters.process(html);
+            const postProcessed = options.removeExternalStylesheets
+                ? inlined.replace(/(<link[^>]*?href="\/_astro\/.*?".*?>)/gm, '')
+                : inlined;
+            await fs.writeFile(file, postProcessed);
+        }
+        logger.success(`Processed ${files.length} files`);
+    }
+};
+export default (options = defaults) => {
+    const _options = Object.assign(defaults, options);
+    const paths = _options.path instanceof String
+        ? new Set([_options.path.toString()])
+        : typeof _options?.path?.[Symbol.iterator] === 'function'
+            ? new Set([..._options.path])
+            : new Set();
+    const logger = new Logger("astro-critters", _options.logger || 2);
+    return {
+        name: "astro-critters",
+        hooks: {
+            "astro:build:done": ({ dir }) => processFiles(dir, _options, paths, logger)
+        },
+    };
+};
