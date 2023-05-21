@@ -147,10 +147,10 @@ export default {
 	integrations: [
 		critters({
 			path: [
-				// inline dist
+				// Inline dist
 				"./dist",
 
-				// inline dist one more time into a different directory
+				// Inline dist one more time into a different directory
 				new Map([["./dist", "./dist-inlined"]]),
 			],
 		}),
