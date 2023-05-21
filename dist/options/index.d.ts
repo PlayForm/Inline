@@ -1,0 +1,8 @@
+import type { Options as OptionsBase } from "files-pipe/dist/options/index.js";
+import type { CRITTERS } from "./critters.js";
+export interface Options extends OptionsBase {
+    [key: string]: any;
+    critters?: boolean | CRITTERS;
+}
+declare const _default: Options;
+export default _default;
