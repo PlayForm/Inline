@@ -30,7 +30,7 @@
 		"@lightrix/config": "0.0.11",
 		"@lightrix/scripts": "1.0.3",
 		"critters": "0.0.16",
-		"files-pipe": "0.0.4"
+		"files-pipe": "0.0.5"
 	},
 	"devDependencies": {
 		"astro": "2.5.5"
