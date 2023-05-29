@@ -23,12 +23,12 @@ export default (options: Options = {}): AstroIntegration => {
 
 	const paths = new Set<optionPath>();
 
-	if (typeof options["path"] !== "undefined") {
+	if (typeof _options["path"] !== "undefined") {
 		if (
-			options["path"] instanceof Array ||
-			options["path"] instanceof Set
+			_options["path"] instanceof Array ||
+			_options["path"] instanceof Set
 		) {
-			for (const path of options["path"]) {
+			for (const path of _options["path"]) {
 				paths.add(path);
 			}
 		}
@@ -42,7 +42,7 @@ export default (options: Options = {}): AstroIntegration => {
 					paths.add(dir);
 				}
 
-				if (!options["critters"]) {
+				if (!_options["critters"]) {
 					return;
 				}
 
@@ -52,13 +52,13 @@ export default (options: Options = {}): AstroIntegration => {
 					);
 
 					const critters = new Critters(
-						deepmerge(options["critters"], {
+						deepmerge(_options["critters"], {
 							path:
 								_path instanceof Map
 									? _path.keys().next().value
 									: _path,
 							logLevel: (() => {
-								switch (options["logger"]) {
+								switch (_options["logger"]) {
 									case 0:
 										return "silent";
 
@@ -77,9 +77,9 @@ export default (options: Options = {}): AstroIntegration => {
 					await (
 						await (
 							await (
-								await new files(options["logger"]).in(path)
+								await new files(_options["logger"]).in(path)
 							).by("**/*.html")
-						).not(options["exclude"])
+						).not(_options["exclude"])
 					).pipe(
 						deepmerge(defaults["pipe"], {
 							wrote: async (ongoing) =>
