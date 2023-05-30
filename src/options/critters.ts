@@ -1,4 +1,3 @@
-// @ts-ignore
 import type { Options as CrittersOptions } from "critters";
 
 export interface CRITTERS extends CrittersOptions {
