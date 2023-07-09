@@ -24,7 +24,10 @@ export default (options: Options = {}): AstroIntegration => {
 	const paths = new Set<optionPath>();
 
 	if (typeof _options["path"] !== "undefined") {
-		if (_options["path"] instanceof Array || _options["path"] instanceof Set) {
+		if (
+			_options["path"] instanceof Array ||
+			_options["path"] instanceof Set
+		) {
 			for (const path of _options["path"]) {
 				paths.add(path);
 			}
@@ -45,12 +48,15 @@ export default (options: Options = {}): AstroIntegration => {
 
 				for (const path of paths) {
 					const _path = await applyTo(path, (url: URL | string) =>
-						url instanceof URL ? fileURLToPath(url) : url,
+						url instanceof URL ? fileURLToPath(url) : url
 					);
 
 					const critters = new Critters(
 						deepmerge(_options["critters"], {
-							path: _path instanceof Map ? _path.keys().next().value : _path,
+							path:
+								_path instanceof Map
+									? _path.keys().next().value
+									: _path,
 							logLevel: (() => {
 								switch (_options["logger"]) {
 									case 0:
@@ -65,7 +71,7 @@ export default (options: Options = {}): AstroIntegration => {
 										return "info";
 								}
 							})(),
-						} satisfies Options["critters"]),
+						} satisfies Options["critters"])
 					);
 
 					await (
@@ -78,7 +84,7 @@ export default (options: Options = {}): AstroIntegration => {
 						deepmerge(defaults["pipe"], {
 							wrote: async (ongoing) =>
 								critters.process(ongoing.buffer.toString()),
-						} satisfies executions),
+						} satisfies executions)
 					);
 				}
 			},

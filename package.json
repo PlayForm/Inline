@@ -1,20 +1,8 @@
 {
 	"name": "astro-critters",
 	"version": "1.1.39",
-	"type": "module",
-	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/astro-community/astro-critters.git"
-	},
-	"homepage": "https://github.com/astro-community/astro-critters#readme",
-	"bugs": {
-		"url": "https://github.com/astro-community/astro-critters/issues"
-	},
-	"license": "MIT",
 	"private": false,
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
 	"keywords": [
 		"astro-integration",
 		"astro-component",
@@ -23,6 +11,18 @@
 		"css",
 		"performance"
 	],
+	"homepage": "https://github.com/astro-community/astro-critters#readme",
+	"bugs": {
+		"url": "https://github.com/astro-community/astro-critters/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/astro-community/astro-critters.git"
+	},
+	"license": "MIT",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"scripts": {
 		"prepublishOnly": "lightrix build 'src/**/*.ts'"
 	},
