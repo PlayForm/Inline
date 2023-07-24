@@ -28,11 +28,11 @@
 	},
 	"dependencies": {
 		"critters": "0.0.19",
-		"files-pipe": "0.0.7"
+		"files-pipe": "0.0.8"
 	},
 	"devDependencies": {
 		"@lightrix/config": "0.0.11",
-		"@lightrix/scripts": "1.0.6",
+		"@lightrix/scripts": "1.0.7",
 		"astro": "2.9.1"
 	},
 	"publishConfig": {
