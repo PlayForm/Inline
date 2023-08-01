@@ -1,8 +1,8 @@
 import deepmerge from "files-pipe/dist/lib/deepmerge.js";
-import type { Options as OptionsBase } from "files-pipe/dist/options/index.js";
-import defaults from "files-pipe/dist/options/index.js";
-import type { CRITTERS } from "./critters.js";
-import defaultsCRITTERS from "./critters.js";
+import type { Options as OptionsBase } from "files-pipe/dist/options/Index.js";
+import defaults from "files-pipe/dist/options/Index.js";
+import type { CRITTERS } from "./Critters.js";
+import defaultsCRITTERS from "./Critters.js";
 
 export interface Options extends OptionsBase {
 	// rome-ignore lint/suspicious/noExplicitAny:

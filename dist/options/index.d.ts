@@ -1,5 +1,5 @@
-import type { Options as OptionsBase } from "files-pipe/dist/options/index.js";
-import type { CRITTERS } from "./critters.js";
+import type { Options as OptionsBase } from "files-pipe/dist/options/Index.js";
+import type { CRITTERS } from "./Critters.js";
 export interface Options extends OptionsBase {
     [key: string]: any;
     critters?: boolean | CRITTERS;

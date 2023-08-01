@@ -4,10 +4,10 @@ import Critters from "critters";
 import { files } from "files-pipe";
 import applyTo from "files-pipe/dist/lib/apply-to.js";
 import deepmerge from "files-pipe/dist/lib/deepmerge.js";
-import type { executions, optionPath } from "files-pipe/dist/options/index.js";
+import type { executions, optionPath } from "files-pipe/dist/options/Index.js";
 import { fileURLToPath } from "url";
-import type { Options } from "./options/index.js";
-import defaults from "./options/index.js";
+import type { Options } from "./options/Index.js";
+import defaults from "./options/Index.js";
 
 export default (options: Options = {}): AstroIntegration => {
 	for (const option in options) {
