@@ -2,7 +2,7 @@ import type { AstroIntegration } from "astro";
 // @ts-ignore
 import Critters from "critters";
 import { files } from "files-pipe";
-import applyTo from "files-pipe/dist/lib/apply-to.js";
+import applyTo from "files-pipe/dist/lib/ApplyTo.js";
 import deepmerge from "files-pipe/dist/lib/deepmerge.js";
 import type { executions, optionPath } from "files-pipe/dist/options/Index.js";
 import { fileURLToPath } from "url";
