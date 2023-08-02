@@ -80,9 +80,9 @@ export default (options: Options = {}): AstroIntegration => {
 								await new files(_options["logger"]).in(path)
 							).by("**/*.html")
 						).not(_options["exclude"])
-					).pipe(
-						deepmerge(defaults["pipe"], {
-							wrote: async (ongoing) =>
+					).Pipe(
+						deepmerge(defaults["Pipe"], {
+							Wrote: async (ongoing) =>
 								critters.process(ongoing.buffer.toString()),
 						} satisfies executions)
 					);
