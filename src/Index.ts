@@ -78,7 +78,7 @@ export default (options: Options = {}): AstroIntegration => {
 						await (
 							await (
 								await new files(_options["logger"]).in(path)
-							).by("**/*.html")
+							).By("**/*.html")
 						).not(_options["exclude"])
 					).Pipe(
 						deepmerge(defaults["Pipe"], {
