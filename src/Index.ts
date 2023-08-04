@@ -1,35 +1,35 @@
 import type { AstroIntegration } from "astro";
 // @ts-ignore
 import Critters from "critters";
-import { files } from "files-pipe";
-import applyTo from "files-pipe/dist/lib/ApplyTo.js";
-import deepmerge from "files-pipe/dist/lib/deepmerge.js";
+import { Files } from "files-pipe";
+import Apply from "files-pipe/dist/lib/Apply.js";
+import Merge from "files-pipe/dist/lib/Merge.js";
 import type { executions, optionPath } from "files-pipe/dist/options/Index.js";
-import { fileURLToPath } from "url";
+import { fileURLToPath as Path } from "url";
 import type { Options } from "./options/Index.js";
-import defaults from "./options/Index.js";
+import Defaults from "./options/Index.js";
 
-export default (options: Options = {}): AstroIntegration => {
-	for (const option in options) {
+export default (Options: Options = {}): AstroIntegration => {
+	for (const Option in Options) {
 		if (
-			Object.prototype.hasOwnProperty.call(options, option) &&
-			options[option] === true
+			Object.prototype.hasOwnProperty.call(Options, Option) &&
+			Options[Option] === true
 		) {
-			options[option] = defaults[option];
+			Options[Option] = Defaults[Option];
 		}
 	}
 
-	const _options = deepmerge(defaults, options);
+	const _Options = Merge(Defaults, Options);
 
-	const paths = new Set<optionPath>();
+	const Paths = new Set<optionPath>();
 
-	if (typeof _options["path"] !== "undefined") {
+	if (typeof _Options["path"] !== "undefined") {
 		if (
-			_options["path"] instanceof Array ||
-			_options["path"] instanceof Set
+			_Options["path"] instanceof Array ||
+			_Options["path"] instanceof Set
 		) {
-			for (const path of _options["path"]) {
-				paths.add(path);
+			for (const Path of _Options["path"]) {
+				Paths.add(Path);
 			}
 		}
 	}
@@ -38,27 +38,27 @@ export default (options: Options = {}): AstroIntegration => {
 		name: "astro-critters",
 		hooks: {
 			"astro:build:done": async ({ dir }) => {
-				if (!paths.size) {
-					paths.add(dir);
+				if (!Paths.size) {
+					Paths.add(dir);
 				}
 
-				if (!_options["critters"]) {
+				if (!_Options["critters"]) {
 					return;
 				}
 
-				for (const path of paths) {
-					const _path = await applyTo(path, (url: URL | string) =>
-						url instanceof URL ? fileURLToPath(url) : url
+				for (const _Path of Paths) {
+					const __Path = await Apply(_Path, (url: URL | string) =>
+						url instanceof URL ? Path(url) : url
 					);
 
 					const critters = new Critters(
-						deepmerge(_options["critters"], {
+						Merge(_Options["critters"], {
 							path:
-								_path instanceof Map
-									? _path.keys().next().value
-									: _path,
+								__Path instanceof Map
+									? __Path.keys().next().value
+									: __Path,
 							logLevel: (() => {
-								switch (_options["logger"]) {
+								switch (_Options["logger"]) {
 									case 0:
 										return "silent";
 
@@ -71,17 +71,17 @@ export default (options: Options = {}): AstroIntegration => {
 										return "info";
 								}
 							})(),
-						} satisfies Options["critters"])
+						} satisfies Options["Critters"])
 					);
 
 					await (
 						await (
 							await (
-								await new files(_options["logger"]).in(path)
+								await new Files(_Options["logger"]).in(_Path)
 							).By("**/*.html")
-						).not(_options["exclude"])
+						).not(_Options["exclude"])
 					).Pipe(
-						deepmerge(defaults["Pipe"], {
+						Merge(Defaults["Pipe"], {
 							Wrote: async (ongoing) =>
 								critters.process(ongoing.buffer.toString()),
 						} satisfies executions)
