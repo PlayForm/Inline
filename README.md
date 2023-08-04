@@ -94,10 +94,10 @@ If your path is different than `dist` be sure to update it accordingly:
 import critters from "astro-critters";
 
 export default {
-	outDir: "./build",
+	outDir: "./Target",
 	integrations: [
 		critters({
-			path: "./build",
+			path: "./Target",
 		}),
 	],
 };
