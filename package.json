@@ -27,7 +27,7 @@
 		"prepublishOnly": "lightrix build 'src/**/*.ts'"
 	},
 	"dependencies": {
-		"critters": "0.0.19",
+		"critters": "0.0.20",
 		"files-pipe": "0.1.0"
 	},
 	"devDependencies": {
