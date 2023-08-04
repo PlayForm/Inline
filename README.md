@@ -114,7 +114,7 @@ import critters from "astro-critters";
 export default {
 	integrations: [
 		critters({
-			path: ["./build", "./dist"],
+			path: ["./Target", "./Build", "./dist"],
 		}),
 	],
 };
@@ -147,10 +147,10 @@ export default {
 	integrations: [
 		critters({
 			path: [
-				// Inline dist
-				"./dist",
-				// Inline dist one more time into a different directory
-				new Map([["./dist", "./dist-inlined"]]),
+				// Inline Target
+				"./Target",
+				// Inline Target one more time into a different directory
+				new Map([["./Target", "./TargetInline"]]),
 			],
 		}),
 	],
@@ -171,7 +171,7 @@ export default {
 		critters({
 			exclude: [
 				"my-awesome.html",
-				(file: string) => file === "./dist/index.html",
+				(file: string) => file === "./Target/index.html",
 			],
 		}),
 	],

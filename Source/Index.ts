@@ -2,9 +2,9 @@ import type { AstroIntegration } from "astro";
 // @ts-ignore
 import Critters from "critters";
 import { Files } from "files-pipe";
-import Apply from "files-pipe/dist/Lib/Apply.js";
-import Merge from "files-pipe/dist/Lib/Merge.js";
-import type { executions, optionPath } from "files-pipe/dist/options/Index.js";
+import Apply from "files-pipe/Target/Library//Apply.js";
+import Merge from "files-pipe/Target/Library//Merge.js";
+import type { executions, optionPath } from "files-pipe/Target/Options/Index.js";
 import { fileURLToPath as Path } from "url";
 import type { Options } from "./options/Index.js";
 import Defaults from "./options/Index.js";
