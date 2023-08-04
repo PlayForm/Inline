@@ -149,7 +149,6 @@ export default {
 			path: [
 				// Inline dist
 				"./dist",
-
 				// Inline dist one more time into a different directory
 				new Map([["./dist", "./dist-inlined"]]),
 			],
