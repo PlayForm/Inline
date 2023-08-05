@@ -59,10 +59,10 @@ Then, apply this integration to your `astro.config.*` file using the
 `integrations` property:
 
 ```ts
-import critters from "astro-critters";
+import Critters from "astro-critters";
 
 export default {
-	integrations: [critters()],
+	integrations: [Critters()],
 };
 ```
 
@@ -77,11 +77,11 @@ You can override any of the default options from the configuration of:
 or disable them entirely:
 
 ```ts
-import critters from "astro-critters";
+import Critters from "astro-critters";
 
 export default {
 	integrations: [
-		critters({
+		Critters({
 			critters: false,
 		}),
 	],
@@ -91,12 +91,12 @@ export default {
 If your path is different than the Astro `outDir` be sure to update it accordingly:
 
 ```ts
-import critters from "astro-critters";
+import Critters from "astro-critters";
 
 export default {
 	outDir: "./Target",
 	integrations: [
-		critters({
+		Critters({
 			path: "./Target",
 		}),
 	],
@@ -109,11 +109,11 @@ variable.
 **`astro.config.ts`**
 
 ```ts
-import critters from "astro-critters";
+import Critters from "astro-critters";
 
 export default {
 	integrations: [
-		critters({
+		Critters({
 			path: ["./Target", "./Build"],
 		}),
 	],
@@ -125,11 +125,11 @@ You can also provide a map of paths for different input output directories.
 **`astro.config.ts`**
 
 ```ts
-import critters from "astro-critters";
+import Critters from "astro-critters";
 
 export default {
 	integrations: [
-		critters({
+		Critters({
 			path: new Map([["./input", "./output"]]),
 		}),
 	],
@@ -141,11 +141,11 @@ Or an array of the two.
 **`astro.config.ts`**
 
 ```ts
-import critters from "astro-critters";
+import Critters from "astro-critters";
 
 export default {
 	integrations: [
-		critters({
+		Critters({
 			path: [
 				// Inline Target
 				"./Target",
@@ -164,11 +164,11 @@ file names.
 **`astro.config.ts`**
 
 ```ts
-import critters from "astro-critters";
+import Critters from "astro-critters";
 
 export default {
 	integrations: [
-		critters({
+		Critters({
 			exclude: [
 				"my-awesome.html",
 				(file: string) => file === "./Target/index.html",
@@ -181,11 +181,11 @@ export default {
 Set `logger` to `0` if you do not want to see debug messages. Default is `2`.
 
 ```ts
-import critters from "astro-critters";
+import Critters from "astro-critters";
 
 export default {
 	integrations: [
-		critters({
+		Critters({
 			logger: 0,
 		}),
 	],
