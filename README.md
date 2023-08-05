@@ -88,7 +88,7 @@ export default {
 };
 ```
 
-If your path is different than `dist` be sure to update it accordingly:
+If your path is different than the Astro `outDir` be sure to update it accordingly:
 
 ```ts
 import critters from "astro-critters";
@@ -114,7 +114,7 @@ import critters from "astro-critters";
 export default {
 	integrations: [
 		critters({
-			path: ["./Target", "./Build", "./dist"],
+			path: ["./Target", "./Build"],
 		}),
 	],
 };

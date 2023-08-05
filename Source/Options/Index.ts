@@ -1,4 +1,4 @@
-import Merge from "files-pipe/Target/Library//Merge.js";
+import Merge from "files-pipe/Target/Library/Merge.js";
 import type { Options as OptionsBase } from "files-pipe/Target/Options/Index.js";
 import Defaults from "files-pipe/Target/Options/Index.js";
 import type { CRITTERS } from "./Critters.js";
