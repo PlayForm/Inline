@@ -1,5 +1,5 @@
 import Merge from "files-pipe/Target/Library/Merge.js";
-import type { Options as _Option } from "files-pipe/Target/Option/Index.js";
+import type { Option as _Option } from "files-pipe/Target/Option/Index.js";
 import Default from "files-pipe/Target/Option/Index.js";
 import type { Critters } from "./Critters.js";
 import _Critters from "./Critters.js";

@@ -1,5 +1,5 @@
-import type { Options } from "critters";
-export interface Critters extends Options {
+import type { Options as Option } from "critters";
+export interface Critters extends Option {
     [key: string]: any;
 }
 declare const _default: {
