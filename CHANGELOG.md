@@ -1,3 +1,23 @@
+## 2.0.5
+
+-   Cleanup
+
+## 2.0.4
+
+-   Cleanup
+
+## 2.0.3
+
+-   Cleanup
+
+## 2.0.2
+
+-   Cleanup
+
+## 2.0.1
+
+-   Restoration
+
 ## 1.1.40
 
 -   Cleanup

@@ -1,13 +1,16 @@
 import type { AstroIntegration } from "astro";
+import { fileURLToPath as __Path } from "url";
+
 // @ts-ignore
 import Critters from "critters";
+
 import { Files } from "files-pipe";
 import Apply from "files-pipe/Target/Library/Apply.js";
 import Merge from "files-pipe/Target/Library/Merge.js";
-import type { executions, optionPath } from "files-pipe/Target/Options/Index.js";
-import { fileURLToPath as Path } from "url";
-import type { Options } from "./options/Index.js";
-import Defaults from "./options/Index.js";
+import type { Execution, Path } from "files-pipe/Target/Option/Index.js";
+
+import type { Options } from "./Option/Index.js";
+import Default from "./Option/Index.js";
 
 export default (Options: Options = {}): AstroIntegration => {
 	for (const Option in Options) {
@@ -15,20 +18,20 @@ export default (Options: Options = {}): AstroIntegration => {
 			Object.prototype.hasOwnProperty.call(Options, Option) &&
 			Options[Option] === true
 		) {
-			Options[Option] = Defaults[Option];
+			Options[Option] = Default[Option];
 		}
 	}
 
-	const _Options = Merge(Defaults, Options);
+	const _Options = Merge(Default, Options);
 
-	const Paths = new Set<optionPath>();
+	const Paths = new Set<Path>();
 
-	if (typeof _Options["path"] !== "undefined") {
+	if (typeof _Options["Path"] !== "undefined") {
 		if (
-			_Options["path"] instanceof Array ||
-			_Options["path"] instanceof Set
+			_Options["Path"] instanceof Array ||
+			_Options["Path"] instanceof Set
 		) {
-			for (const Path of _Options["path"]) {
+			for (const Path of _Options["Path"]) {
 				Paths.add(Path);
 			}
 		}
@@ -37,54 +40,52 @@ export default (Options: Options = {}): AstroIntegration => {
 	return {
 		name: "astro-critters",
 		hooks: {
-			"astro:build:done": async ({ dir }) => {
+			"astro:build:done": async ({ dir: Dir }) => {
 				if (!Paths.size) {
-					Paths.add(dir);
+					Paths.add(Dir);
 				}
 
-				if (!_Options["critters"]) {
+				if (!_Options["Critters"]) {
 					return;
 				}
 
-				for (const _Path of Paths) {
-					const __Path = await Apply(_Path, (url: URL | string) =>
-						url instanceof URL ? Path(url) : url
-					);
-
-					const critters = new Critters(
-						Merge(_Options["critters"], {
-							path:
-								__Path instanceof Map
-									? __Path.keys().next().value
-									: __Path,
-							logLevel: (() => {
-								switch (_Options["logger"]) {
-									case 0:
-										return "silent";
-
-									case 1:
-										return "silent";
-
-									case 2:
-										return "info";
-									default:
-										return "info";
-								}
-							})(),
-						} satisfies Options["Critters"])
+				for (const Path of Paths) {
+					const _Path = await Apply(
+						(_URL: URL | string) =>
+							_URL instanceof URL ? __Path(_URL) : _URL,
+						Path
 					);
 
 					await (
 						await (
 							await (
-								await new Files(_Options["logger"]).in(_Path)
+								await new Files(_Options["Logger"]).In(Path)
 							).By("**/*.html")
-						).not(_Options["exclude"])
+						).Not(_Options["Exclude"])
 					).Pipe(
-						Merge(Defaults["Pipe"], {
-							Wrote: async (ongoing) =>
-								critters.process(ongoing.buffer.toString()),
-						} satisfies executions)
+						Merge(Default["Pipe"], {
+							Wrote: async (On) =>
+								new Critters(
+									Merge(_Options["Critters"], {
+										path:
+											_Path instanceof Map
+												? _Path.keys().next().value
+												: _Path,
+										logLevel: (() => {
+											switch (_Options["Logger"]) {
+												case 0:
+													return "silent";
+												case 1:
+													return "silent";
+												case 2:
+													return "info";
+												default:
+													return "info";
+											}
+										})(),
+									} satisfies Options["Critters"])
+								).process(On.Buffer.toString()),
+						} satisfies Execution)
 					);
 				}
 			},
