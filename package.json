@@ -19,6 +19,7 @@
 		"type": "git",
 		"url": "git+https://github.com/astro-community/AstroCritters.git"
 	},
+	"license": "MIT",
 	"type": "module",
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
