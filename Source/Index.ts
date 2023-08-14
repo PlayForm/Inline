@@ -9,29 +9,29 @@ import Apply from "files-pipe/Target/Library/Apply.js";
 import Merge from "files-pipe/Target/Library/Merge.js";
 import type { Execution, Path } from "files-pipe/Target/Option/Index.js";
 
-import type { Option as Option } from "./Option/Index.js";
+import type { Option } from "./Option/Index.js";
 import Default from "./Option/Index.js";
 
-export default (Options: Option = {}): AstroIntegration => {
-	for (const Option in Options) {
+export default (_Option: Option = {}): AstroIntegration => {
+	for (const Option in _Option) {
 		if (
-			Object.prototype.hasOwnProperty.call(Options, Option) &&
-			Options[Option] === true
+			Object.prototype.hasOwnProperty.call(_Option, Option) &&
+			_Option[Option] === true
 		) {
-			Options[Option] = Default[Option];
+			_Option[Option] = Default[Option];
 		}
 	}
 
-	const _Options = Merge(Default, Options);
+	const __Option = Merge(Default, _Option);
 
 	const Paths = new Set<Path>();
 
-	if (typeof _Options["Path"] !== "undefined") {
+	if (typeof __Option["Path"] !== "undefined") {
 		if (
-			_Options["Path"] instanceof Array ||
-			_Options["Path"] instanceof Set
+			__Option["Path"] instanceof Array ||
+			__Option["Path"] instanceof Set
 		) {
-			for (const Path of _Options["Path"]) {
+			for (const Path of __Option["Path"]) {
 				Paths.add(Path);
 			}
 		}
@@ -45,7 +45,7 @@ export default (Options: Option = {}): AstroIntegration => {
 					Paths.add(Dir);
 				}
 
-				if (!_Options["Critters"]) {
+				if (!__Option["Critters"]) {
 					return;
 				}
 
@@ -59,20 +59,20 @@ export default (Options: Option = {}): AstroIntegration => {
 					await (
 						await (
 							await (
-								await new Files(_Options["Logger"]).In(Path)
+								await new Files(__Option["Logger"]).In(Path)
 							).By("**/*.html")
-						).Not(_Options["Exclude"])
+						).Not(__Option["Exclude"])
 					).Pipe(
 						Merge(Default["Pipe"], {
 							Wrote: async (On) =>
 								new Critters(
-									Merge(_Options["Critters"], {
+									Merge(__Option["Critters"], {
 										path:
 											_Path instanceof Map
 												? _Path.keys().next().value
 												: _Path,
 										logLevel: (() => {
-											switch (_Options["Logger"]) {
+											switch (__Option["Logger"]) {
 												case 0:
 													return "silent";
 												case 1:

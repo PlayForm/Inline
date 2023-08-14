@@ -1,10 +1,10 @@
 import Merge from "files-pipe/Target/Library/Merge.js";
-import type { Options as _Options } from "files-pipe/Target/Option/Index.js";
+import type { Options as _Option } from "files-pipe/Target/Option/Index.js";
 import Default from "files-pipe/Target/Option/Index.js";
 import type { Critters } from "./Critters.js";
 import _Critters from "./Critters.js";
 
-export interface Option extends _Options {
+export interface Option extends _Option {
 	// rome-ignore lint/suspicious/noExplicitAny:
 	[key: string]: any;
 

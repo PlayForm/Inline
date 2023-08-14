@@ -1,7 +1,7 @@
 // @ts-ignore
-import type { Options } from "critters";
+import type { Options as Option } from "critters";
 
-export interface Critters extends Options {
+export interface Critters extends Option {
 	// rome-ignore lint/suspicious/noExplicitAny:
 	[key: string]: any;
 }
