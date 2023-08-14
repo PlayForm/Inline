@@ -27,10 +27,10 @@
 	},
 	"dependencies": {
 		"critters": "0.0.20",
-		"files-pipe": "2.0.9"
+		"files-pipe": "2.0.12"
 	},
 	"devDependencies": {
 		"astro": "2.10.7",
-		"typescript-esbuild": "0.1.8"
+		"typescript-esbuild": "0.1.11"
 	}
 }
