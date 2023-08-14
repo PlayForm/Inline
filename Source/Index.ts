@@ -9,10 +9,10 @@ import Apply from "files-pipe/Target/Library/Apply.js";
 import Merge from "files-pipe/Target/Library/Merge.js";
 import type { Execution, Path } from "files-pipe/Target/Option/Index.js";
 
-import type { Options } from "./Option/Index.js";
+import type { Option as Option } from "./Option/Index.js";
 import Default from "./Option/Index.js";
 
-export default (Options: Options = {}): AstroIntegration => {
+export default (Options: Option = {}): AstroIntegration => {
 	for (const Option in Options) {
 		if (
 			Object.prototype.hasOwnProperty.call(Options, Option) &&
@@ -83,7 +83,7 @@ export default (Options: Options = {}): AstroIntegration => {
 													return "info";
 											}
 										})(),
-									} satisfies Options["Critters"])
+									} satisfies Option["Critters"])
 								).process(On.Buffer.toString()),
 						} satisfies Execution)
 					);
