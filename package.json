@@ -1,6 +1,6 @@
 {
 	"name": "astro-critters",
-	"version": "2.0.7",
+	"version": "2.0.8",
 	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
 	"keywords": [
 		"astro-integration",
