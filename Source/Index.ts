@@ -4,10 +4,8 @@ import { fileURLToPath as __Path } from "url";
 // @ts-ignore
 import Critters from "critters";
 
-import { Files } from "files-pipe";
-import Apply from "files-pipe/Target/Library/Apply.js";
-import Merge from "files-pipe/Target/Library/Merge.js";
-import type { Execution, Path } from "files-pipe/Target/Option/Index.js";
+import type { Execution, Path } from "files-pipe";
+import { Apply, Files, Merge } from "files-pipe";
 
 import type { Option } from "./Option/Index.js";
 import Default from "./Option/Index.js";
