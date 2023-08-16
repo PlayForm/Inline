@@ -10,7 +10,7 @@ rest.
 
 > **Note**
 >
-> AstroCritters will not inline your requests, only your statically generated
+> `AstroCritters` will not inline your requests, only your statically generated
 > build and pre-rendered routes.
 
 ## Installation
@@ -26,7 +26,7 @@ command will:
 1. (Optionally) Install all necessary dependencies and peer dependencies
 2. (Also optionally) Update your `astro.config.*` file to apply this integration
 
-To install AstroCritters, run the following from your project directory and
+To install `AstroCritters`, run the following from your project directory and
 follow the prompts:
 
 Using NPM:
@@ -49,7 +49,7 @@ pnpx astro add astro-critters
 
 ### Install dependencies manually
 
-First, install the AstroCritters integration like so:
+First, install the `AstroCritters` integration like so:
 
 ```
 npm install -D -E astro-critters
