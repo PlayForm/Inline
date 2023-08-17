@@ -1,6 +1,7 @@
 {
 	"name": "astro-critters",
 	"version": "2.0.10",
+	"private": "false",
 	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
 	"keywords": [
 		"astro-integration",
@@ -20,6 +21,11 @@
 		"url": "git+https://github.com/astro-community/AstroCritters.git"
 	},
 	"license": "MIT",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
 	"type": "module",
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
@@ -33,5 +39,8 @@
 	"devDependencies": {
 		"astro": "2.10.9",
 		"typescript-esbuild": "0.1.13"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
