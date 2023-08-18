@@ -34,11 +34,11 @@
 	},
 	"dependencies": {
 		"critters": "0.0.20",
-		"files-pipe": "2.0.15"
+		"files-pipe": "2.0.16"
 	},
 	"devDependencies": {
 		"astro": "2.10.9",
-		"typescript-esbuild": "0.1.13"
+		"typescript-esbuild": "0.1.14"
 	},
 	"publishConfig": {
 		"access": "public"
