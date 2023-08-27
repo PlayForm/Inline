@@ -4,7 +4,7 @@ import { fileURLToPath as __Path } from "url";
 // @ts-ignore
 import Critters from "critters";
 
-import type { Execution, Path } from "files-pipe";
+import type { Action, Path } from "files-pipe";
 import { Apply, Files, Merge } from "files-pipe";
 
 import type { Option } from "./Option/Index.js";
@@ -83,7 +83,7 @@ export default (_Option: Option = {}): AstroIntegration => {
 										})(),
 									} satisfies Option["Critters"])
 								).process(On.Buffer.toString()),
-						} satisfies Execution)
+						} satisfies Action)
 					);
 				}
 			},
