@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"critters": "0.0.20",
-		"files-pipe": "2.0.17"
+		"files-pipe": "2.0.18"
 	},
 	"devDependencies": {
 		"astro": "2.10.15",
