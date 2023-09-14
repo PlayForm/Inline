@@ -12,7 +12,7 @@ export interface Option extends _Option {
 
 export default Merge(Default, {
 	Critters: _Critters,
-	Pipe: {
+	Action: {
 		Failed: async (On) => `Error: Cannot inline file ${On.Input}!`,
 		Fulfilled: async (Plan) =>
 			Plan.Files > 0

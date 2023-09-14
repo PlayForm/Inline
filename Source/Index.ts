@@ -61,7 +61,7 @@ export default (_Option: Option = {}): AstroIntegration => {
 							).By("**/*.html")
 						).Not(__Option["Exclude"])
 					).Pipe(
-						Merge(Default["Pipe"], {
+						Merge(Default["Action"], {
 							Wrote: async (On) =>
 								new Critters(
 									Merge(__Option["Critters"], {
