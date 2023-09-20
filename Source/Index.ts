@@ -62,7 +62,7 @@ export default (_Option: Option = {}): AstroIntegration => {
 						).Not(__Option["Exclude"])
 					).Pipe(
 						Merge(Default["Action"], {
-							Wrote: async (Cache, On) =>
+							Wrote: async (On) =>
 								new Critters(
 									Merge(__Option["Critters"], {
 										path:
