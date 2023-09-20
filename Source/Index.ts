@@ -1,14 +1,14 @@
-import type { AstroIntegration } from "astro";
-import { fileURLToPath as __Path } from "url";
+import type { Option } from "./Option/Index.js";
 
+import type { AstroIntegration } from "astro";
+import type { Action, Path } from "files-pipe";
+
+import Default from "./Option/Index.js";
+
+import { fileURLToPath as __Path } from "url";
 // @ts-ignore
 import Critters from "critters";
-
-import type { Action, Path } from "files-pipe";
-import { Apply, Files, Merge } from "files-pipe";
-
-import type { Option } from "./Option/Index.js";
-import Default from "./Option/Index.js";
+import Files, { Apply, Merge } from "files-pipe";
 
 export default (_Option: Option = {}): AstroIntegration => {
 	for (const Option in _Option) {
@@ -62,7 +62,7 @@ export default (_Option: Option = {}): AstroIntegration => {
 						).Not(__Option["Exclude"])
 					).Pipe(
 						Merge(Default["Action"], {
-							Wrote: async (On) =>
+							Wrote: async (Cache, On) =>
 								new Critters(
 									Merge(__Option["Critters"], {
 										path:
