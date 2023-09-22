@@ -1,8 +1,8 @@
+import type { Type as Critters } from "./Critters.js";
 import type { Option as _Option } from "files-pipe";
-import type { Critters } from "./Critters.js";
-export interface Option extends _Option {
+export interface Type extends _Option {
     [key: string]: any;
     Critters?: boolean | Critters;
 }
-declare const _default: Option;
+declare const _default: Type;
 export default _default;

@@ -1,4 +1,4 @@
-import type { Option } from "./Option/Index.js";
+import type { Type } from "./Option/Index.js";
 
 import type { AstroIntegration } from "astro";
 import type { Action, Path } from "files-pipe";
@@ -10,7 +10,7 @@ import { fileURLToPath as __Path } from "url";
 import Critters from "critters";
 import Files, { Apply, Merge } from "files-pipe";
 
-export default (_Option: Option = {}): AstroIntegration => {
+export default (_Option: Type = {}): AstroIntegration => {
 	for (const Option in _Option) {
 		if (
 			Object.prototype.hasOwnProperty.call(_Option, Option) &&
@@ -84,9 +84,9 @@ export default (_Option: Option = {}): AstroIntegration => {
 													return "info";
 											}
 										})(),
-									} satisfies Option["Critters"])
+									} satisfies Type["Critters"]) as Type["Critters"]
 								).process(On.Buffer.toString()),
-						} satisfies Action)
+						} satisfies Action) as Action
 					);
 				}
 			},

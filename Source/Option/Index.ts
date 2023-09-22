@@ -1,9 +1,12 @@
+import type { Type as Critters } from "./Critters.js";
+
 import type { Option as _Option } from "files-pipe";
-import { Default, Merge } from "files-pipe";
-import type { Critters } from "./Critters.js";
+
 import _Critters from "./Critters.js";
 
-export interface Option extends _Option {
+import { Default, Merge } from "files-pipe";
+
+export interface Type extends _Option {
 	// rome-ignore lint/suspicious/noExplicitAny:
 	[key: string]: any;
 
@@ -22,4 +25,4 @@ export default Merge(Default, {
 				: false,
 		Accomplished: false,
 	},
-} satisfies Option) as Option;
+} satisfies Type) as Type;

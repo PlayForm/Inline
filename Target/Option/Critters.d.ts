@@ -1,11 +1,6 @@
 import type { Options as Option } from "critters";
-export interface Critters extends Option {
+export interface Type extends Option {
     [key: string]: any;
 }
-declare const _default: {
-    preload: string;
-    inlineFonts: boolean;
-    compress: boolean;
-    pruneSource: boolean;
-};
+declare const _default: Type;
 export default _default;
