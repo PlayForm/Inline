@@ -5,10 +5,11 @@ import type { Action, Path } from "files-pipe";
 
 import Default from "./Option/Index.js";
 
+import Files, { Apply, Merge } from "files-pipe";
+
 import { fileURLToPath as __Path } from "url";
 // @ts-ignore
 import Critters from "critters";
-import Files, { Apply, Merge } from "files-pipe";
 
 export default (_Option: Type = {}): AstroIntegration => {
 	for (const Option in _Option) {
