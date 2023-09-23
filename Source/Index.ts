@@ -1,17 +1,15 @@
-import type { Type } from "./Option/Index.js";
+import type Option from "./Interface/Option.js";
+
+import type Action from "files-pipe/Target/Interface/Action.js";
+import type Path from "files-pipe/Target/Interface/Path.js";
 
 import type { AstroIntegration } from "astro";
-import type { Action, Path } from "files-pipe";
 
-import Files, { Apply, Merge } from "files-pipe";
+export const { default: Default } = await import("./Object/Option.js");
 
-import { fileURLToPath as __Path } from "url";
-// @ts-ignore
-import Critters from "critters";
+export const { default: Merge } = await import("files-pipe/Target/Fn/Merge.js");
 
-export const Default = await import("./Option/Index.js");
-
-export default (_Option: Type = {}): AstroIntegration => {
+export default (_Option: Option = {}): AstroIntegration => {
 	for (const Option in _Option) {
 		if (
 			Object.prototype.hasOwnProperty.call(_Option, Option) &&
@@ -49,16 +47,20 @@ export default (_Option: Type = {}): AstroIntegration => {
 				}
 
 				for (const Path of Paths) {
-					const _Path = await Apply(
-						(_URL: URL | string) =>
-							_URL instanceof URL ? __Path(_URL) : _URL,
+					const _Path = await (
+						await import("files-pipe/Target/Fn/Apply.js")
+					).default(
+						async (_URL: URL | string) =>
+							_URL instanceof URL
+								? (await import("url")).fileURLToPath(_URL)
+								: _URL,
 						Path
 					);
 
 					await (
 						await (
 							await (
-								await new Files(
+								await new (await import("files-pipe")).default(
 									__Option["Cache"],
 									__Option["Logger"]
 								).In(Path)
@@ -67,7 +69,8 @@ export default (_Option: Type = {}): AstroIntegration => {
 					).Pipe(
 						Merge(Default["Action"], {
 							Wrote: async (On) =>
-								new Critters(
+								// @ts-expect-error
+								new (await import("critters"))(
 									Merge(__Option["Critters"], {
 										path:
 											_Path instanceof Map
@@ -85,7 +88,7 @@ export default (_Option: Type = {}): AstroIntegration => {
 													return "info";
 											}
 										})(),
-									} satisfies Type["Critters"]) as Type["Critters"]
+									} satisfies Option["Critters"]) as Option["Critters"]
 								).process(On.Buffer.toString()),
 						} satisfies Action) as Action
 					);
