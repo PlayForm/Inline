@@ -25,4 +25,4 @@ export default Merge(Default, {
 				: false,
 		Accomplished: false,
 	},
-} satisfies Type) as Type;
+} satisfies Type);
