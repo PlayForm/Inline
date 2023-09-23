@@ -6,7 +6,7 @@ import _Critters from "./Critters.js";
 
 import { Default, Merge } from "files-pipe";
 
-export interface Type extends _Option {
+export default interface Type extends _Option {
 	// rome-ignore lint/suspicious/noExplicitAny:
 	[key: string]: any;
 

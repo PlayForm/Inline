@@ -1,7 +1,7 @@
 // @ts-ignore
 import type { Options as Option } from "critters";
 
-export interface Type extends Option {
+export default interface Type extends Option {
 	// rome-ignore lint/suspicious/noExplicitAny:
 	[key: string]: any;
 }
