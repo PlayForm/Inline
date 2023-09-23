@@ -3,13 +3,13 @@ import type { Type } from "./Option/Index.js";
 import type { AstroIntegration } from "astro";
 import type { Action, Path } from "files-pipe";
 
-import Default from "./Option/Index.js";
-
 import Files, { Apply, Merge } from "files-pipe";
 
 import { fileURLToPath as __Path } from "url";
 // @ts-ignore
 import Critters from "critters";
+
+export const Default = await import("./Option/Index.js");
 
 export default (_Option: Type = {}): AstroIntegration => {
 	for (const Option in _Option) {
@@ -17,7 +17,7 @@ export default (_Option: Type = {}): AstroIntegration => {
 			Object.prototype.hasOwnProperty.call(_Option, Option) &&
 			_Option[Option] === true
 		) {
-			_Option[Option] = Default[Option];
+			_Option[Option] = Default[Option as keyof typeof Default];
 		}
 	}
 
