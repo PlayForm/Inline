@@ -5,4 +5,4 @@ export default {
 	inlineFonts: true,
 	compress: true,
 	pruneSource: true,
-} satisfies Type as Type;
+} satisfies Type;

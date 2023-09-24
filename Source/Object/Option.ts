@@ -15,4 +15,4 @@ export default (await import("files-pipe/Target/Fn/Merge.js")).default(
 			Accomplished: false,
 		},
 	} satisfies Type
-) as Type;
+);
