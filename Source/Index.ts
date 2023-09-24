@@ -7,7 +7,7 @@ import type { AstroIntegration } from "astro";
 
 export const { default: Default } = await import("./Object/Option.js");
 
-export const { default: Merge } = await import("files-pipe/Target/Fn/Merge.js");
+export const { default: Merge } = await import("files-pipe/Target/Function/Merge.js");
 
 export default (_Option: Option = {}): AstroIntegration => {
 	for (const Option in _Option) {
@@ -48,7 +48,7 @@ export default (_Option: Option = {}): AstroIntegration => {
 
 				for (const Path of Paths) {
 					const _Path = await (
-						await import("files-pipe/Target/Fn/Apply.js")
+						await import("files-pipe/Target/Function/Apply.js")
 					).default(
 						async (_URL: URL | string) =>
 							_URL instanceof URL

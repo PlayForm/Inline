@@ -1,6 +1,6 @@
 import type Type from "../Interface/Option.js";
 
-export default (await import("files-pipe/Target/Fn/Merge.js")).default(
+export default (await import("files-pipe/Target/Function/Merge.js")).default(
 	(await import("files-pipe/Target/Object/Option.js")).default,
 	{
 		Critters: (await import("../Object/Critters.js")).default,
