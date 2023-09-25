@@ -88,7 +88,7 @@ export default {
 };
 ```
 
-#### You can add multiple paths to inline by specifying an array as the `path` variable.
+#### You can add multiple paths to inline by specifying an array as the `Path` variable.
 
 **`astro.config.ts`**
 
