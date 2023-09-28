@@ -1,8 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
-    preload: "media",
-    inlineFonts: true,
-    compress: true,
-    pruneSource: true,
-};
+var e={preload:"media",inlineFonts:!0,compress:!0,pruneSource:!0};export{e as default};
