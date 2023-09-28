@@ -1,1 +1,158 @@
-const{default:n}=await import("./Object/Option.js"),{default:s}=await import("files-pipe/Target/Function/Merge.js");var c=(a={})=>{for(const e in a)Object.prototype.hasOwnProperty.call(a,e)&&a[e]===!0&&(a[e]=n[e]);const t=s(n,a),o=new Set;if(typeof t.Path<"u"&&(t.Path instanceof Array||t.Path instanceof Set))for(const e of t.Path)o.add(e);return{name:"astro-critters",hooks:{"astro:build:done":async({dir:e})=>{if(o.size||o.add(e),!!t.Critters)for(const f of o){const i=await(await import("files-pipe/Target/Function/Apply.js")).default(async r=>r instanceof URL?(await import("url")).fileURLToPath(r):r,f);await(await(await(await new(await import("files-pipe")).default(t.Cache,t.Logger).In(f)).By("**/*.html")).Not(t.Exclude)).Pipe(s(n.Action,{Wrote:async r=>new(await import("critters"))(s(t.Critters,{path:i instanceof Map?i.keys().next().value:i,logLevel:(()=>{switch(t.Logger){case 0:return"silent";case 1:return"silent";case 2:return"info";default:return"info"}})()})).process(r.Buffer.toString())}))}}}}};export{n as Default,s as Merge,c as default};
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Merge = exports.Default = void 0;
+exports.Default = (await Promise.resolve().then(function () { return require("./Object/Option.js"); })).default;
+exports.Merge = (await Promise.resolve().then(function () { return require("files-pipe/Target/Function/Merge.js"); })).default;
+exports.default = (function (_Option) {
+    if (_Option === void 0) { _Option = {}; }
+    for (var Option_1 in _Option) {
+        if (Object.prototype.hasOwnProperty.call(_Option, Option_1) &&
+            _Option[Option_1] === true) {
+            _Option[Option_1] = exports.Default[Option_1];
+        }
+    }
+    var __Option = (0, exports.Merge)(exports.Default, _Option);
+    var Paths = new Set();
+    if (typeof __Option["Path"] !== "undefined") {
+        if (__Option["Path"] instanceof Array ||
+            __Option["Path"] instanceof Set) {
+            for (var _i = 0, _a = __Option["Path"]; _i < _a.length; _i++) {
+                var Path_1 = _a[_i];
+                Paths.add(Path_1);
+            }
+        }
+    }
+    return {
+        name: "astro-critters",
+        hooks: {
+            "astro:build:done": function (_a) {
+                var Dir = _a.dir;
+                return __awaiter(void 0, void 0, void 0, function () {
+                    var _loop_1, _i, Paths_1, Path_2;
+                    return __generator(this, function (_b) {
+                        switch (_b.label) {
+                            case 0:
+                                if (!Paths.size) {
+                                    Paths.add(Dir);
+                                }
+                                if (!__Option["Critters"]) {
+                                    return [2 /*return*/];
+                                }
+                                _loop_1 = function (Path_2) {
+                                    var _Path;
+                                    return __generator(this, function (_c) {
+                                        switch (_c.label) {
+                                            case 0: return [4 /*yield*/, Promise.resolve().then(function () { return require("files-pipe/Target/Function/Apply.js"); })];
+                                            case 1: return [4 /*yield*/, (_c.sent()).default(function (_URL) { return __awaiter(void 0, void 0, void 0, function () {
+                                                    var _a;
+                                                    return __generator(this, function (_b) {
+                                                        switch (_b.label) {
+                                                            case 0:
+                                                                if (!(_URL instanceof URL)) return [3 /*break*/, 2];
+                                                                return [4 /*yield*/, Promise.resolve().then(function () { return require("url"); })];
+                                                            case 1:
+                                                                _a = (_b.sent()).fileURLToPath(_URL);
+                                                                return [3 /*break*/, 3];
+                                                            case 2:
+                                                                _a = _URL;
+                                                                _b.label = 3;
+                                                            case 3: return [2 /*return*/, _a];
+                                                        }
+                                                    });
+                                                }); }, Path_2)];
+                                            case 2:
+                                                _Path = _c.sent();
+                                                return [4 /*yield*/, Promise.resolve().then(function () { return require("files-pipe"); })];
+                                            case 3: return [4 /*yield*/, new (_c.sent()).default(__Option["Cache"], __Option["Logger"]).In(Path_2)];
+                                            case 4: return [4 /*yield*/, (_c.sent()).By("**/*.html")];
+                                            case 5: return [4 /*yield*/, (_c.sent()).Not(__Option["Exclude"])];
+                                            case 6: return [4 /*yield*/, (_c.sent()).Pipe((0, exports.Merge)(exports.Default["Action"], {
+                                                    Wrote: function (On) { return __awaiter(void 0, void 0, void 0, function () {
+                                                        return __generator(this, function (_a) {
+                                                            switch (_a.label) {
+                                                                case 0: return [4 /*yield*/, Promise.resolve().then(function () { return require("critters"); })];
+                                                                case 1: 
+                                                                // @ts-expect-error
+                                                                return [2 /*return*/, new (_a.sent())((0, exports.Merge)(__Option["Critters"], {
+                                                                        path: _Path instanceof Map
+                                                                            ? _Path.keys().next().value
+                                                                            : _Path,
+                                                                        logLevel: (function () {
+                                                                            switch (__Option["Logger"]) {
+                                                                                case 0:
+                                                                                    return "silent";
+                                                                                case 1:
+                                                                                    return "silent";
+                                                                                case 2:
+                                                                                    return "info";
+                                                                                default:
+                                                                                    return "info";
+                                                                            }
+                                                                        })(),
+                                                                    })).process(On.Buffer.toString())];
+                                                            }
+                                                        });
+                                                    }); },
+                                                }))];
+                                            case 7:
+                                                _c.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                };
+                                _i = 0, Paths_1 = Paths;
+                                _b.label = 1;
+                            case 1:
+                                if (!(_i < Paths_1.length)) return [3 /*break*/, 4];
+                                Path_2 = Paths_1[_i];
+                                return [5 /*yield**/, _loop_1(Path_2)];
+                            case 2:
+                                _b.sent();
+                                _b.label = 3;
+                            case 3:
+                                _i++;
+                                return [3 /*break*/, 1];
+                            case 4: return [2 /*return*/];
+                        }
+                    });
+                });
+            },
+        },
+    };
+});
