@@ -71,7 +71,7 @@ export default (_Option: Option = {}): AstroIntegration => {
 					).Pipe(
 						Merge(Default["Action"], {
 							Wrote: async (On) =>
-								// @ts-expect-error
+								
 								new (await import("critters"))(
 									Merge(__Option["Critters"], {
 										path:
