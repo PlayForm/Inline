@@ -2,8 +2,8 @@ import type Type from "../Interface/Option.js";
 
 export default (
 	await import("typescript-esbuild/Target/Function/Merge.js")
-).default((await import("files-pipe/Target/Object/Option.js")).default, {
-	Critters: (await import("../Object/Critters.js")).default,
+).default((await import("files-pipe/Target/Variable/Option.js")).default, {
+	Critters: (await import("../Variable/Critters.js")).default,
 	Action: {
 		Failed: async (On) => `Error: Cannot inline file ${On.Input}!`,
 		Fulfilled: async (Plan) =>
