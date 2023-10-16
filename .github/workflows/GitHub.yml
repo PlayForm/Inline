@@ -49,7 +49,7 @@ jobs:
             STRIPE_CLI_TELEMETRY_OPTOUT: 1
 
         steps:
-            - uses: pozil/auto-assign-issue@v1.12.0
+            - uses: pozil/auto-assign-issue@v1.13.0
               with:
                   repo-token: ${{ secrets.GITHUB_TOKEN }}
                   assignees: NikolaRHristov
