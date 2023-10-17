@@ -1,11 +1,4 @@
-/// <reference types="node" />
 declare const _default: Omit<{} & {
-    Critters: {
-        preload: string;
-        inlineFonts: boolean;
-        compress: boolean;
-        pruneSource: boolean;
-    };
     Cache: {
         Search: string;
         Folder: string;
@@ -18,10 +11,16 @@ declare const _default: Omit<{} & {
         Failed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<string>;
         Fulfilled: (Plan: import("files-pipe/Target/Interface/Plan.js").default) => Promise<string | false>;
         Read: ({ Input }: import("files-pipe/Target/Interface/File.js").default) => Promise<string>;
-        Wrote: ({ Buffer }: import("files-pipe/Target/Interface/File.js").default) => Promise<Buffer>;
+        Wrote: ({ Buffer }: import("files-pipe/Target/Interface/File.js").default) => Promise<import("files-pipe/Target/Type/Buffer.js").Type>;
         Passed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<true>;
         Changed: (Plan: import("files-pipe/Target/Interface/Plan.js").default) => Promise<import("files-pipe/Target/Interface/Plan.js").default>;
     }, "__proto__">;
     Logger: 2;
+    Critters: {
+        preload: string;
+        inlineFonts: boolean;
+        compress: boolean;
+        pruneSource: boolean;
+    };
 }, "__proto__">;
 export default _default;
