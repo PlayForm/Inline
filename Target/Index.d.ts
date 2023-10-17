@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import type Option from "./Interface/Option.js";
 import type { AstroIntegration } from "astro";
 export declare const Default: Omit<{} & {
@@ -19,7 +20,7 @@ export declare const Default: Omit<{} & {
         Failed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<string>;
         Fulfilled: (Plan: import("files-pipe/Target/Interface/Plan.js").default) => Promise<string | false>;
         Read: ({ Input }: import("files-pipe/Target/Interface/File.js").default) => Promise<string>;
-        Wrote: ({ Buffer }: import("files-pipe/Target/Interface/File.js").default) => Promise<import("files-pipe/Target/Interface/Buffer.js").Type>;
+        Wrote: ({ Buffer }: import("files-pipe/Target/Interface/File.js").default) => Promise<Buffer>;
         Passed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<true>;
         Changed: (Plan: import("files-pipe/Target/Interface/Plan.js").default) => Promise<import("files-pipe/Target/Interface/Plan.js").default>;
     }, "__proto__">;
