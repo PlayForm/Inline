@@ -51,7 +51,7 @@ pnpx astro add astro-critters
 
 First, install the `AstroCritters` integration like so:
 
-```
+```sh
 npm install -D -E astro-critters
 ```
 
