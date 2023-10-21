@@ -1,7 +1,11 @@
+/**
+ * @module Critters
+ *
+ */
 declare const _default: {
-    preload: string;
-    inlineFonts: boolean;
-    compress: boolean;
-    pruneSource: boolean;
+    preload: "media";
+    inlineFonts: true;
+    compress: true;
+    pruneSource: true;
 };
 export default _default;

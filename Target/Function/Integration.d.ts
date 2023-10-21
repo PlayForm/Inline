@@ -1,5 +1,10 @@
-import type Option from "./Interface/Option.js";
-import type { AstroIntegration } from "astro";
+/**
+ * @module Integration
+ *
+ */
+declare const _default: Type;
+export default _default;
+import type Type from "../Interface/Integration.js";
 export declare const Default: Omit<{} & {
     Cache: {
         Search: string;
@@ -11,7 +16,7 @@ export declare const Default: Omit<{} & {
     Action: Omit<{} & {
         Accomplished: false;
         Failed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<string>;
-        Fulfilled: (Plan: import("files-pipe/Target/Interface/Plan.js").default) => Promise<string | false>;
+        Fulfilled: ({ Files }: import("files-pipe/Target/Interface/Plan.js").default) => Promise<string | false>;
         Read: ({ Input }: import("files-pipe/Target/Interface/File.js").default) => Promise<string>;
         Wrote: ({ Buffer }: import("files-pipe/Target/Interface/File.js").default) => Promise<import("files-pipe/Target/Type/Buffer.js").Type>;
         Passed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<true>;
@@ -19,12 +24,12 @@ export declare const Default: Omit<{} & {
     }, "__proto__">;
     Logger: 2;
     Critters: {
-        preload: string;
-        inlineFonts: boolean;
-        compress: boolean;
-        pruneSource: boolean;
+        preload: "media";
+        inlineFonts: true;
+        compress: true;
+        pruneSource: true;
     };
 }, "__proto__">;
+export declare const Search: string;
 export declare const Merge: import("typescript-esbuild/Target/Interface/Merge.js").default<import("typescript-esbuild/Target/Interface/Merge.js").Generic>;
-declare const _default: (_Option?: Option) => AstroIntegration;
-export default _default;
+export declare const _Critters: any;
