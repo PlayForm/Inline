@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"critters": "0.0.20",
-		"files-pipe": "NikolaRHristov/FilesPipe#main"
+		"files-pipe": "2.1.0"
 	},
 	"devDependencies": {
 		"astro": "3.3.2",
