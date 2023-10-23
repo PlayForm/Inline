@@ -55,27 +55,34 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 						).Not(Exclude)
 					).Pipe(
 						Merge(Action, {
-							Wrote: async ({ Buffer }) =>
-								new _Critters(
-									Merge(Critters, {
-										path:
-											Path instanceof Map
-												? Path.keys().next().value
-												: Path,
-										logLevel: (() => {
-											switch (Logger) {
-												case 0:
-													return "silent";
-												case 1:
-													return "silent";
-												case 2:
-													return "info";
-												default:
-													return "info";
-											}
-										})(),
-									})
-								).process(Buffer.toString()),
+							Wrote: async ({ Buffer }) => {
+								try {
+									return new _Critters(
+										Merge(Critters, {
+											path:
+												Path instanceof Map
+													? Path.keys().next().value
+													: Path,
+											logLevel: (() => {
+												switch (Logger) {
+													case 0:
+														return "silent";
+													case 1:
+														return "silent";
+													case 2:
+														return "info";
+													default:
+														return "info";
+												}
+											})(),
+										})
+									).process(Buffer.toString());
+								} catch (_Error) {
+									console.log(_Error);
+
+									return Buffer;
+								}
+							},
 						} satisfies Action)
 					);
 				}
