@@ -32,4 +32,3 @@ export declare const Default: Omit<{} & {
 }, "__proto__">;
 export declare const Search: string;
 export declare const Merge: import("typescript-esbuild/Target/Interface/Merge.js").default<import("typescript-esbuild/Target/Interface/Merge.js").Generic>;
-export declare const _Critters: any;

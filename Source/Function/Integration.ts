@@ -1,3 +1,6 @@
+// @ts-ignore
+import __Critters from "critters";
+
 /**
  * @module Integration
  *
@@ -44,9 +47,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 				}
 
 				for (const Path of Paths) {
-					
-					// @ts-expect-error
-					const _Critters = new (await import('critters')).default(
+					const _Critters = new __Critters(
 						Merge(Critters, {
 							path:
 								Path instanceof Map
@@ -65,6 +66,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 								}
 							})(),
 						})
+						
 					);
 
 					await (
@@ -78,7 +80,8 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 						).Not(Exclude)
 					).Pipe(
 						Merge(Action, {
-							Wrote: async ({ Buffer }) => _Critters.process(Buffer.toString()),
+							Wrote: async ({ Buffer }) =>
+								_Critters.process(Buffer.toString()),
 						} satisfies Action)
 					);
 				}
@@ -88,7 +91,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 }) satisfies Type as Type;
 
 import type Type from "../Interface/Integration.js";
-
+import type Critters from "../Interface/Critters.js";
 import type Action from "files-pipe/Target/Interface/Action.js";
 import type Path from "files-pipe/Target/Type/Path.js";
 
