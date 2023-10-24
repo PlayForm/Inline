@@ -44,6 +44,29 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 				}
 
 				for (const Path of Paths) {
+					
+					// @ts-expect-error
+					const _Critters = new (await import('critters')).default(
+						Merge(Critters, {
+							path:
+								Path instanceof Map
+									? Path.keys().next().value
+									: Path,
+							logLevel: (() => {
+								switch (Logger) {
+									case 0:
+										return "silent";
+									case 1:
+										return "silent";
+									case 2:
+										return "info";
+									default:
+										return "info";
+								}
+							})(),
+						})
+					);
+
 					await (
 						await (
 							await (
@@ -55,34 +78,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 						).Not(Exclude)
 					).Pipe(
 						Merge(Action, {
-							Wrote: async ({ Buffer }) => {
-								try {
-									return new _Critters(
-										Merge(Critters, {
-											path:
-												Path instanceof Map
-													? Path.keys().next().value
-													: Path,
-											logLevel: (() => {
-												switch (Logger) {
-													case 0:
-														return "silent";
-													case 1:
-														return "silent";
-													case 2:
-														return "info";
-													default:
-														return "info";
-												}
-											})(),
-										})
-									).process(Buffer.toString());
-								} catch (_Error) {
-									console.log(_Error);
-
-									return Buffer;
-								}
-							},
+							Wrote: async ({ Buffer }) => _Critters.process(Buffer.toString()),
 						} satisfies Action)
 					);
 				}
@@ -107,6 +103,3 @@ export const {
 export const { default: Merge } = await import(
 	"typescript-esbuild/Target/Function/Merge.js"
 );
-
-// @ts-expect-error
-export const { default: _Critters } = await import("critters");
