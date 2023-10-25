@@ -1,7 +1,7 @@
 ## 2.1.0
 
 -   Refactor
--	Documentation
+-   Documentation
 
 ## 2.0.11
 
