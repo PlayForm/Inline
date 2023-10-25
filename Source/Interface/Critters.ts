@@ -3,8 +3,6 @@
  *
  */
 export default interface Type {
-	[key: string]: Value<Type>;
-
 	path?: string;
 	publicPath?: string;
 	external?: boolean;
@@ -26,5 +24,3 @@ export default interface Type {
 }
 
 import type Logger from "./Logger.js";
-
-import type Value from "typescript-esbuild/Target/Type/Value.js";
