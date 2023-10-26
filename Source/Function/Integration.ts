@@ -6,14 +6,14 @@ import __Critters from "critters";
  *
  */
 export default ((...[_Option = {}]: Parameters<Type>) => {
-	for (const Option in _Option) {
-		if (
-			Object.prototype.hasOwnProperty.call(_Option, Option) &&
-			_Option[Option] === true
-		) {
-			_Option[Option] = Default[Option as keyof typeof Default];
-		}
-	}
+	Object.entries(_Option).forEach(([Key, Value]) =>
+		Object.defineProperty(_Option, Key, {
+			value:
+				Value === true
+					? Default[Key as keyof typeof Default]
+					: _Option[Key as keyof typeof _Option],
+		})
+	);
 
 	const { Action, Cache, Critters, Exclude, Logger, Path } = Merge(
 		Default,
