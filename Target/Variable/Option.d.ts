@@ -3,13 +3,19 @@
  *
  */
 declare const _default: Omit<{} & {
+    Critters: {
+        preload: "media";
+        inlineFonts: true;
+        compress: true;
+        pruneSource: true;
+    };
+    Files: string;
     Cache: {
         Search: string;
         Folder: string;
     };
     Path: string;
-    Exclude: false;
-    Files: string;
+    Logger: 2;
     Action: Omit<{} & {
         Accomplished: false;
         Failed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<string>;
@@ -19,12 +25,6 @@ declare const _default: Omit<{} & {
         Passed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<true>;
         Changed: (Plan: import("files-pipe/Target/Interface/Plan.js").default) => Promise<import("files-pipe/Target/Interface/Plan.js").default>;
     }, "__proto__">;
-    Logger: 2;
-    Critters: {
-        preload: "media";
-        inlineFonts: true;
-        compress: true;
-        pruneSource: true;
-    };
+    Exclude: false;
 }, "__proto__">;
 export default _default;
