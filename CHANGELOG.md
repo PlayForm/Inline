@@ -1,3 +1,52 @@
+## 2.1.0
+
+-   Refactor
+-   Documentation
+
+## 2.0.11
+
+-   Cleanup
+
+## 2.0.10
+
+-   Cleanup
+
+## 2.0.9
+
+-   Cleanup
+
+## 2.0.8
+
+-   Cleanup
+
+## 2.0.7
+
+-   Cleanup
+
+## 2.0.6
+
+-   Cleanup
+
+## 2.0.5
+
+-   Cleanup
+
+## 2.0.4
+
+-   Cleanup
+
+## 2.0.3
+
+-   Cleanup
+
+## 2.0.2
+
+-   Cleanup
+
+## 2.0.1
+
+-   Restoration
+
 ## 1.1.40
 
 -   Cleanup

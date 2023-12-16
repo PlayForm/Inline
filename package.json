@@ -1,39 +1,44 @@
 {
 	"name": "astro-critters",
-	"version": "1.1.40",
+	"version": "2.1.0",
 	"private": false,
-	"description": "🦔 AstroJS GoogleChromeLabs critters integration. Inline your critical CSS with Astro.",
+	"description": "🦔 AstroJS GoogleChromeLabs Critters integration. Inline your critical CSS with Astro.",
 	"keywords": [
 		"astro-integration",
 		"astro-component",
 		"astro",
 		"critters",
 		"css",
-		"performance"
+		"performance",
+		"withastro"
 	],
-	"homepage": "https://github.com/astro-community/astro-critters#readme",
+	"homepage": "https://github.com/astro-community/AstroCritters#readme",
 	"bugs": {
-		"url": "https://github.com/astro-community/astro-critters/issues"
+		"url": "https://github.com/astro-community/AstroCritters/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/astro-community/astro-critters.git"
+		"url": "git+https://github.com/astro-community/AstroCritters.git"
 	},
-	"license": "MIT",
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
 	"type": "module",
-	"main": "./Target/Index.js",
-	"types": "./Target/Index.d.ts",
+	"main": "./Target/Function/Integration.js",
+	"types": "./Target/Function/Integration.d.ts",
 	"scripts": {
-		"prepublishOnly": "lightrix build 'Source/**/*.ts'"
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"critters": "0.0.20",
-		"files-pipe": "2.0.9"
+		"files-pipe": "2.1.4",
+		"typescript-esbuild": "0.3.3"
 	},
 	"devDependencies": {
-		"@lightrix/configuration": "0.0.1",
-		"@lightrix/script": "1.0.7",
-		"astro": "2.10.7"
+		"astro": "4.0.5"
 	},
 	"publishConfig": {
 		"access": "public"

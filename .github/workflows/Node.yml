@@ -1,11 +1,13 @@
-name: "CodeQL"
+name: Node
 
 concurrency:
-    group: codeql-${{ github.workflow }}-${{ github.ref }}
+    group: Node-${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
 permissions:
     security-events: write
+    contents: write
+    pull-requests: write
 
 on:
     workflow_dispatch:
@@ -16,7 +18,7 @@ on:
     workflow_call:
 
 jobs:
-    codeql:
+    Pre-Publish:
         runs-on: ubuntu-latest
 
         env:
@@ -49,14 +51,41 @@ jobs:
             STNOUPGRADE: 1
             STRIPE_CLI_TELEMETRY_OPTOUT: 1
 
+        strategy:
+            matrix:
+                node-version: [18, 19, 20]
+
         steps:
-            - uses: actions/checkout@v3.5.3
+            - uses: actions/checkout@v4.1.1
 
-            - uses: github/codeql-action/init@v2.21.3
+            - uses: pnpm/action-setup@v2.4.0
               with:
-                  languages: javascript
+                  version: 8.6.12
+                  run_install: |
+                      - recursive: true
+                        args: [
+                          --link-workspace-packages=true,
+                          --lockfile-only,
+                          --prefer-frozen-lockfile=false,
+                          --shamefully-hoist=false,
+                          --shared-workspace-lockfile=true,
+                          --strict-peer-dependencies=false,
+                          --unsafe-perm=true
+                        ]
 
-            - name: Perform CodeQL Analysis
-              uses: github/codeql-action/analyze@v2.21.3
+            - uses: actions/setup-node@v4.0.0
               with:
-                  category: "/language:javascript"
+                  node-version: ${{ matrix.node-version }}
+                  cache: "pnpm"
+                  cache-dependency-path: ./pnpm-lock.yaml
+
+            - run: pnpm install
+              working-directory: .
+
+            - run: pnpm run prepublishOnly
+              working-directory: .
+
+            - uses: actions/upload-artifact@v4.0.0
+              with:
+                  name: .-Node-${{ matrix.node-version }}-Target
+                  path: ./Target
