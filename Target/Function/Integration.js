@@ -1,7 +1,7 @@
 import h from "critters";
 var w = (...[r = {}]) => {
 	Object.entries(r).forEach(([t, e]) =>
-		Object.defineProperty(r, t, { value: e === !0 ? c[t] : r[t] }),
+		Object.defineProperty(r, t, { value: e === !0 ? c[t] : r[t] })
 	);
 	const {
 			Action: p,
@@ -42,7 +42,7 @@ var w = (...[r = {}]) => {
 											return "info";
 									}
 								})(),
-							}),
+							})
 						);
 						await (
 							await (
@@ -56,7 +56,7 @@ var w = (...[r = {}]) => {
 							s(p, {
 								Wrote: async ({ Buffer: l }) =>
 									y.process(l.toString()),
-							}),
+							})
 						);
 					}
 			},
@@ -65,7 +65,9 @@ var w = (...[r = {}]) => {
 };
 const { default: c } = await import("../Variable/Option.js"),
 	{
-		default: { Cache: { Search: m } },
+		default: {
+			Cache: { Search: m },
+		},
 	} = await import("files-pipe/Target/Variable/Option.js"),
 	{ default: s } = await import(
 		"typescript-esbuild/Target/Function/Merge.js"

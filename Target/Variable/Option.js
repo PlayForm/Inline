@@ -8,10 +8,10 @@ var e = (await import("typescript-esbuild/Target/Function/Merge.js")).default(
 				t > 0
 					? `Successfully inlined a total of ${t} HTML ${
 							t === 1 ? "file" : "files"
-					  }.`
+						}.`
 					: !1,
 			Accomplished: !1,
 		},
-	},
+	}
 );
 export { e as default };
