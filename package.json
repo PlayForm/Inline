@@ -34,8 +34,8 @@
 	},
 	"dependencies": {
 		"critters": "0.0.20",
-		"files-pipe": "2.1.4",
-		"typescript-esbuild": "0.3.4"
+		"files-pipe": "2.1.5",
+		"typescript-esbuild": "0.3.5"
 	},
 	"devDependencies": {
 		"astro": "4.1.0"
