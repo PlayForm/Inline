@@ -12,7 +12,7 @@ export default (
 			Files > 0
 				? `Successfully inlined a total of ${Files} HTML ${
 						Files === 1 ? "file" : "files"
-					}.`
+				  }.`
 				: false,
 		Accomplished: false,
 	},
