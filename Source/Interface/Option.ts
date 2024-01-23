@@ -3,7 +3,6 @@
  *
  */
 export default interface Type extends Option {
-	// biome-ignore lint/suspicious/noExplicitAny:
 	Critters?: boolean | Critters;
 }
 
