@@ -5,7 +5,7 @@ import __Critters from "critters";
  * @module Integration
  *
  */
-export default (((...[_Option = {}]: Parameters<Type>) => {
+export default ((...[_Option = {}]: Parameters<Type>) => {
 	Object.entries(_Option).forEach(([Key, Value]) =>
 		Object.defineProperty(_Option, Key, {
 			value:
@@ -86,7 +86,7 @@ export default (((...[_Option = {}]: Parameters<Type>) => {
 			},
 		},
 	};
-}) satisfies Type as Type);
+}) satisfies Type as Type;
 
 import type Action from "files-pipe/Target/Interface/Action.js";
 import type Path from "files-pipe/Target/Type/Path.js";
@@ -95,7 +95,9 @@ import type Type from "../Interface/Integration.js";
 export const { default: Default } = await import("../Variable/Option.js");
 
 export const {
-	default: { Cache: { Search } },
+	default: {
+		Cache: { Search },
+	},
 } = await import("files-pipe/Target/Variable/Option.js");
 
 export const { default: Merge } = await import(
