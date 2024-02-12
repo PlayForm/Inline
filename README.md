@@ -59,10 +59,8 @@ Then, apply this integration to your `astro.config.*` file using the
 `integrations` property:
 
 ```ts
-import Critters from "astro-critters";
-
 export default {
-	integrations: [Critters()],
+	integrations: [(await import("astro-critters")).default()],
 };
 ```
 
@@ -79,11 +77,9 @@ You can override any of the default options from the configuration of:
 or disable them entirely:
 
 ```ts
-import Critters from "astro-critters";
-
 export default {
 	integrations: [
-		Critters({
+		(await import("astro-critters")).default({
 			Critters: false,
 		}),
 	],
@@ -98,11 +94,9 @@ variable.
 **`astro.config.ts`**
 
 ```ts
-import Critters from "astro-critters";
-
 export default {
 	integrations: [
-		Critters({
+		(await import("astro-critters")).default({
 			Path: ["./Target", "./Build"],
 		}),
 	],
@@ -116,11 +110,9 @@ You can also provide a map of paths for different input output directories.
 **`astro.config.ts`**
 
 ```ts
-import Critters from "astro-critters";
-
 export default {
 	integrations: [
-		Critters({
+		(await import("astro-critters")).default({
 			Path: new Map([["./Source", "./Target"]]),
 		}),
 	],
@@ -132,11 +124,9 @@ Or an array of the two.
 **`astro.config.ts`**
 
 ```ts
-import Critters from "astro-critters";
-
 export default {
 	integrations: [
-		Critters({
+		(await import("astro-critters")).default({
 			Path: [
 				// Inline Target
 				"./Target",
@@ -157,11 +147,9 @@ match on file names:
 **`astro.config.ts`**
 
 ```ts
-import Critters from "astro-critters";
-
 export default {
 	integrations: [
-		Critters({
+		(await import("astro-critters")).default({
 			Exclude: [
 				"File.html",
 				(File: string) => File === "./Target/index.html",
@@ -177,11 +165,9 @@ You can control the logging level by setting the `Logger` parameter. The default
 value is `2`, but you can set it to `0` if you don't want to see debug messages:
 
 ```ts
-import Critters from "astro-critters";
-
 export default {
 	integrations: [
-		Critters({
+		(await import("astro-critters")).default({
 			Logger: 0,
 		}),
 	],
