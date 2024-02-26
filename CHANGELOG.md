@@ -1,3 +1,8 @@
+## 2.1.2
+
+-   Cleanup
+-   Bug fix
+
 ## 2.1.1
 
 -   Cleanup

@@ -1,6 +1,6 @@
 {
 	"name": "astro-critters",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"private": false,
 	"description": "AstroJS GoogleChromeLabs Critters integration. 🦔 Inline your critical CSS with Astro.",
 	"keywords": [
@@ -38,7 +38,7 @@
 		"typescript-esbuild": "0.3.9"
 	},
 	"devDependencies": {
-		"astro": "4.4.4"
+		"astro": "4.4.5"
 	},
 	"publishConfig": {
 		"access": "public"
