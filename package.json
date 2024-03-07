@@ -33,7 +33,7 @@
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"critters": "0.0.21",
+		"critters": "0.0.22",
 		"files-pipe": "2.1.9",
 		"typescript-esbuild": "0.3.11"
 	},
