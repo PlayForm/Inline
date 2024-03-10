@@ -12,13 +12,13 @@
 		"performance",
 		"withastro"
 	],
-	"homepage": "https://github.com/astro-community/AstroCritters#readme",
+	"homepage": "https://github.com/Playform/AstroCritters#readme",
 	"bugs": {
-		"url": "https://github.com/astro-community/AstroCritters/issues"
+		"url": "https://github.com/Playform/AstroCritters/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/astro-community/AstroCritters.git"
+		"url": "git+https://github.com/Playform/AstroCritters.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
