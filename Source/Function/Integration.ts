@@ -12,12 +12,12 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 				Value === true
 					? Default[Key as keyof typeof Default]
 					: _Option[Key as keyof typeof _Option],
-		})
+		}),
 	);
 
 	const { Action, Cache, Critters, Exclude, Logger, Path } = Merge(
 		Default,
-		_Option
+		_Option,
 	);
 
 	const Paths = new Set<Path>();
@@ -50,7 +50,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 							_URL instanceof URL
 								? (await import("url")).fileURLToPath(_URL)
 								: _URL,
-						Path
+						Path,
 					);
 
 					const _Critters = new __Critters(
@@ -71,23 +71,22 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 										return "info";
 								}
 							})(),
-						})
+						}),
 					);
 
 					await (
 						await (
 							await (
-								await new (await import("files-pipe")).default(
-									Cache,
-									Logger
-								).In(Path)
+								await new (
+									await import("files-pipe")
+								).default(Cache, Logger).In(Path)
 							).By("**/*.html")
 						).Not(Exclude)
 					).Pipe(
 						Merge(Action, {
 							Wrote: async ({ Buffer }) =>
 								_Critters.process(Buffer.toString()),
-						} satisfies Action)
+						} satisfies Action),
 					);
 				}
 			},
