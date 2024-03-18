@@ -86,7 +86,7 @@ export default {
 };
 ```
 
-### Adding Multiple Paths
+### Add Multiple Paths
 
 You can add multiple paths to inline by specifying an array as the `Path`
 variable.
