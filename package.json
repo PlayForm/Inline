@@ -2,7 +2,7 @@
 	"name": "astro-critters",
 	"version": "2.1.4",
 	"private": false,
-	"description": "🦔 Inline CSS. Inline your critical CSS with Astro.",
+	"description": "🦔 Inline CSS.",
 	"keywords": [
 		"astro-integration",
 		"astro-component",
