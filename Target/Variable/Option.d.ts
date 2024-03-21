@@ -9,7 +9,7 @@ declare const _default: Omit<{} & {
         compress: true;
         pruneSource: true;
     };
-    Files: string;
+    File: string;
     Cache: {
         Search: string;
         Folder: string;
@@ -19,7 +19,7 @@ declare const _default: Omit<{} & {
     Action: Omit<{} & {
         Accomplished: false;
         Failed: (On: import("files-pipe/Target/Interface/File.js").default) => Promise<string>;
-        Fulfilled: ({ Files }: import("files-pipe/Target/Interface/Plan.js").default) => Promise<string | false>;
+        Fulfilled: ({ File }: import("files-pipe/Target/Interface/Plan.js").default) => Promise<string | false>;
         Read: ({ Input }: any) => Promise<string>;
         Wrote: ({ Buffer }: any) => Promise<any>;
         Passed: (On: any) => Promise<true>;

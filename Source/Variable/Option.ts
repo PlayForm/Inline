@@ -8,10 +8,10 @@ export default (
 	Critters: (await import("../Variable/Critters.js")).default,
 	Action: {
 		Failed: async (On) => `Error: Cannot inline file ${On.Input}!`,
-		Fulfilled: async ({ Files }) =>
-			Files > 0
-				? `Successfully inlined a total of ${Files} HTML ${
-						Files === 1 ? "file" : "files"
+		Fulfilled: async ({ File }) =>
+			File > 0
+				? `Successfully inlined a total of ${File} HTML ${
+						File === 1 ? "file" : "files"
 				  }.`
 				: false,
 		Accomplished: false,
