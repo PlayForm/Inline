@@ -32,7 +32,9 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 		name: "astro-critters",
 		hooks: {
 			"astro:build:done": async ({ dir }) => {
-				Paths.add(dir);
+				if (!Paths.size) {
+					Paths.add(dir);
+				}
 
 				if (typeof Cache === "object" && Cache.Search === Search) {
 					Cache.Search = dir;

@@ -16,7 +16,6 @@ export default (
 				: false,
 		Accomplished: false,
 	},
-	Path: ["./_astro"],
 } satisfies Type);
 
 import type Type from "../Interface/Option.js";
