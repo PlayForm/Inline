@@ -38,7 +38,7 @@
 		"files-pipe": "2.1.15"
 	},
 	"devDependencies": {
-		"astro": "4.5.8",
+		"astro": "4.5.9",
 		"typescript-document": "0.0.5",
 		"typescript-esbuild": "0.4.5"
 	},
