@@ -17,7 +17,7 @@ export declare const Default: Omit<{} & {
         Search: string;
         Folder: string;
     };
-    Path: string[];
+    Path: string;
     Logger: 2;
     Action: Omit<{} & {
         Accomplished: false;
