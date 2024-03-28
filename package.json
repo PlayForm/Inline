@@ -38,8 +38,13 @@
 		"files-pipe": "2.1.16"
 	},
 	"devDependencies": {
+<<<<<<< HEAD
 		"astro": "4.5.10",
 		"typescript-document": "0.0.7",
+=======
+		"astro": "4.5.12",
+		"typescript-document": "0.0.6",
+>>>>>>> b732ad5a1a8787493522a60fa69dabb778e6eae6
 		"typescript-esbuild": "0.4.9"
 	},
 	"publishConfig": {
