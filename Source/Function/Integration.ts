@@ -29,7 +29,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 	}
 
 	return {
-		name: "critters-astro",
+		name: "@playform/critters-astro",
 		hooks: {
 			"astro:build:done": async ({ dir }) => {
 				if (!Paths.size) {

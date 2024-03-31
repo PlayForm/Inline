@@ -32,19 +32,19 @@ follow the prompts:
 Using NPM:
 
 ```sh
-npx astro add critters-astro
+npx astro add @playform/critters-astro
 ```
 
 Using Yarn:
 
 ```sh
-yarn astro add critters-astro
+yarn astro add @playform/critters-astro
 ```
 
 Using PNPM:
 
 ```sh
-pnpx astro add critters-astro
+pnpx astro add @playform/critters-astro
 ```
 
 ### Install dependencies manually
@@ -52,7 +52,7 @@ pnpx astro add critters-astro
 First, install the `CrittersAstro` integration like so:
 
 ```sh
-npm install -D -E critters-astro
+npm install -D -E @playform/critters-astro
 ```
 
 Then, apply this integration to your `astro.config.*` file using the
@@ -60,7 +60,7 @@ Then, apply this integration to your `astro.config.*` file using the
 
 ```ts
 export default {
-	integrations: [(await import("critters-astro")).default()],
+	integrations: [(await import("@playform/critters-astro")).default()],
 };
 ```
 
@@ -79,7 +79,7 @@ or disable them entirely:
 ```ts
 export default {
 	integrations: [
-		(await import("critters-astro")).default({
+		(await import("@playform/critters-astro")).default({
 			Critters: false,
 		}),
 	],
@@ -96,7 +96,7 @@ variable.
 ```ts
 export default {
 	integrations: [
-		(await import("critters-astro")).default({
+		(await import("@playform/critters-astro")).default({
 			Path: ["./Target", "./Build"],
 		}),
 	],
@@ -112,7 +112,7 @@ You can also provide a map of paths for different input output directories.
 ```ts
 export default {
 	integrations: [
-		(await import("critters-astro")).default({
+		(await import("@playform/critters-astro")).default({
 			Path: new Map([["./Source", "./Target"]]),
 		}),
 	],
@@ -126,7 +126,7 @@ Or an array of the two.
 ```ts
 export default {
 	integrations: [
-		(await import("critters-astro")).default({
+		(await import("@playform/critters-astro")).default({
 			Path: [
 				// Inline Target
 				"./Target",
@@ -149,7 +149,7 @@ match on file names:
 ```ts
 export default {
 	integrations: [
-		(await import("critters-astro")).default({
+		(await import("@playform/critters-astro")).default({
 			Exclude: [
 				"File.html",
 				(File: string) => File === "./Target/index.html",
@@ -167,14 +167,14 @@ value is `2`, but you can set it to `0` if you don't want to see debug messages:
 ```ts
 export default {
 	integrations: [
-		(await import("critters-astro")).default({
+		(await import("@playform/critters-astro")).default({
 			Logger: 0,
 		}),
 	],
 };
 ```
 
-[CrittersAstro]: https://npmjs.org/critters-astro
+[CrittersAstro]: https://npmjs.org/@playform/critters-astro
 [critters]: https://github.com/GoogleChromeLabs/critters
 [astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
 [critical CSS]:
