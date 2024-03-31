@@ -2,7 +2,7 @@
 	"name": "@playform/critters-astro",
 	"version": "0.0.2",
 	"private": false,
-	"description": "🦔  Inline CSS.",
+	"description": "🦔 Inline CSS.",
 	"keywords": [
 		"astro",
 		"critters",
