@@ -1,16 +1,13 @@
 {
-	"name": "critters-astro",
-	"version": "2.1.6",
+	"name": "@playform/critters-astro",
+	"version": "0.0.1",
 	"private": false,
 	"description": "🦔  Inline CSS.",
 	"keywords": [
-		"astro-integration",
-		"astro-component",
 		"astro",
 		"critters",
 		"css",
-		"performance",
-		"withastro"
+		"performance"
 	],
 	"homepage": "https://github.com/Playform/CrittersAstro#readme",
 	"bugs": {
