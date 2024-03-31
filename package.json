@@ -32,7 +32,7 @@
 	},
 	"dependencies": {
 		"critters": "0.0.22",
-		"files-pipe": "2.1.16"
+		"@playform/file-pipe": "2.1.16"
 	},
 	"devDependencies": {
 		"astro": "4.5.12",
