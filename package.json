@@ -9,7 +9,7 @@
 		"css",
 		"performance"
 	],
-	"homepage": "https://github.com/Playform/CrittersAstro#readme",
+	"homepage": "https://github.com/Playform/CrittersAstro#ReadMe",
 	"bugs": {
 		"url": "https://github.com/Playform/CrittersAstro/issues"
 	},
@@ -32,7 +32,7 @@
 	},
 	"dependencies": {
 		"critters": "0.0.22",
-		"@playform/file-pipe": "0.0.1"
+		"@playform/file-pipe": "0.0.2"
 	},
 	"devDependencies": {
 		"astro": "4.5.12",
