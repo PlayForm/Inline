@@ -1,21 +1,21 @@
 {
-	"name": "@playform/critters-astro",
+	"name": "@playform/inline",
 	"version": "0.0.2",
 	"private": false,
-	"description": "🦔 Inline CSS.",
+	"description": "🦔 Inline.",
 	"keywords": [
 		"astro",
 		"critters",
 		"css",
 		"performance"
 	],
-	"homepage": "https://github.com/Playform/CrittersAstro#ReadMe",
+	"homepage": "https://github.com/Playform/Inline#ReadMe",
 	"bugs": {
-		"url": "https://github.com/Playform/CrittersAstro/issues"
+		"url": "https://github.com/Playform/Inline/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Playform/CrittersAstro.git"
+		"url": "git+https://github.com/Playform/Inline.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
