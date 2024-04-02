@@ -46,7 +46,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 
 				for (let Path of Paths) {
 					Path = await (
-						await import("@playform/file-pipe/Target/Function/Apply.js")
+						await import("@playform/pipe/Target/Function/Apply.js")
 					).default(
 						async (_URL) =>
 							_URL instanceof URL
@@ -80,7 +80,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 						await (
 							await (
 								await new (
-									await import("@playform/file-pipe")
+									await import("@playform/pipe")
 								).default(Cache, Logger).In(Path)
 							).By("**/*.html")
 						).Not(Exclude)
@@ -96,8 +96,8 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 	};
 }) satisfies Type as Type;
 
-import type Action from "@playform/file-pipe/Target/Interface/Action.js";
-import type Path from "@playform/file-pipe/Target/Type/Path.js";
+import type Action from "@playform/pipe/Target/Interface/Action.js";
+import type Path from "@playform/pipe/Target/Type/Path.js";
 import type Type from "../Interface/Integration.js";
 
 export const { default: Default } = await import("../Variable/Option.js");
@@ -106,6 +106,6 @@ export const {
 	default: {
 		Cache: { Search },
 	},
-} = await import("@playform/file-pipe/Target/Variable/Option.js");
+} = await import("@playform/pipe/Target/Variable/Option.js");
 
 export const { default: Merge } = await import("../Function/Merge.js");

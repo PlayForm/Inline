@@ -3,7 +3,7 @@
  *
  */
 export default (await import("../Function/Merge.js")).default(
-	(await import("@playform/file-pipe/Target/Variable/Option.js")).default,
+	(await import("@playform/pipe/Target/Variable/Option.js")).default,
 	{
 		Critters: (await import("../Variable/Critters.js")).default,
 		Action: {
