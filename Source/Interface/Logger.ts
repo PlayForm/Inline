@@ -2,7 +2,7 @@
  * @module Critters
  *
  */
-export default interface Type {
+export default interface Interface {
 	trace?: (message: string) => void;
 	debug?: (message: string) => void;
 	info?: (message: string) => void;
