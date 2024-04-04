@@ -1,6 +1,6 @@
 {
 	"name": "@playform/inline",
-	"version": "0.0.2",
+	"version": "0.0.1",
 	"private": false,
 	"description": "🦔 Inline.",
 	"keywords": [
@@ -36,13 +36,8 @@
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.2",
-<<<<<<< HEAD
 		"@playform/document": "0.0.3",
-		"astro": "4.5.13"
-=======
-		"@playform/document": "0.0.2",
 		"astro": "4.5.15"
->>>>>>> 96d41862ee6c3b5ba06f9528630a4c3cfa1ee3fd
 	},
 	"publishConfig": {
 		"access": "public"
