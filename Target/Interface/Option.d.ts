@@ -2,7 +2,7 @@
  * @module Option
  *
  */
-export default interface Type extends Option {
+export default interface Interface extends Option {
     Critters?: boolean | Critters;
 }
 import type Critters from "@Interface/Critters.js";
