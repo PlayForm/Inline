@@ -1,13 +1,16 @@
 {
 	"name": "@playform/inline",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"private": false,
 	"description": "🦔 Inline.",
 	"keywords": [
 		"astro",
+		"astro-component",
+		"astro-integration",
 		"critters",
 		"css",
-		"performance"
+		"performance",
+		"withastro"
 	],
 	"homepage": "https://github.com/Playform/Inline#ReadMe",
 	"bugs": {
