@@ -108,4 +108,4 @@ export const {
 	},
 } = await import("@playform/pipe/Target/Variable/Option.js");
 
-export const { default: Merge } = await import("../Function/Merge.js");
+export const { default: Merge } = await import("@Function/Merge.js");

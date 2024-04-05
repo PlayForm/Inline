@@ -2,7 +2,7 @@
  * @module Option
  *
  */
-export default (await import("../Function/Merge.js")).default(
+export default (await import("@Function/Merge.js")).default(
 	(await import("@playform/pipe/Target/Variable/Option.js")).default,
 	{
 		Critters: (await import("@Variable/Critters.js")).default,
