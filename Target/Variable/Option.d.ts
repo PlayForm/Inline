@@ -17,13 +17,15 @@ declare const _default: Omit<{} & {
     Path: string;
     Logger: 2;
     Action: Omit<{} & {
-        Accomplished: false;
-        Failed: (On: import("@playform/pipe/Target/Interface/File.js").default) => Promise<string>;
-        Fulfilled: ({ File }: import("@playform/pipe/Target/Interface/Plan.js").default) => Promise<string | false>;
-        Read: ({ Input }: import("@playform/pipe/Target/Interface/File.js").default) => Promise<string>;
-        Wrote: ({ Buffer }: import("@playform/pipe/Target/Interface/File.js").default) => Promise<import("@playform/pipe/Target/Type/Buffer.js").Type>;
-        Passed: (On: import("@playform/pipe/Target/Interface/File.js").default) => Promise<true>;
-        Changed: (Plan: import("@playform/pipe/Target/Interface/Plan.js").default) => Promise<import("@playform/pipe/Target/Interface/Plan.js").default>;
+        Read: ({ Input }: import("@playform/pipe/Target/Interface/File").default) => Promise<string>;
+        Wrote: ({ Buffer }: import("@playform/pipe/Target/Interface/File").default) => Promise<import("@playform/pipe/Target/Type/Buffer").Type>;
+        Passed: (On: import("@playform/pipe/Target/Interface/File").default) => Promise<true>;
+        Failed: (On: any) => Promise<string>;
+        Accomplished: boolean;
+        Fulfilled: ({ File }: {
+            File: any;
+        }) => Promise<string | false>;
+        Changed: (Plan: import("@playform/pipe/Target/Interface/Plan").default) => Promise<import("@playform/pipe/Target/Interface/Plan").default>;
     }, "__proto__">;
     Exclude: false;
 }, "__proto__">;
