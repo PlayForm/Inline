@@ -5,7 +5,7 @@
 export default (await import("../Function/Merge.js")).default(
 	(await import("@playform/pipe/Target/Variable/Option.js")).default,
 	{
-		Critters: (await import("../Variable/Critters.js")).default,
+		Critters: (await import("@Variable/Critters.js")).default,
 		Action: {
 			Failed: async (On) => `Error: Cannot inline file ${On.Input}!`,
 			Fulfilled: async ({ File }) =>
@@ -19,4 +19,4 @@ export default (await import("../Function/Merge.js")).default(
 	} satisfies Type,
 );
 
-import type Type from "../Interface/Option.js";
+import type Type from "@Interface/Option.js";

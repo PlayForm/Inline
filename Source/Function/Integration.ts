@@ -98,9 +98,9 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 
 import type Action from "@playform/pipe/Target/Interface/Action.js";
 import type Path from "@playform/pipe/Target/Type/Path.js";
-import type Type from "../Interface/Integration.js";
+import type Type from "@Interface/Integration.js";
 
-export const { default: Default } = await import("../Variable/Option.js");
+export const { default: Default } = await import("@Variable/Option.js");
 
 export const {
 	default: {

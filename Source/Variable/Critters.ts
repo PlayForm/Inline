@@ -9,4 +9,4 @@ export default {
 	pruneSource: true,
 } satisfies Type;
 
-import type Type from "../Interface/Critters.js";
+import type Type from "@Interface/Critters.js";
