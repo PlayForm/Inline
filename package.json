@@ -27,6 +27,7 @@
 	"main": "./Target/Function/Integration.js",
 	"types": "./Target/Function/Integration.d.ts",
 	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
