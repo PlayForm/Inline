@@ -10,8 +10,8 @@ rest.
 
 > **Note**
 >
-> `Inline` will not inline your requests, only your statically generated
-> build and pre-rendered routes.
+> `Inline` will not inline your requests, only your statically generated build
+> and pre-rendered routes.
 
 ## Installation
 
@@ -26,8 +26,8 @@ command will:
 1. (Optionally) Install all necessary dependencies and peer dependencies
 2. (Also optionally) Update your `astro.config.*` file to apply this integration
 
-To install `Inline`, run the following from your project directory and
-follow the prompts:
+To install `Inline`, run the following from your project directory and follow
+the prompts:
 
 Using NPM:
 

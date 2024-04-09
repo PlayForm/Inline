@@ -5,19 +5,19 @@ import __Critters from "critters";
  * @module Integration
  *
  */
-export default ((...[_Option = {}]: Parameters<Type>) => {
+export default ((...[_Option = {}]: Parameters<Interface>) => {
 	Object.entries(_Option).forEach(([Key, Value]) =>
 		Object.defineProperty(_Option, Key, {
 			value:
 				Value === true
 					? Default[Key as keyof typeof Default]
 					: _Option[Key as keyof typeof _Option],
-		}),
+		})
 	);
 
 	const { Action, Cache, Critters, Exclude, Logger, Path } = Merge(
 		Default,
-		_Option,
+		_Option
 	);
 
 	const Paths = new Set<Path>();
@@ -52,7 +52,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 							_URL instanceof URL
 								? (await import("url")).fileURLToPath(_URL)
 								: _URL,
-						Path,
+						Path
 					);
 
 					const _Critters = new __Critters(
@@ -73,7 +73,7 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 										return "info";
 								}
 							})(),
-						}),
+						})
 					);
 
 					await (
@@ -88,17 +88,17 @@ export default ((...[_Option = {}]: Parameters<Type>) => {
 						Merge(Action, {
 							Wrote: async ({ Buffer }) =>
 								_Critters.process(Buffer.toString()),
-						} satisfies Action),
+						} satisfies Action)
 					);
 				}
 			},
 		},
 	};
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
 import type Action from "@playform/pipe/Target/Interface/Action.js";
 import type Path from "@playform/pipe/Target/Type/Path.js";
-import type Type from "@Interface/Integration.js";
+import type Interface from "@Interface/Integration.js";
 
 export const { default: Default } = await import("@Variable/Option.js");
 

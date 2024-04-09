@@ -12,11 +12,11 @@ export default (await import("@Function/Merge.js")).default(
 				File > 0
 					? `Successfully inlined a total of ${File} HTML ${
 							File === 1 ? "file" : "files"
-					  }.`
+						}.`
 					: false,
 			Accomplished: false,
 		},
-	} satisfies Type,
+	} satisfies Interface
 );
 
-import type Type from "@Interface/Option.js";
+import type Interface from "@Interface/Option.js";
