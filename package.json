@@ -21,13 +21,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Playform/Inline.git"
+		"url": "git+HTTPS://github.com/Playform/Inline.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Playform",
-		"email": "hello@playform.cloud",
-		"url": "https://playform.cloud"
+		"name": "Source/Open",
+		"email": "Source/Open@Playform.Cloud",
+		"url": "HTTPS://Playform.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Function/Integration.js",
