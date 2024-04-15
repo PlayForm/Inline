@@ -174,9 +174,9 @@ export default {
 };
 ```
 
-[Inline]: https://npmjs.org/@playform/inline
-[critters]: https://github.com/GoogleChromeLabs/critters
-[astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
+[Inline]: HTTPS://npmjs.org/@playform/inline
+[critters]: HTTPS://github.com/GoogleChromeLabs/critters
+[astro-integration]: HTTPS://docs.astro.build/en/guides/integrations-guide/
 [critical CSS]:
 	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
 
