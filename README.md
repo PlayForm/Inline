@@ -178,7 +178,7 @@ export default {
 [critters]: HTTPS://github.com/GoogleChromeLabs/critters
 [astro-integration]: HTTPS://docs.astro.build/en/guides/integrations-guide/
 [critical CSS]:
-	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
+	HTTPS://www.smashingmagazine.com/2015/08/understanding-critical-css/
 
 ## Changelog
 
