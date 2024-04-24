@@ -16,19 +16,19 @@
 		"withastro",
 		"playform"
 	],
-	"homepage": "HTTPS://GitHub.Com/Playform/Inline#readme",
+	"homepage": "HTTPS://GitHub.Com/PlayForm/Inline#readme",
 	"bugs": {
-		"url": "HTTPS://GitHub.Com/Playform/Inline/issues"
+		"url": "HTTPS://GitHub.Com/PlayForm/Inline/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/Playform/Inline.git"
+		"url": "git+HTTPS://github.com/PlayForm/Inline.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "⛲ Source ⁄ 🚪 Open —",
-		"email": "Source/Open@Playform.Cloud",
-		"url": "HTTPS://Playform.Cloud"
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Function/Integration.js",
