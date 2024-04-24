@@ -43,7 +43,7 @@
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
-		"astro": "4.6.3"
+		"astro": "4.6.4"
 	},
 	"publishConfig": {
 		"access": "public"
