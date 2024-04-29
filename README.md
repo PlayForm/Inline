@@ -174,7 +174,7 @@ export default {
 };
 ```
 
-[Inline —]: httpS://npmjs.org/@playform/inline
+[Inline]: HTTPS://npmjs.org/@playform/inline
 [critters]: HTTPS://github.com/GoogleChromeLabs/critters
 [astro-integration]: HTTPS://docs.astro.build/en/guides/integrations-guide/
 [critical CSS]:
