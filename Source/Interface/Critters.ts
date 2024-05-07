@@ -23,4 +23,4 @@ export default interface Interface {
 	logger?: Logger;
 }
 
-import type Logger from "@Interface/Logger.js";
+import type Logger from "../Interface/Logger.js";

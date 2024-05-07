@@ -96,7 +96,7 @@ export default ((...[_Option = {}]: Parameters<Interface>) => {
 	};
 }) satisfies Interface as Interface;
 
-import type Interface from "@Interface/Integration.js";
+import type Interface from "../Interface/Integration.js";
 import type Action from "@playform/pipe/Target/Interface/Action.js";
 import type Path from "@playform/pipe/Target/Type/Path.js";
 

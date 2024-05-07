@@ -19,4 +19,4 @@ export default (await import("@Function/Merge.js")).default(
 	} satisfies Interface
 );
 
-import type Interface from "@Interface/Option.js";
+import type Interface from "../Interface/Option.js";
