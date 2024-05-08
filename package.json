@@ -42,7 +42,7 @@
 		"critters": "0.0.22"
 	},
 	"devDependencies": {
-		"@playform/build": "0.0.8",
+		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
 		"astro": "4.7.1"
 	},
