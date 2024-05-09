@@ -38,13 +38,13 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@playform/pipe": "0.0.2",
+		"@playform/pipe": "0.0.3",
 		"critters": "0.0.22"
 	},
 	"devDependencies": {
-		"@playform/build": "0.0.7",
+		"@playform/build": "0.0.8",
 		"@playform/document": "0.0.6",
-		"astro": "4.7.1"
+		"astro": "4.8.1"
 	},
 	"publishConfig": {
 		"access": "public"
