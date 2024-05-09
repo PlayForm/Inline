@@ -22,7 +22,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/PlayForm/Inline.git"
+		"url": "git+https://github.com/PlayForm/Inline.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
