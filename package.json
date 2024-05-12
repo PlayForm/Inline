@@ -2,7 +2,7 @@
 	"name": "@playform/inline",
 	"version": "0.0.2",
 	"private": false,
-	"description": "🦔 Inline",
+	"description": "🦔 Inline —",
 	"keywords": [
 		"astro",
 		"astro-component",
@@ -44,7 +44,7 @@
 	"devDependencies": {
 		"@playform/build": "0.0.8",
 		"@playform/document": "0.0.6",
-		"astro": "4.8.1"
+		"astro": "4.8.2"
 	},
 	"publishConfig": {
 		"access": "public"
