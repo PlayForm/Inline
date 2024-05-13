@@ -1,6 +1,6 @@
 {
-	"name": "@playform/inline",
-	"version": "0.0.3",
+	"name": "astro-critters",
+	"version": "2.1.7",
 	"private": false,
 	"description": "🦔 Inline —",
 	"keywords": [
@@ -42,7 +42,7 @@
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.8",
-		"astro": "4.8.2"
+		"astro": "4.8.3"
 	},
 	"publishConfig": {
 		"access": "public"
