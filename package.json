@@ -34,7 +34,6 @@
 	"main": "./Target/Function/Integration.js",
 	"types": "./Target/Function/Integration.d.ts",
 	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
@@ -43,7 +42,6 @@
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.8",
-		"@playform/document": "0.0.6",
 		"astro": "4.8.2"
 	},
 	"publishConfig": {
