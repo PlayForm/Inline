@@ -2,9 +2,21 @@
  * @module Integration
  *
  */
-declare const _default: Interface;
+declare const _default: (Option: import("../Interface/Option.js").default) => {
+    name: string;
+    hooks: {
+        "astro:build:done": ({ dir }: {
+            pages: {
+                pathname: string;
+            }[];
+            dir: URL;
+            routes: import("astro").RouteData[];
+            logger: import("astro").AstroIntegrationLogger;
+            cacheManifest: boolean;
+        }) => Promise<void>;
+    };
+};
 export default _default;
-import type Interface from "../Interface/Integration.js";
 export declare const Default: Omit<{} & {
     Critters: {
         preload: "media";
