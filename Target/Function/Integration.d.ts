@@ -2,6 +2,7 @@
  * @module Integration
  *
  */
+<<<<<<< HEAD
 declare const _default: (Option: import("../Interface/Option.js").default) => {
     name: string;
     hooks: {
@@ -17,6 +18,11 @@ declare const _default: (Option: import("../Interface/Option.js").default) => {
     };
 };
 export default _default;
+=======
+declare const _default: Interface;
+export default _default;
+import type Interface from "../Interface/Integration.js";
+>>>>>>> aec050d3ae91d44fb4154a86e5cc4ee92e348712
 export declare const Default: Omit<{} & {
     Critters: {
         preload: "media";
