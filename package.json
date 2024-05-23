@@ -41,8 +41,15 @@
 		"critters": "0.0.22"
 	},
 	"devDependencies": {
-		"@playform/build": "0.0.8",
+		"@playform/build": "0.0.8"
+	},
+	"peerDependencies": {
 		"astro": "4.8.7"
+	},
+	"peerDependenciesMeta": {
+		"astro": {
+			"optional": true
+		}
 	},
 	"publishConfig": {
 		"access": "public"
