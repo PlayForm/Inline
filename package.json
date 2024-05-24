@@ -34,17 +34,18 @@
 	"main": "./Target/Function/Integration.js",
 	"types": "./Target/Function/Integration.d.ts",
 	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@playform/pipe": "0.0.3",
+		"@playform/pipe": "0.0.5",
 		"critters": "0.0.22"
 	},
 	"devDependencies": {
-		"@playform/build": "0.0.8"
+		"@playform/build": "0.0.9"
 	},
 	"peerDependencies": {
-		"astro": "4.8.7"
+		"astro": "4.9.1"
 	},
 	"peerDependenciesMeta": {
 		"astro": {

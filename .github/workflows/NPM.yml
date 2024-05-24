@@ -40,4 +40,3 @@ jobs:
                   npm publish --legacy-peer-deps --provenance --ignore-scripts
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
