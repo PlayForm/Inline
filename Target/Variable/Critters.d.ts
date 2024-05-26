@@ -2,10 +2,6 @@
  * @module Critters
  *
  */
-declare const _default: {
-    preload: "media";
-    inlineFonts: true;
-    compress: true;
-    pruneSource: true;
-};
+declare const _default: Interface;
 export default _default;
+import type Interface from "../Interface/Critters.js";

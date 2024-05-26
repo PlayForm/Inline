@@ -16,7 +16,7 @@ export default (await import("@Function/Merge.js")).default(
 					: false,
 			Accomplished: false,
 		},
-	} satisfies Interface
+	} satisfies Interface,
 );
 
 import type Interface from "../Interface/Option.js";

@@ -2,13 +2,7 @@
  * @module Option
  *
  */
-declare const _default: Omit<{} & {
-    Critters: {
-        preload: "media";
-        inlineFonts: true;
-        compress: true;
-        pruneSource: true;
-    };
+declare const _default: {
     File: string;
     Cache: {
         Search: string;
@@ -16,7 +10,7 @@ declare const _default: Omit<{} & {
     };
     Path: string;
     Logger: 2;
-    Action: Omit<{} & {
+    Action: {
         Accomplished: false;
         Failed: (On: import("@playform/pipe/Target/Interface/File.js").default) => Promise<string>;
         Fulfilled: ({ File }: import("@playform/pipe/Target/Interface/Plan.js").default) => Promise<string | false>;
@@ -24,7 +18,8 @@ declare const _default: Omit<{} & {
         Wrote: ({ Buffer }: import("@playform/pipe/Target/Interface/File.js").default) => Promise<import("@playform/pipe/Target/Type/Buffer.js").Type>;
         Passed: (On: import("@playform/pipe/Target/Interface/File.js").default) => Promise<true>;
         Changed: (Plan: import("@playform/pipe/Target/Interface/Plan.js").default) => Promise<import("@playform/pipe/Target/Interface/Plan.js").default>;
-    }, "__proto__">;
+    };
     Exclude: false;
-}, "__proto__">;
+    Critters: import("../Interface/Critters.js").default;
+};
 export default _default;

@@ -7,6 +7,6 @@ export default {
 	inlineFonts: true,
 	compress: true,
 	pruneSource: true,
-} satisfies Interface;
+} satisfies Interface as Interface;
 
 import type Interface from "../Interface/Critters.js";
