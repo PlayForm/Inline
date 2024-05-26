@@ -1,6 +1,6 @@
 {
 	"name": "@playform/inline",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"private": false,
 	"description": "🦔 Inline —",
 	"keywords": [
@@ -41,13 +41,14 @@
 		"@playform/pipe": "0.0.5",
 		"critters": "0.0.22"
 	},
-	"devDependencies": {
-		"@playform/build": "0.0.9"
-	},
 	"peerDependencies": {
+		"@playform/build": "0.0.9",
 		"astro": "4.9.1"
 	},
 	"peerDependenciesMeta": {
+		"@playform/build": {
+			"optional": true
+		},
 		"astro": {
 			"optional": true
 		}
