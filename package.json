@@ -39,19 +39,11 @@
 	},
 	"dependencies": {
 		"@playform/pipe": "0.0.5",
+		"astro": "4.9.1",
 		"critters": "0.0.22"
 	},
-	"peerDependencies": {
-		"@playform/build": "0.0.9",
-		"astro": "4.9.1"
-	},
-	"peerDependenciesMeta": {
-		"@playform/build": {
-			"optional": true
-		},
-		"astro": {
-			"optional": true
-		}
+	"devDependencies": {
+		"@playform/build": "0.0.9"
 	},
 	"publishConfig": {
 		"access": "public"
