@@ -1,6 +1,6 @@
 {
 	"name": "@playform/inline",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"private": false,
 	"description": "🦔 Inline —",
 	"keywords": [
@@ -42,7 +42,7 @@
 		"critters": "0.0.22"
 	},
 	"devDependencies": {
-		"@playform/build": "0.0.9"
+		"@playform/build": "0.0.10"
 	},
 	"publishConfig": {
 		"access": "public"
