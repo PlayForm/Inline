@@ -38,11 +38,7 @@
 	},
 	"dependencies": {
 		"@playform/pipe": "0.0.5",
-<<<<<<< HEAD
 		"astro": "*",
-=======
-		"astro": "4.10.0",
->>>>>>> 6d2defe8871cc0aff570dcb921d6c445d4107a79
 		"critters": "0.0.22"
 	},
 	"devDependencies": {
