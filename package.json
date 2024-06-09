@@ -1,6 +1,6 @@
 {
 	"name": "@playform/inline",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"private": false,
 	"description": "🦔 Inline —",
 	"keywords": [
@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"@playform/pipe": "0.0.5",
-		"astro": "4.10.0",
+		"astro": "*",
 		"critters": "0.0.22"
 	},
 	"devDependencies": {
