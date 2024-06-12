@@ -37,7 +37,7 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@playform/pipe": "0.0.5",
+		"@playform/pipe": "0.0.6",
 		"astro": "*",
 		"critters": "0.0.22"
 	},
