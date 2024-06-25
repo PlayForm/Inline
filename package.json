@@ -39,7 +39,7 @@
 	"dependencies": {
 		"@playform/pipe": "0.0.6",
 		"astro": "*",
-		"critters": "0.0.22"
+		"critters": "0.0.24"
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.11"
