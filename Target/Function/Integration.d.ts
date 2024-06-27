@@ -26,14 +26,4 @@ export declare const Default: {
     Critters: import("../Interface/Critters.js").default;
 };
 export declare const Search: string;
-export declare const Merge: <Ts extends readonly unknown[]>(...objects: Ts) => import("deepmerge-ts").DeepMergeHKT<Ts, Readonly<{
-    DeepMergeRecordsURI: "DeepMergeRecordsDefaultURI";
-    DeepMergeArraysURI: "DeepMergeArraysDefaultURI";
-    DeepMergeSetsURI: "DeepMergeSetsDefaultURI";
-    DeepMergeMapsURI: "DeepMergeMapsDefaultURI";
-    DeepMergeOthersURI: "DeepMergeLeafURI";
-    DeepMergeFilterValuesURI: "DeepMergeFilterValuesDefaultURI";
-}>, Readonly<{
-    key: PropertyKey;
-    parents: readonly Readonly<Record<PropertyKey, unknown>>[];
-}>>;
+export declare const Merge: <Ts extends readonly unknown[]>(...objects: Ts) => import("deepmerge-ts").DeepMergeHKT<Ts, import("deepmerge-ts").GetDeepMergeFunctionsURIs<{}>, import("deepmerge-ts").DeepMergeBuiltInMetaData>;
