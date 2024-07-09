@@ -51,6 +51,7 @@ jobs:
             STNOUPGRADE: 1
             STRIPE_CLI_TELEMETRY_OPTOUT: 1
             TELEMETRY_DISABLED: 1
+            TERRAFORM_TELEMETRY: 0
 
         strategy:
             matrix:
@@ -86,7 +87,7 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.3
+            - uses: actions/upload-artifact@v4.3.4
               with:
                   name: .-Node-${{ matrix.node-version }}-Target
                   path: ./Target
