@@ -42,7 +42,7 @@
 		"critters": "0.0.24"
 	},
 	"devDependencies": {
-		"@playform/build": "0.1.0"
+		"@playform/build": "0.1.1"
 	},
 	"publishConfig": {
 		"access": "public"
