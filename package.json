@@ -43,7 +43,7 @@
 		"critters": "0.0.24"
 	},
 	"devDependencies": {
-		"@playform/build": "0.1.1"
+		"@playform/build": "0.1.2"
 	},
 	"publishConfig": {
 		"provenance": true,
