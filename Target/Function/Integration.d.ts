@@ -35,5 +35,5 @@ export declare const Merge: <Ts extends readonly unknown[]>(...objects: Ts) => i
     DeepMergeFilterValuesURI: "DeepMergeFilterValuesDefaultURI";
 }>, Readonly<{
     key: PropertyKey;
-    parents: readonly Readonly<Record<PropertyKey, unknown>>[];
+    parents: ReadonlyArray<Readonly<Record<PropertyKey, unknown>>>;
 }>>;

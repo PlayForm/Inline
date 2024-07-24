@@ -1,6 +1,6 @@
 {
-	"name": "astro-critters",
-	"version": "2.1.10",
+	"name": "@playform/inline",
+	"version": "0.1.0",
 	"private": false,
 	"description": "🦔 Inline —",
 	"keywords": [
@@ -34,17 +34,19 @@
 	"main": "./Target/Function/Integration.js",
 	"types": "./Target/Function/Integration.d.ts",
 	"scripts": {
+		"Run": "Build 'Source/**/*.ts' --Watch",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@playform/pipe": "0.0.5",
+		"@playform/pipe": "0.1.0",
 		"astro": "*",
-		"critters": "0.0.22"
+		"critters": "0.0.24"
 	},
 	"devDependencies": {
-		"@playform/build": "0.0.10"
+		"@playform/build": "0.1.2"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"provenance": true
 	}
 }
