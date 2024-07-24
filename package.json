@@ -1,6 +1,6 @@
 {
 	"name": "@playform/inline",
-	"version": "0.0.7",
+	"version": "0.1.0",
 	"private": false,
 	"description": "🦔 Inline —",
 	"keywords": [
@@ -38,15 +38,15 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@playform/pipe": "0.0.6",
+		"@playform/pipe": "0.1.0",
 		"astro": "*",
 		"critters": "0.0.24"
 	},
 	"devDependencies": {
-		"@playform/build": "0.1.1"
+		"@playform/build": "0.1.2"
 	},
 	"publishConfig": {
-		"provenance": true,
-		"access": "public"
+		"access": "public",
+		"provenance": true
 	}
 }
