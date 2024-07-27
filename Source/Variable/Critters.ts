@@ -7,7 +7,7 @@ export default {
 	inlineFonts: true,
 	compress: true,
 	pruneSource: true,
-	reduceInlineStyles: false
+	reduceInlineStyles: false,
 } satisfies Interface as Interface;
 
 import type Interface from "../Interface/Critters.js";
