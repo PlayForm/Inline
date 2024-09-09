@@ -44,7 +44,7 @@
 		"deepmerge-ts": "7.1.0"
 	},
 	"devDependencies": {
-		"@playform/build": "0.1.4"
+		"@playform/build": "0.1.5"
 	},
 	"publishConfig": {
 		"access": "public",
