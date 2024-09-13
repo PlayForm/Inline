@@ -39,7 +39,7 @@
 	},
 	"dependencies": {
 		"@playform/pipe": "0.1.1",
-		"astro": "4.15.4",
+		"astro": "4.15.5",
 		"critters": "0.0.24",
 		"deepmerge-ts": "7.1.0"
 	},
