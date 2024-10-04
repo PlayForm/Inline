@@ -1,10 +1,10 @@
+import type Interface from "../Interface/Integration.js";
 /**
  * @module Integration
  *
  */
 declare const _default: Interface;
 export default _default;
-import type Interface from "../Interface/Integration.js";
 export declare const Default: {
     File: string;
     Cache: {
