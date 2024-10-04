@@ -1,5 +1,9 @@
 // @ts-ignore
+import type Action from "@playform/pipe/Target/Interface/Action.js";
+import type Path from "@playform/pipe/Target/Type/Path.js";
 import __Critters from "critters";
+
+import type Interface from "../Interface/Integration.js";
 
 /**
  * @module Integration
@@ -95,10 +99,6 @@ export default ((...[_Option = {}]: Parameters<Interface>) => {
 		},
 	};
 }) satisfies Interface as Interface;
-
-import type Action from "@playform/pipe/Target/Interface/Action.js";
-import type Path from "@playform/pipe/Target/Type/Path.js";
-import type Interface from "../Interface/Integration.js";
 
 export const { default: Default } = await import("@Variable/Option.js");
 

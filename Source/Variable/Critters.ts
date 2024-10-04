@@ -1,3 +1,5 @@
+import type Interface from "../Interface/Critters.js";
+
 /**
  * @module Critters
  *
@@ -9,5 +11,3 @@ export default {
 	pruneSource: true,
 	reduceInlineStyles: false,
 } satisfies Interface as Interface;
-
-import type Interface from "../Interface/Critters.js";
