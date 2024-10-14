@@ -2,7 +2,7 @@
 
 # 🦔 [Inline] —
 
-This **[Astro integration][astro-integration]** brings [critters][critters] to
+This **[Astro integration][astro-integration]** brings [`critters`][critters] to
 your Astro project.
 
 Critters is a plugin that inlines your app's [critical CSS] and lazy-loads the rest.
