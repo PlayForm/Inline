@@ -58,7 +58,7 @@ export default ((...[_Option = {}]) => {
 					).default(
 						async (_URL) =>
 							_URL instanceof URL
-								? (await import("url")).fileURLToPath(_URL)
+								? (await import("node:url")).fileURLToPath(_URL)
 								: _URL,
 						Path,
 					);
