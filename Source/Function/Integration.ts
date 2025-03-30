@@ -1,7 +1,6 @@
 import type Action from "@playform/pipe/Target/Interface/Action.js";
 import type Path from "@playform/pipe/Target/Type/Path.js";
-// @ts-ignore
-import __Critters from "critters";
+import __Beasties from "beasties";
 
 import type Interface from "../Interface/Integration.js";
 
@@ -19,7 +18,7 @@ export default ((...[_Option = {}]) => {
 		}),
 	);
 
-	const { Action, Cache, Critters, Exclude, Logger, Path } = Merge(
+	const { Action, Cache, Beasties, Exclude, Logger, Path } = Merge(
 		Default,
 		_Option,
 	);
@@ -48,7 +47,7 @@ export default ((...[_Option = {}]) => {
 					Cache.Search = dir;
 				}
 
-				if (!Critters) {
+				if (!Beasties) {
 					return;
 				}
 
@@ -63,8 +62,9 @@ export default ((...[_Option = {}]) => {
 						Path,
 					);
 
-					const _Critters = new __Critters(
-						Merge(Critters, {
+					const _Beasties = new __Beasties(
+						// @ts-expect-error
+						Merge(Beasties, {
 							path:
 								Path instanceof Map
 									? Path.keys().next().value
@@ -98,7 +98,7 @@ export default ((...[_Option = {}]) => {
 					).Pipe(
 						Merge(Action, {
 							Wrote: async ({ Buffer }) =>
-								_Critters.process(Buffer.toString()),
+								await _Beasties.process(Buffer.toString()),
 						} satisfies Action),
 					);
 				}

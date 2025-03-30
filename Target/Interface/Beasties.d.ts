@@ -1,9 +1,10 @@
-import type Logger from "../Interface/Logger.js";
+import type { Options } from "beasties";
+import type Logger from "./Logger.js";
 /**
- * @module Critters
+ * @module Beasties
  *
  */
-export default interface Interface {
+export default interface Interface extends Options {
     path?: string;
     publicPath?: string;
     external?: boolean;

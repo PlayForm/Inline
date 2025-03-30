@@ -20,6 +20,6 @@ declare const _default: {
         Changed: (Plan: import("@playform/pipe/Target/Interface/Plan.js").default) => Promise<import("@playform/pipe/Target/Interface/Plan.js").default>;
     };
     Exclude: false;
-    Critters: import("../Interface/Critters.js").default;
+    Beasties: import("../Interface/Beasties.js").default;
 };
 export default _default;

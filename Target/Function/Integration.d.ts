@@ -23,7 +23,7 @@ export declare const Default: {
         Changed: (Plan: import("@playform/pipe/Target/Interface/Plan.js").default) => Promise<import("@playform/pipe/Target/Interface/Plan.js").default>;
     };
     Exclude: false;
-    Critters: import("../Interface/Critters.js").default;
+    Beasties: import("../Interface/Beasties.js").default;
 };
 export declare const Search: string;
 export declare const Merge: <Ts extends readonly unknown[]>(...objects: Ts) => import("deepmerge-ts").DeepMergeHKT<Ts, Readonly<{

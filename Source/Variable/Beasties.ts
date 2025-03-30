@@ -1,7 +1,7 @@
-import type Interface from "../Interface/Critters.js";
+import type Interface from "../Interface/Beasties.js";
 
 /**
- * @module Critters
+ * @module Beasties
  *
  */
 export default {

@@ -2,10 +2,10 @@
 
 # [Inline] 🦔
 
-This **[Astro integration][astro-integration]** brings [`critters`][critters] to
+This **[Astro integration][astro-integration]** brings [`beasties`][beasties] to
 your Astro project.
 
-Critters is a plugin that inlines your app's [critical CSS] and lazy-loads the
+Beasties is a plugin that inlines your app's [critical CSS] and lazy-loads the
 rest.
 
 > **Note**
@@ -66,13 +66,13 @@ export default {
 
 ## Getting started
 
-Critters will now automatically inline the critical CSS of your HTML files.
+Beasties will now automatically inline the critical CSS of your HTML files.
 
 ### Default Inlining
 
 You can override any of the default options from the configuration of:
 
-- [`critters`](HTTPS://GitHub.Com/GoogleChromeLabs/critters#usage)
+- [`beasties`](HTTPS://github.com/DanielRoe/Beasties#usage)
 
 or disable them entirely:
 
@@ -80,7 +80,7 @@ or disable them entirely:
 export default {
 	integrations: [
 		(await import("@playform/inline")).default({
-			Critters: false,
+			Beasties: false,
 		}),
 	],
 };
@@ -175,7 +175,7 @@ export default {
 ```
 
 [Inline]: HTTPS://NPMJS.Org/@playform/inline
-[critters]: HTTPS://github.com/GoogleChromeLabs/critters
+[beasties]: HTTPS://github.com/DanielRoe/Beasties
 [astro-integration]: HTTPS://docs.astro.build/en/guides/integrations-guide/
 [critical CSS]:
 	HTTPS://www.smashingmagazine.com/2015/08/understanding-critical-css/

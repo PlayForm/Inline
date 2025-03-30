@@ -1,5 +1,5 @@
 /**
- * @module Critters
+ * @module Beasties
  *
  */
 export default interface Interface {
