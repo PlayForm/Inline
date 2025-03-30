@@ -1,6 +1,32 @@
+## 0.1.2
+
+### Change
+
+- Updated package version to `0.1.2` and adjusted description emojis.
+- Replaced `critters` dependency with `beasties@0.2.0`.
+- Updated dependencies:
+    - `@playform/pipe` from `0.1.2` to `0.1.3`.
+    - `deepmerge-ts` from `7.1.3` to `7.1.5`.
+- Migrated from `critters` to `beasties` integration:
+    - Updated module references in `Integration.ts`, `Option.ts`, and
+      `Logger.ts`.
+    - Changed `node:url` import for `fileURLToPath`.
+
+### Add
+
+- New `Beasties` interface and default configuration in
+  `Source/Interface/Beasties.ts` and `Source/Variable/Beasties.ts`.
+- Async CSS processing with `beasties` in `Integration.ts`.
+
+### Removed
+
+- Deleted all `Critters`-related code:
+    - Removed `Source/Interface/Critters.ts` and `Source/Variable/Critters.ts`.
+    - Removed `critters` dependency and legacy configuration.
+
 ## 0.1.1
 
-### Changed
+### Change
 
 - Updated email and URL in `package.json` to `Source/Open@PlayForm.LTD` and
   `HTTPS://PlayForm.LTD`.
@@ -10,7 +36,7 @@
     - Added `deepmerge-ts` version `7.1.3`.
     - `@playform/build` from `0.1.2` to `0.2.1`.
 
-### Added
+### Add
 
 - Added imports for `Action`, `Path`, and `Interface` in `Integration.ts`.
 - Added optional `Option` parameter in `Integration.ts`.
@@ -21,39 +47,39 @@
 
 ## 0.1.0
 
-### Changed
+### Change
 
 - Updated `@playform/pipe` from `0.0.5` to `0.1.0`.
 - Updated `critters` from `0.0.22` to `0.0.24`.
 - Updated `@playform/build` from `0.0.10` to `0.1.2`.
 - Added `provenance` field in `package.json`.
 
-### Added
+### Add
 
 - Added `reduceInlineStyles` option in `Critters.ts`.
 
 ## 0.0.7
 
-### Changed
+### Change
 
 - Changed `astro` version to `*`.
 
 ## 0.0.6
 
-### Changed
+### Change
 
 - Updated `@playform/build` from `0.0.9` to `0.0.10`.
 
 ## 0.0.5
 
-### Changed
+### Change
 
 - Updated `astro` from `4.9.1` to `4.9.2`.
 - Moved `@playform/build` from `peerDependencies` to `devDependencies`.
 
 ## 0.0.4
 
-### Changed
+### Change
 
 - Updated `@playform/pipe` from `0.0.3` to `0.0.5`.
 - Updated `astro` from `4.8.2` to `4.9.1`.
@@ -66,20 +92,20 @@
 
 ## 0.0.3
 
-### Changed
+### Change
 
 - Updated `@playform/pipe` from `0.0.2` to `0.0.3`.
 - Updated `@playform/build` from `0.0.5` to `0.0.8`.
 - Updated `astro` from `4.5.16` to `4.8.2`.
 - Changed URLs in `package.json` to uppercase.
 
-### Added
+### Add
 
 - Added `astro-critters`, `astro-inline`, and `playform` dependencies.
 
 ## 0.0.2
 
-### Changed
+### Change
 
 - Added `astro-component`, `astro-integration`, and `withastro` dependencies.
 - Updated `Document` field in `package.json`.
