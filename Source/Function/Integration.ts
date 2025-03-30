@@ -36,7 +36,7 @@ export default ((...[_Option = {}]) => {
 	}
 
 	return {
-		name: "astro-critters",
+		name: "astro-beasties",
 		hooks: {
 			"astro:build:done": async ({ dir }) => {
 				if (Paths.size === 0) {
