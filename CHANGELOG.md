@@ -1,5 +1,29 @@
 ## 0.1.2
 
+### Change
+
+- Updated package version to `0.1.2` and adjusted description emojis.
+- Replaced `critters` dependency with `beasties@0.2.0`.
+- Updated dependencies:
+    - `@playform/pipe` from `0.1.2` to `0.1.3`.
+    - `deepmerge-ts` from `7.1.3` to `7.1.5`.
+- Migrated from `critters` to `beasties` integration:
+    - Updated module references in `Integration.ts`, `Option.ts`, and
+      `Logger.ts`.
+    - Changed `node:url` import for `fileURLToPath`.
+
+### Add
+
+- New `Beasties` interface and default configuration in
+  `Source/Interface/Beasties.ts` and `Source/Variable/Beasties.ts`.
+- Async CSS processing with `beasties` in `Integration.ts`.
+
+### Removed
+
+- Deleted all `Critters`-related code:
+    - Removed `Source/Interface/Critters.ts` and `Source/Variable/Critters.ts`.
+    - Removed `critters` dependency and legacy configuration.
+
 ## 0.1.1
 
 ### Change
