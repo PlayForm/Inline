@@ -1,1 +1,0 @@
-var t=(await import("../Function/Merge.js")).default((await import("@playform/pipe/Target/Variable/Option.js")).default,{Beasties:(await import("./Beasties.js")).default,Action:{Failed:async e=>`Error: Cannot inline file ${e.Input}!`,Fulfilled:async({File:e})=>e>0?`Successfully inlined a total of ${e} HTML ${e===1?"file":"files"}.`:!1,Accomplished:!1}});export{t as default};

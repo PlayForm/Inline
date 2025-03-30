@@ -36,7 +36,7 @@ export default ((...[_Option = {}]) => {
 	}
 
 	return {
-		name: "@playform/inline",
+		name: "astro-critters",
 		hooks: {
 			"astro:build:done": async ({ dir }) => {
 				if (Paths.size === 0) {

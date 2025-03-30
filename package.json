@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
 	"name": "@playform/inline",
 	"version": "0.1.2",
+=======
+	"name": "astro-critters",
+	"version": "2.2.1",
+>>>>>>> 0597a43c6a5824115d23ea591fa0d70df310101e
 	"private": false,
 	"description": "Inline 🦔",
 	"keywords": [
