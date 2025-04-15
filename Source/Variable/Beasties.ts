@@ -10,4 +10,5 @@ export default {
 	compress: true,
 	pruneSource: true,
 	reduceInlineStyles: false,
+	external: true
 } satisfies Interface as Interface;
