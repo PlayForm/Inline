@@ -28,8 +28,8 @@
 
 ### Change
 
-- Updated email and URL in `package.json` to `Source/Open@PlayForm.LTD` and
-  `HTTPS://PlayForm.LTD`.
+- Updated email and URL in `package.json` to `Source/Open@PlayForm.Cloud` and
+  `HTTPS://PlayForm.Cloud`.
 - Updated dependencies:
     - `@playform/pipe` from `0.1.0` to `0.1.2`.
     - `critters` from `0.0.24` to `0.0.25`.
