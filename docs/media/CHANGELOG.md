@@ -1,3 +1,18 @@
+## 0.1.3
+
+### Change
+
+- Updated package version to `0.1.3`.
+- Updated contact email and URL in `package.json` from `PlayForm.LTD` to
+  `PlayForm.Cloud`.
+- Updated dependencies:
+    - `@playform/pipe` from `0.1.3` to `0.1.4`.
+    - `astro` from `*` to `5.16.8`.
+    - `beasties` from `0.2.0` to `0.3.5`.
+    - `@playform/build` from `0.2.1` to `0.2.6`.
+- Set `external: true` in `Beasties` configuration
+  (`Source/Variable/Beasties.ts`).
+
 ## 0.1.2
 
 ### Change
