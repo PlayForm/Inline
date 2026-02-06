@@ -43,10 +43,6 @@ export default ((...[_Option = {}]) => {
 					Paths.add(dir);
 				}
 
-				if (typeof Cache === "object" && Cache.Search === Search) {
-					Cache.Search = dir;
-				}
-
 				if (!Beasties) {
 					return;
 				}
