@@ -105,10 +105,4 @@ export default ((...[_Option = {}]) => {
 
 export const { default: Default } = await import("@Variable/Option.js");
 
-export const {
-	default: {
-		Cache: { Search },
-	},
-} = await import("@playform/pipe/Target/Variable/Option.js");
-
 export const { default: Merge } = await import("@Function/Merge.js");
