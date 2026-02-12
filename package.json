@@ -39,12 +39,12 @@
 	},
 	"dependencies": {
 		"@playform/pipe": "0.1.4",
-		"astro": "5.17.1",
+		"astro": "5.17.2",
 		"beasties": "0.4.1",
 		"deepmerge-ts": "7.1.5"
 	},
 	"devDependencies": {
-		"@playform/build": "0.2.6"
+		"@playform/build": "0.3.0"
 	},
 	"publishConfig": {
 		"access": "public",
