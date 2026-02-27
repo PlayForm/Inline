@@ -5,8 +5,8 @@
 declare const _default: {
     File: string;
     Cache: {
-        Search: string;
         Folder: string;
+        Version: string;
     };
     Path: string;
     Logger: 2;

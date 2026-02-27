@@ -93,6 +93,8 @@ export default ((...[_Option = {}]) => {
 						).Not(Exclude)
 					).Pipe(
 						Merge(Action, {
+							...(typeof Beasties === "object" ? { Options: Beasties } : {}),
+
 							Wrote: async ({ Buffer }) =>
 								await _Beasties.process(Buffer.toString()),
 						} satisfies Action),

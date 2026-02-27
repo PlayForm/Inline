@@ -8,8 +8,8 @@ export default _default;
 export declare const Default: {
     File: string;
     Cache: {
-        Search: string;
         Folder: string;
+        Version: string;
     };
     Path: string;
     Logger: 2;
@@ -25,7 +25,6 @@ export declare const Default: {
     Exclude: false;
     Beasties: import("../Interface/Beasties.js").default;
 };
-export declare const Search: string;
 export declare const Merge: <Ts extends readonly unknown[]>(...objects: Ts) => import("deepmerge-ts").DeepMergeHKT<Ts, Readonly<{
     DeepMergeRecordsURI: "DeepMergeRecordsDefaultURI";
     DeepMergeArraysURI: "DeepMergeArraysDefaultURI";
