@@ -1,3 +1,7 @@
+## 0.1.4
+
+- Fixes `astro` version to \*
+
 ## 0.1.3
 
 ### Change

@@ -8,8 +8,8 @@ export default _default;
 export declare const Default: {
     File: string;
     Cache: {
+        Search: string;
         Folder: string;
-        Version: string;
     };
     Path: string;
     Logger: 2;
