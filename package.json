@@ -1,6 +1,6 @@
 {
-	"name": "@playform/inline",
-	"version": "0.1.4",
+	"name": "astro-beasties",
+	"version": "0.0.2",
 	"private": false,
 	"description": "Inline 🦔",
 	"keywords": [
