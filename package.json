@@ -41,7 +41,7 @@
 		"@playform/pipe": "0.1.5",
 		"astro": "*",
 		"beasties": "0.4.3",
-		"deepmerge-ts": "7.1.5"
+		"deepmerge-ts": "7.1.6"
 	},
 	"devDependencies": {
 		"@playform/build": "0.3.3"
