@@ -38,7 +38,7 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@playform/pipe": "0.1.5",
+		"@playform/pipe": "0.1.6",
 		"astro": "*",
 		"beasties": "0.4.3",
 		"deepmerge-ts": "8.0.0"
